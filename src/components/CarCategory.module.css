@@ -1,0 +1,62 @@
+/* CarCategory.module.css */
+
+.carTypes {
+  position: relative;
+}
+.container {
+  position: relative;
+}
+.item {
+  background: #222;
+  padding: 40px 15px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  line-height: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+.item span {
+  font-size: 75px;
+  color: #f5b754;
+  line-height: 0.5em;
+  margin-bottom: 0px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.item h6 {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 0;
+}
+.bgIcon {
+  position: absolute;
+  opacity: 0.02;
+  z-index: -1;
+  bottom: -75px;
+  left: 75px;
+}
+.bgIcon span {
+  font-size: 240px;
+  color: #fff;
+}
+.item:hover {
+  background-color: #f5b754;
+  transition: 0.5s;
+}
+.item:hover span,
+.item:hover h6 {
+  color: #1b1b1b;
+  transition: 0.5s;
+}
+.item:hover .bgIcon {
+  opacity: 0.1;
+  color: #1b1b1b;
+  transition: 0.5s;
+}
+.mtMinus80 {
+  margin-top: -80px;
+}

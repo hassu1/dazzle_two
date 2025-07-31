@@ -1,0 +1,13 @@
+.video-gallery .item {
+    position: relative;
+    margin-bottom: 30px;
+    isolation: isolate;
+    box-shadow: rgb(245, 183, 84) 0px 0px 7px 0px;
+    border-radius: 20px 20px 20px 0px;
+    overflow: hidden;
+}
+.video-gallery .item img {
+    width: 100%;
+    transform: scale(1);
+    transition: transform 500ms;
+}
