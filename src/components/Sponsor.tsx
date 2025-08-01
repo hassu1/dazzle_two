@@ -20,7 +20,7 @@ export default function Sponsor() {
   ];
 
   return (
-    <div style={{ padding: '40px 0', background: '#f9f9f9', margin:'40px', borderRadius:'10px' }}>
+    <div style={{ padding: '40px 0', background: '#f9f9f9', margin:'20px', borderRadius:'10px' }}>
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 0, disableOnInteraction: false }}

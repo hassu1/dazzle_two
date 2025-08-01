@@ -40,7 +40,7 @@ const testimonials = [
 
 export default function Testimonal() {
   return (
-    <section style={{ padding: '40px 0', background: '#f9f9f9', margin:'40px', borderRadius:'10px' }}>
+    <section style={{ padding: '40px 0', background: '#f9f9f9', margin:'20px', borderRadius:'10px' }}>
       <div className="container">
         <div className="row mb-4">
               <div className="col-md-6 col-12 m-auto">

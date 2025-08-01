@@ -14,7 +14,7 @@ header{
     z-index: 9;
     top:50px;
 }
-.hero-bg-section{margin:40px;}
+.hero-bg-section{margin:20px;}
 .hero-bg-wrapper {
     border-radius: 20px;
     background-color: #000;
@@ -250,7 +250,7 @@ html,body{overflow-x: hidden;}
 
 .steps{
     padding: 20px 0px; 
-    margin: 40px; 
+    margin: 20px; 
     border-radius: 10px;
 }
 .stepColumn{

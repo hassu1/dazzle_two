@@ -5,7 +5,7 @@ import './Gallery.css';
 
 export default function Gallery() {
   return (
-     <section className="video-gallery section-padding" style={{margin:'40px'}}>
+     <section className="video-gallery section-padding" style={{margin:'20px'}}>
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-3 col-md-12 mb-30">
