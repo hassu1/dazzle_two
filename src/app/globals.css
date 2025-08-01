@@ -145,7 +145,7 @@ h1 {
   color: #fff;
     margin-right: 0;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     clip-path: circle();
   background:#202020;
 }
