@@ -18,17 +18,6 @@ export default function Banner() {
                   style={{ alignItems:'center'}}
                 >
                   Book your ride now
-                  <div className="box" style={{backgroundColor:'#161616',padding:'3px'}}>
-                    <Image
-                    src="https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efac/676682bf44c92e272152469e_arrow-01.svg"
-                    alt=""
-                    width={24}
-                    height={24}
-                    className="button-icon-image p-1 "
-                    style={{ borderRadius:'5px'}}
-                    
-                     />
-                  </div>
                 </button>
               </div>
             </div>

@@ -14,7 +14,7 @@ export default function Header() {
         <div className="row align-items-center">
           <div className="col-6 col-md-4">
             <Link href="/">
-              <Image src="/img/dazzle.png" alt="Logo" width={150} height={100} />
+              <Image src="/img/dazzle.png" alt="Logo" width={133} height={40} style={{width:'200px', height:'auto'}} />
             </Link>
           </div>
 

@@ -10,17 +10,14 @@ export default function Sponsor() {
   const sponsors = [
     '/img/logos/1.png',
     '/img/logos/2.png',
+    '/img/logos/3.png',
     '/img/logos/4.png',
     '/img/logos/5.png',
     '/img/logos/6.png',
-    '/img/logos/7.png',
-    '/img/logos/8.png',
-    '/img/logos/9.png',
-    '/img/logos/10.png',
   ];
 
   return (
-    <div style={{ padding: '40px 0', background: '#f9f9f9', margin:'20px', borderRadius:'10px' }}>
+    <div style={{ padding: '40px 0', background: '#f9f9f9', margin:'20px', borderRadius:'20px' }}>
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 0, disableOnInteraction: false }}

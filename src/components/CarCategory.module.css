@@ -20,7 +20,7 @@
 }
 .item span {
   font-size: 75px;
-  color: #f5b754;
+  color: #E5AF3E;
   line-height: 0.5em;
   margin-bottom: 0px;
   display: inline-block;
@@ -44,7 +44,7 @@
   color: #fff;
 }
 .item:hover {
-  background-color: #f5b754;
+  background-color: #E5AF3E;
   transition: 0.5s;
 }
 .item:hover span,
@@ -59,4 +59,34 @@
 }
 .mtMinus80 {
   margin-top: -80px;
+}
+
+
+
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* For tablets (≤ 992px) — 3 columns */
+@media (max-width: 992px) {
+  .gridWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For small tablets and large phones (≤ 768px) — 2 columns */
+@media (max-width: 768px) {
+  .gridWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For mobile phones (≤ 480px) — 1 column */
+@media (max-width: 480px) {
+  .gridWrapper {
+    grid-template-columns: 1fr;
+  }
 }

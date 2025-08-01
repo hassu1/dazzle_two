@@ -2,7 +2,7 @@ export default function CompanyLocation() {
   return (
     <>
       {/* <!--================== S-GMAP ==================--> */}
-      <section className="s-instagram s-dark-instagram" style={{margin:'20px', borderRadius:'10px'}}>
+      <section className="s-instagram s-dark-instagram" style={{margin:'20px', borderRadius:'20px'}}>
         <div id="map" className="cont-map">
           <iframe
             className=""
