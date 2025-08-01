@@ -143,8 +143,11 @@ h1 {
 }
 .footer-social-icon a {
   color: #fff;
-  font-size: 16px;
-  margin-right: 15px;
+    margin-right: 0;
+    font-size: 16px;
+    padding: 5px;
+    clip-path: circle();
+  background:#202020;
 }
 .footer-social-icon i {
   height: 40px;
@@ -153,15 +156,11 @@ h1 {
   line-height: 38px;
   border-radius: 50%;
 }
-.facebook-bg {
-  background: #3B5998;
+
+.footer-social-icon a:hover i {
+  color:#E5AF3E;
 }
-.twitter-bg {
-  background: #55ACEE;
-}
-.google-bg {
-  background: #DD4B39;
-}
+
 .footer-widget-heading h3 {
   color: #fff;
   font-size: 20px;

@@ -8,7 +8,7 @@ export default function CarCategory() {
     { name: "Sport Cars", icon: "flaticon-sportive-car", link: "/cars/sport" },
     { name: "SUVs", icon: "flaticon-car-suv", link: "/cars/suv" },
     { name: "Convertible", icon: "flaticon-cabrio-car", link: "/cars/convertible" },
-    { name: "Coupe", icon: "flaticon-sedan-car-model", link: "/cars/sedan" },
+    { name: "Coupe", icon: "flaticon-coupe-car", link: "/cars/coupe" },
   ];
 
   return (

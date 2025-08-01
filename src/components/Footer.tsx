@@ -43,17 +43,12 @@ export default function Footer() {
                 <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5">
                     <div className="footer-widget">
                         <div className="footer-logo">
-                            <Link href="/"><Image src="/img/dazzle.png" className="img-fluid" alt="logo" width={800} height={500} style={{width:'100%', height:'auto'}}/></Link>
+                            <Link href="/"><Image src="/img/logo-01.png" className="img-fluid" alt="logo" width={800} height={500} style={{width:'100%', height:'auto'}}/></Link>
                         </div>
                         <div className="footer-text">
                             <p>Dazzle Wheels is the best luxury car rental services in Dubai, we have a big fleet of 50 sports and luxury vehicles, we are known for the professional services, we offer a wide range of supercars, luxury cars & Suvs in the market for daily rental.</p>
                         </div>
-                        <div className="footer-social-icon">
-                            <span>Follow us</span>
-                            <Link href="#"><i className="fab fa-facebook-f facebook-bg"></i></Link>
-                            <Link href="#"><i className="fab fa-twitter twitter-bg"></i></Link>
-                            <Link href="#"><i className="fab fa-google-plus-g google-bg"></i></Link>
-                        </div>
+                     
                     </div>
                 </div>
 
@@ -70,8 +65,6 @@ export default function Footer() {
                             <li><Link href="#">Ferrari</Link></li>
                             <li><Link href="#">BMW</Link></li>
                             <li><Link href="#">Porsche</Link></li>
-                            <li><Link href="#">Toyota</Link></li>
-                            <li><Link href="#">Honda</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -105,6 +98,12 @@ export default function Footer() {
                                 <input type="text" placeholder="Email Address" />
                                 <button><i className="fab fa-telegram-plane"></i></button>
                             </form>
+                        </div>
+                           <div className="footer-social-icon mt-3">
+                            <span>Follow us</span>
+                            <Link href="#"><i className="fab fa-facebook-f facebook-bg"></i></Link>
+                            <Link href="#"><i className="fab fa-twitter twitter-bg"></i></Link>
+                            <Link href="#"><i className="fab fa-google-plus-g google-bg"></i></Link>
                         </div>
                     </div>
                 </div>

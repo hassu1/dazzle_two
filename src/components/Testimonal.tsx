@@ -44,7 +44,7 @@ export default function Testimonal() {
       <div className="container">
         <div className="row mb-4">
               <div className="col-md-6 col-12 m-auto">
-                    <h2 className="text-center" style={{ color:'#161616'}}>Feedback</h2>
+                    <h2 className="text-center" style={{ color:'#161616' , fontSize:'40px'}}>Feedback</h2>
             </div>
         </div>
         <Swiper

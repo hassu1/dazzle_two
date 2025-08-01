@@ -14,6 +14,8 @@ export default function Sponsor() {
     '/img/logos/4.png',
     '/img/logos/5.png',
     '/img/logos/6.png',
+    '/img/logos/7.png',
+    '/img/logos/8.png',
   ];
 
   return (
