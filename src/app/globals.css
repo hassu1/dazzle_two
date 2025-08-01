@@ -258,10 +258,13 @@ html,body{overflow-x: hidden;}
     border-top-right-radius:10px;
      border-bottom-right-radius:10px;
 }
+.pl-6rem{padding-left:6rem!important;}
+.pl-3rem{padding-left:3rem!important;}
 
 @media only screen and (max-width: 600px) {
   .hero-bg-section, .steps, .footer-section{margin:0}
   .hero-bg-wrapper, .steps, .stepColumn, .footer-section{border-radius:0;}
   .hero-bg-title{font-size:50px}
   .hero-bg-wrap{width:100%;}
+  .pl-6rem, .pl-3rem{padding-left:0!important}
 }

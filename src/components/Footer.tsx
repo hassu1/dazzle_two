@@ -58,7 +58,7 @@ export default function Footer() {
                 </div>
 
                 {/* <!-- New Brands Section --> */}
-              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5">
+              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5 pl-6rem">
                     <div className="footer-widget">
                         <div className="footer-widget-heading">
                             <h3>Brands</h3>
@@ -77,7 +77,7 @@ export default function Footer() {
                 </div>
 
                 {/* <!-- Merged Useful Links into one column --> */}
-              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5">
+              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5 pl-3rem">
                     <div className="footer-widget">
                         <div className="footer-widget-heading">
                             <h3>Useful Links</h3>

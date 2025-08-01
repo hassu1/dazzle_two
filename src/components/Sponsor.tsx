@@ -8,14 +8,15 @@ import Image from 'next/image';
 export default function Sponsor() {
   // Sample images – replace with your actual sponsor image paths
   const sponsors = [
-    '/img/clients/1.png',
-    '/img/clients/2.png',
-    '/img/clients/3.png',
-    '/img/clients/4.png',
-    '/img/clients/5.png',
-    '/img/clients/6.png',
-    '/img/clients/7.png',
-    '/img/clients/8.png',
+    '/img/logos/1.png',
+    '/img/logos/2.png',
+    '/img/logos/4.png',
+    '/img/logos/5.png',
+    '/img/logos/6.png',
+    '/img/logos/7.png',
+    '/img/logos/8.png',
+    '/img/logos/9.png',
+    '/img/logos/10.png',
   ];
 
   return (
@@ -37,7 +38,7 @@ export default function Sponsor() {
         {sponsors.map((src, i) => (
           <SwiperSlide key={i}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Image src={src} alt={`Sponsor ${i + 1}`} width={150} height={100} objectFit="contain" />
+              <Image src={src} alt={`Sponsor ${i + 1}`} width={800} height={500} objectFit="cover" style={{width:'50%', height:'auto'}} />
             </div>
           </SwiperSlide>
         ))}
