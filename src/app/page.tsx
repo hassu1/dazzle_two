@@ -10,9 +10,11 @@ import Steps from "@components/components/Steps";
 import Testimonal from "@components/components/Testimonal";
 import CompanyLocation from "@components/components/CompanyLocation";
 import Gallery from "@components/components/Gallery";
+import AOSInitializer from "@components/components/AOSInitializer";
 export default function Home() {
   return (
     <>
+      <AOSInitializer />
       <Header />
       <Banner />
       <BannerForm />

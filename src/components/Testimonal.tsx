@@ -40,7 +40,7 @@ const testimonials = [
 
 export default function Testimonal() {
   return (
-    <section style={{ padding: '40px 0 60px 0', background: '#f9f9f9', margin:'20px', borderRadius:'10px' }}>
+    <section style={{ padding: '40px 0 60px 0', background: '#f9f9f9', margin:'20px', borderRadius:'20px' }}>
       <div className="container">
         <div className="row mb-4">
               <div className="col-md-6 col-12 m-auto">
@@ -59,6 +59,7 @@ export default function Testimonal() {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div
+               data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
                 style={{
                   background: '#fff',
                   borderRadius: '10px',

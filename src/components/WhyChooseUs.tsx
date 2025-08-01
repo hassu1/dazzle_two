@@ -27,7 +27,9 @@ export default function WhyChooseUs() {
       <div className="container">
         <div className="row">
           {features.map((item, i) => (
-            <div key={i} className="col-lg-3 col-md-6 col-12 mb-4">
+            <div key={i} className="col-lg-3 col-md-6 col-12 mb-4"
+              data-aos={i % 2 === 0 ? 'fade-up' : 'fade-down'}
+            >
               <div className="text-center d-flex flex-column gap-3" style={{padding:'5px'}}>
                 <i className={item.icon} style={{ fontSize: '50px'}}></i>
                 <h3 style={{color:'#161618',fontSize:'25px',fontWeight:500,lineHeight:'1.2em'}}>{item.title}</h3>

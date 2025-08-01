@@ -47,7 +47,7 @@ export default function Steps() {
       <div className="container-fluid">
         <div className="row">
           {/* Video Section */}
-          <div className="col-md-7 col-12 p-0 position-relative">
+          <div className="col-md-7 col-12 p-0 position-relative" data-aos="fade-up">
             <video
               ref={videoRef}
               src="/img/video-transcode.mp4"
@@ -70,7 +70,7 @@ export default function Steps() {
           {/* Steps Section */}
           <div
             className="col-md-5 col-12 p-0 stepColumn"
-            style={{ }}
+            data-aos="fade-down"
           >
             <div className="p-5">
               <h2 className="text-white" style={{ fontSize: "40px" }}>
@@ -80,7 +80,9 @@ export default function Steps() {
 
             <div className="px-5 pb-5 d-flex flex-column gap-4">
               {steps.map((step, index) => (
-                <div key={index} className="d-flex gap-5 align-items-start">
+                <div key={index} className="d-flex gap-5 align-items-start"
+                 data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
+                >
                   <div className={styles.stepNumber}>{step.number}</div>
                   <div className="d-flex flex-column gap-2">
                     <h4 className="text-white">{step.title}</h4>

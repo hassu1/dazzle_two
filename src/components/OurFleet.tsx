@@ -124,7 +124,11 @@ export default function OurFleet() {
 
         <div className="row">
          {cars.slice(0, 6).map((car, index) => (
-            <div key={index} className="col-lg-4 col-md-6 col-12 mb-5">
+            <div
+              key={index}
+              className="col-lg-4 col-md-6 col-12 mb-5"
+              data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
+            >
               <div role="listitem" className={styles.collectionItem}>
                 <div className={styles.carCard}>
                   <div className={styles.carListingBrandWrapper}>

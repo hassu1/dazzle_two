@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="container">
         <div className="footer-cta pt-5 pb-5">
             <div className="row">
-                <div className="col-xl-4 col-md-4 mb-30">
+                <div className="col-xl-4 col-md-4 mb-30" data-aos="fade-up">
                     <div className="single-cta">
                         <i className="fas fa-map-marker-alt"></i>
                         <div className="cta-text">
@@ -18,7 +18,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="col-xl-4 col-md-4 mb-30">
+                <div className="col-xl-4 col-md-4 mb-30" data-aos="fade-down">
                     <div className="single-cta">
                         <i className="fas fa-phone"></i>
                         <div className="cta-text">
@@ -27,7 +27,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="col-xl-4 col-md-4 mb-30">
+                <div className="col-xl-4 col-md-4 mb-30" data-aos="fade-up">
                     <div className="single-cta">
                         <i className="far fa-envelope-open"></i>
                         <div className="cta-text">
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
         <div className="footer-content pt-5 pb-5">
             <div className="row">
-                <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5">
+                <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5" data-aos="fade-up">
                     <div className="footer-widget">
                         <div className="footer-logo">
                             <Link href="/"><Image src="/img/logo-01.png" className="img-fluid" alt="logo" width={800} height={500} style={{width:'100%', height:'auto'}}/></Link>
@@ -53,7 +53,7 @@ export default function Footer() {
                 </div>
 
                 {/* <!-- New Brands Section --> */}
-              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5 pl-6rem">
+              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5 pl-6rem" data-aos="fade-down">
                     <div className="footer-widget">
                         <div className="footer-widget-heading">
                             <h3>Brands</h3>
@@ -70,7 +70,7 @@ export default function Footer() {
                 </div>
 
                 {/* <!-- Merged Useful Links into one column --> */}
-              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5 pl-3rem">
+              <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5 pl-3rem" data-aos="fade-up">
                     <div className="footer-widget">
                         <div className="footer-widget-heading">
                             <h3>Useful Links</h3>
@@ -85,7 +85,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                 <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5">  
+                 <div className="col-xl-3 col-lg-3 col-md-6 col-12 mb-5" data-aos="fade-down">  
                     <div className="footer-widget">
                         <div className="footer-widget-heading">
                             <h3>Subscribe</h3>
