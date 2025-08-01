@@ -197,6 +197,7 @@ h1 {
 .subscribe-form {
   position: relative;
   overflow: hidden;
+  border-radius:20px;
 }
 .subscribe-form input {
   width: 100%;
@@ -204,6 +205,10 @@ h1 {
   background: #2E2E2E;
   border: 1px solid #2E2E2E;
   color: #fff;
+  border-radius:20px;
+}
+.subscribe-form input:focus-visible{
+  border:none;
 }
 .subscribe-form button {
   position: absolute;
@@ -211,6 +216,7 @@ h1 {
   background: #E5AF3E;
   padding: 13px 20px;
   border: 1px solid #E5AF3E;
+  border-radius:20px;
   top: 0;
 }
 .subscribe-form button i {

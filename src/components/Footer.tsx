@@ -119,7 +119,7 @@ export default function Footer() {
                     </div>
                     <div className="footer-menu">
                         <ul className='mb-0'>
-                            <li><Image src="/img/payment-secure.webp" alt="" width={800} height={500} style={{width:'100%',height:'auto'}} /></li>
+                            <li><Image src="/img/payment-cards.png" alt="" width={800} height={500} style={{width:'100%',height:'auto'}} /></li>
                         </ul>
                     </div>
                 </div>
