@@ -22,7 +22,6 @@ export default function CarCategory() {
         <div className={styles.gridWrapper}>
         {categories.map((category, index) => (
           <div className={styles.gridItem} key={index}
-          data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
           >
             <div className={styles.item}>
               <Link href={category.link}>

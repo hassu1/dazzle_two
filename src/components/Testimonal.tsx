@@ -59,7 +59,6 @@ export default function Testimonal() {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div
-               data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
                 style={{
                   background: '#fff',
                   borderRadius: '10px',

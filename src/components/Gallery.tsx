@@ -17,7 +17,7 @@ export default function Gallery() {
           key={i}
           style={{ padding: 0, flex: '0 0 calc(25% - 15px)' }} // 25% width - gap adjustment
         >
-          <div className="item" data-aos={i % 2 === 0 ? 'fade-up' : 'fade-down'}>
+          <div className="item">
             <Image
               src={`/img/gallery/${img}.jpg`}
               className="img-fluid"

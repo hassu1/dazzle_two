@@ -127,7 +127,6 @@ export default function OurFleet() {
             <div
               key={index}
               className="col-lg-4 col-md-6 col-12 mb-5"
-              data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
             >
               <div role="listitem" className={styles.collectionItem}>
                 <div className={styles.carCard}>
