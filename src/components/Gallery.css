@@ -2,7 +2,7 @@
     position: relative;
     margin-bottom: 30px;
     isolation: isolate;
-    /* box-shadow: rgb(245, 183, 84) 0px 0px 7px 0px; */
+    box-shadow: rgb(245, 183, 84) 0px 0px 7px 0px;
     border-radius: 20px;
     overflow: hidden;
 }

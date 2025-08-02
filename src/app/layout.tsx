@@ -25,10 +25,10 @@ export default function RootLayout({
         <link rel="icon" href="/img/favicon.png" />
 
         {/* Styles */}
-       
          <link rel="stylesheet" href="/css/plugins/bootstrap.min.css"/>
          <link rel="stylesheet" href="/css/plugins/font-awesome-pro.css"/>
          <link rel="stylesheet" href="/css/plugins/flaticon.css"/>
+  
           <link
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
@@ -37,6 +37,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+
           <Script src="js/popper.min.js" strategy="afterInteractive" />
         <Script src="js/bootstrap.min.js" strategy="afterInteractive" />
       </body>

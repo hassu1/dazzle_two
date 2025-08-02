@@ -14,7 +14,7 @@ const cars = [
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 1,150,000",
+    price: "AED 600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -29,7 +29,7 @@ const cars = [
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 1,150,000",
+    price: "AED 600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -44,7 +44,7 @@ const cars = [
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 1,150,000",
+    price: "AED 600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -59,7 +59,7 @@ const cars = [
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 1,150,000",
+    price: "AED 600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -74,7 +74,7 @@ const cars = [
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 1,150,000",
+    price: "AED 600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -89,7 +89,7 @@ const cars = [
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 1,150,000",
+    price: "AED 600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -149,13 +149,8 @@ export default function OurFleet() {
                         {car.name}
                       </h3>
                       <div className={styles.carListingSpecs}>
-                        <div className={styles.listingSpec}>{car.year}</div>
                         <div className={styles.listingDetailsDivider}></div>
                         <div className={styles.listingSpec}>{car.type}</div>
-                        <div className={styles.listingDetailsDivider}></div>
-                        <div className={styles.listingSpec}>
-                          {car.condition}
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -232,7 +227,7 @@ export default function OurFleet() {
                         href={`/cars/${car.slug}`}
                         className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                       >
-                        see details
+                        Book Now
                       </Link>
                     </div>
                   </div>
