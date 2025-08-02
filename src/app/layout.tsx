@@ -28,6 +28,7 @@ export default function RootLayout({
          <link rel="stylesheet" href="/css/plugins/bootstrap.min.css"/>
          <link rel="stylesheet" href="/css/plugins/font-awesome-pro.css"/>
          <link rel="stylesheet" href="/css/plugins/flaticon.css"/>
+         <link rel="stylesheet" href="/css/plugins/omFont.css"/>
   
           <link
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"

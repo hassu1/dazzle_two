@@ -10,11 +10,11 @@ const cars = [
     year: "2024",
     type: "SUV",
     condition: "New",
-    mileage: "150",
+    mileage: "2",
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 600 Per Day",
+    price: "600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -25,11 +25,11 @@ const cars = [
     year: "2024",
     type: "SUV",
     condition: "New",
-    mileage: "150",
+    mileage: "2",
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 600 Per Day",
+    price: "600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -40,11 +40,11 @@ const cars = [
     year: "2024",
     type: "SUV",
     condition: "New",
-    mileage: "150",
+    mileage: "2",
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 600 Per Day",
+    price: "600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -55,11 +55,11 @@ const cars = [
     year: "2024",
     type: "SUV",
     condition: "New",
-    mileage: "150",
+    mileage: "2",
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 600 Per Day",
+    price: "600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -70,11 +70,11 @@ const cars = [
     year: "2024",
     type: "SUV",
     condition: "New",
-    mileage: "150",
+    mileage: "2",
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 600 Per Day",
+    price: "600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -85,11 +85,11 @@ const cars = [
     year: "2024",
     type: "SUV",
     condition: "New",
-    mileage: "150",
+    mileage: "2",
     engine: "4.0L",
     fuel: "Petrol",
     transmission: "Auto",
-    price: "AED 600 Per Day",
+    price: "600 Per Day",
     image: "/img/lamborghini-urus.jpg",
     logo: "/img/lamborghini.png",
     slug: "lamborghini-urus",
@@ -173,7 +173,7 @@ export default function OurFleet() {
                     <div className={styles.carListingDetails}>
                       <div className={styles.carDetail}>
                         <Image
-                          src="/img/icons/mileage.svg"
+                          src="/img/icons/icons-1.png"
                           alt="Mileage"
                           width={20}
                           height={20}
@@ -185,44 +185,47 @@ export default function OurFleet() {
                       </div>
                       <div className={styles.carDetail}>
                         <Image
-                          src="/img/icons/engine.svg"
+                          src="/img/icons/icons-3.png"
                           alt="Engine"
                           width={20}
                           height={20}
                           className={styles.listingDetailIcon}
                         />
+                        {/* <i className="fas fa-engine" style={{ color: '#E5AF3E'}} ></i> */}
                         <div className={styles.carDetailValue}>
-                          {car.engine}
+                          V8
                         </div>
                       </div>
                       <div className={styles.carDetail}>
-                        <Image
-                          src="/img/icons/fuel-type.svg"
+                        {/* <Image
+                          src="/img/icons/icons-2.png"
                           alt="Fuel"
                           width={20}
                           height={20}
                           className={styles.listingDetailIcon}
-                        />
+                        /> */}
+                        <i className="omfi-door" style={{ color: '#E5AF3E' , fontSize:'18px'}} ></i>
                         <div className={styles.carDetailValue}>
-                          {car.fuel}
+                          2
                         </div>
                       </div>
                       <div className={styles.carDetail}>
-                        <Image
-                          src="/img/icons/transmission.svg"
-                          alt="Transmission"
+                         {/* <Image
+                          src="/img/icons/icons-4.png"
+                          alt="Fuel"
                           width={20}
                           height={20}
                           className={styles.listingDetailIcon}
-                        />
+                        /> */}
+                        <i className="fas fa-money-bill" style={{ color: '#E5AF3E'}} ></i>
                         <div className={styles.carDetailValue}>
-                          {car.transmission}
+                          2000
                         </div>
                       </div>
                     </div>
 
                     <div className={styles.carListingPriceWrapper}>
-                      <div className={styles.listingPrice}>{car.price}</div>
+                      <div className={styles.listingPrice}> <Image width={30} height={30} alt="" src="/img/dirham.png" style={{filter: 'brightness(0) invert(1)', marginTop:'-4px', paddingRight:'3px'}} />{car.price}</div>
                       <Link
                         href={`/cars/${car.slug}`}
                         className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
