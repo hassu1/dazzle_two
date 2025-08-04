@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/thumbs";
 import { useParams } from "next/navigation";
 import { cars, slugify } from '../../../libs/data/cars';
-
+import type { Swiper as SwiperType } from "swiper";
 import Header from "@components/components/Header";
 import Footer from "@components/components/Footer";
 
@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export default function Detail() {
     
-  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   // Sample images
   const images = [
@@ -45,8 +45,21 @@ if (!brand || !model) {
 }
   
     const car = cars.find(
-  (c) => c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
-);
+    (c) => c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
+  );
+
+  if (!car) {
+    return (
+      <>
+        <Header />
+        <div className="text-center py-40 text-white" style={{ paddingTop: '200px' }}>
+          <h1 className="text-dark">Car Not Found</h1>
+          <p className="text-dark">The vehicle you are looking for does not exist.</p>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
