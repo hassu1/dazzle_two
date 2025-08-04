@@ -26,24 +26,27 @@ export default function Detail() {
     "/img/lamborghini-urus.jpg",
   ];
 
-    const { brand, model } = useParams();
+    const params = useParams();
+
+const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
+const model = Array.isArray(params.model) ? params.model[0] : params.model;
+
+if (!brand || !model) {
+  return (
+    <>
+      <Header />
+      <div className="text-center py-40 text-white" style={{ paddingTop: '200px' }}>
+        <h1 className="text-dark">Car Not Found</h1>
+        <p className="text-dark">The vehicle you are looking for does not exist.</p>
+      </div>
+      <Footer />
+    </>
+  );
+}
   
     const car = cars.find(
-    (c) => c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
-    );
-  
-    if (!car) {
-      return (
-        <>
-          <Header />
-          <div className="text-center py-40 text-white" style={{ paddingTop:'200px'}}>
-            <h1 className="text-dark">Car Not Found</h1>
-            <p className="text-dark">The vehicle you are looking for does not exist.</p>
-          </div>
-          <Footer />
-        </>
-      );
-    }
+  (c) => c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
+);
 
   return (
     <>
