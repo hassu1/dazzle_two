@@ -75,9 +75,9 @@ export default function Listing() {
           {filteredCars.length === 0 ? (
             <div className="col-12 text-center">
               <h4 style={{ color: "#999" }}>
-                No cars found for{" "}
+                No cars found for
                 <span style={{ color: "#000", fontWeight: "bold" }}>
-                  "{capitalized}"
+                &quot;{capitalized}&quot;
                 </span>
               </h4>
             </div>
@@ -88,7 +88,7 @@ export default function Listing() {
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
                       <Link
-                        href={`/car-makes/${car.brand.toLowerCase()}`}
+                        href={`/all-vehicles/${car.brand.toLowerCase()}`}
                         className={`${styles.carListingBrand} w-inline-block`}
                       >
                         <Image
