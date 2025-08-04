@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <Banner />
       {/* <DarkSlider /> */}
-      {/* <BannerForm /> */}
+      <BannerForm />
       <Sponsor />
       <CarCategory />
       <OurFleet />

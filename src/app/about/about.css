@@ -1,0 +1,22 @@
+.heading-lg{
+    margin-bottom: 10px;
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+.para_p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.m-20{margin:20px;}
+.b-20{border-radius: 20px;}
+.border-endd{border-right: 1px solid #E5AF3E!important}
+
+@media only screen and (max-width: 600px) {
+    .heading-lg{font-size:40px}
+    .m-20, .b-20{
+        margin:0;
+        border-radius:0;
+    }
+}
