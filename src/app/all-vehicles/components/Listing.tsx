@@ -2,93 +2,62 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { useMemo } from "react";
 import styles from "@components/components/OurFleet.module.css";
+import { cars } from "../../../libs/data/cars";
 
-// Sample data (replace with real API in production)
-const cars = [
-  {
-    brand: "Lamborghini",
-    name: "Lamborghini Urus",
-    year: "2024",
-    type: "SUV",
-    condition: "New",
-    mileage: "2",
-    engine: "4.0L",
-    fuel: "Petrol",
-    transmission: "Auto",
-    price: "600 Per Day",
-    image: "/img/lamborghini-urus.jpg",
-    logo: "/img/lamborghini.png",
-    slug: "lamborghini-urus",
-  },
-  {
-    brand: "Ferrari",
-    name: "Ferrari Roma",
-    year: "2023",
-    type: "Coupe",
-    condition: "New",
-    mileage: "1",
-    engine: "3.9L",
-    fuel: "Petrol",
-    transmission: "Auto",
-    price: "750 Per Day",
-      image: "/img/lamborghini-urus.jpg",
-    logo: "/img/lamborghini.png",
-    slug: "ferrari-roma",
-  },
-  {
-    brand: "Porsche",
-    name: "Porsche Cayenne",
-    year: "2022",
-    type: "SUV",
-    condition: "Used",
-    mileage: "30",
-    engine: "3.0L",
-    fuel: "Petrol",
-    transmission: "Auto",
-    price: "500 Per Day",
-   image: "/img/lamborghini-urus.jpg",
-    logo: "/img/lamborghini.png",
-    slug: "porsche-cayenne",
-  },
-];
+const ITEMS_PER_PAGE = 6; // Number of items per page
 
 export default function Listing() {
   const params = useParams();
   const brandParam = params?.brand;
   const brandName = typeof brandParam === "string" ? brandParam : "";
 
+  // Get current page from URL query params
+  const searchParams = new URLSearchParams(window.location.search);
+  const currentPage = parseInt(searchParams.get('page') || '1'); // Default to page 1
+
+  // Filter cars based on the brand
   const filteredCars = brandName
     ? cars.filter((car) => car.brand.toLowerCase() === brandName.toLowerCase())
     : cars;
+
+  const totalPages = Math.ceil(filteredCars.length / ITEMS_PER_PAGE);
+  
+  // Get the cars for the current page
+  const paginatedCars = useMemo(() => {
+    return filteredCars.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+  }, [filteredCars, currentPage]);
 
   const capitalized =
     brandName.length > 0
       ? brandName.charAt(0).toUpperCase() + brandName.slice(1)
       : "";
 
+  // Function to generate the page link
+  const createPageLink = (page: number) => `/vehicles/${brandName.toLowerCase()}?page=${page}`;
+
   return (
     <section style={{ padding: "200px 0px 10px 0px" }}>
       <div className="container">
-       
         <div className="row">
           {filteredCars.length === 0 ? (
             <div className="col-12 text-center">
               <h4 style={{ color: "#999" }}>
                 No cars found for
                 <span style={{ color: "#000", fontWeight: "bold" }}>
-                &quot;{capitalized}&quot;
+                  &quot;{capitalized}&quot;
                 </span>
               </h4>
             </div>
           ) : (
-            filteredCars.slice(0, 6).map((car, index) => (
+            paginatedCars.map((car, index) => (
               <div key={index} className="col-lg-4 col-md-6 col-12 mb-5">
                 <div role="listitem" className={styles.collectionItem}>
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
                       <Link
-                        href={`/all-vehicles/${car.brand.toLowerCase()}`}
+                        href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
                         className={`${styles.carListingBrand} w-inline-block`}
                       >
                         <Image
@@ -109,7 +78,7 @@ export default function Listing() {
                     </div>
 
                     <Link
-                      href={`/cars/${car.slug}`}
+                      href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
                       className={`${styles.listingImageWrapper} w-inline-block`}
                     >
                       <Image
@@ -166,7 +135,7 @@ export default function Listing() {
                           {car.price}
                         </div>
                         <Link
-                          href={`/cars/${car.slug}`}
+                          href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
                           className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                         >
                           Book Now
@@ -179,6 +148,43 @@ export default function Listing() {
             ))
           )}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <ul className="pagination-wrap">
+                {currentPage > 1 && (
+                  <li>
+                    <Link href={createPageLink(currentPage - 1)}>
+                      <i className="ti-angle-left"></i>
+                    </Link>
+                  </li>
+                )}
+                {Array.from({ length: totalPages }).map((_, i) => {
+                  const page = i + 1;
+                  return (
+                    <li key={page}>
+                      <Link
+                        href={createPageLink(page)}
+                        className={page === currentPage ? 'active' : ''}
+                      >
+                        {page}
+                      </Link>
+                    </li>
+                  );
+                })}
+                {currentPage < totalPages && (
+                  <li>
+                    <Link href={createPageLink(currentPage + 1)}>
+                      <i className="ti-angle-right"></i>
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

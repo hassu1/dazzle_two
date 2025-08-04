@@ -40,10 +40,10 @@ export default function BannerForm() {
         <div className="container">
           <div
             className="advance_search_form2 aos-init aos-animate"
-            data-bg-color="#161616"
+            data-bg-color="rgb(22 22 22 / 88%)"
             data-aos="fade-up"
             data-aos-delay="100"
-            style={{ backgroundColor: "#161616" }}
+            style={{ backgroundColor: "rgb(22 22 22 / 88%)" }}
           >
             <form action="#">
               <div className="form_row_wrapper">

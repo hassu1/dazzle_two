@@ -270,10 +270,112 @@ html,body{overflow-x: hidden;}
 .pl-6rem{padding-left:6rem!important;}
 .pl-3rem{padding-left:3rem!important;}
 
+.vehicleDetaiBox{
+      border: 1px solid #d6d6d6;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+    padding: 30px;
+}
+.car-specs-wrapper {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: space-between;
+    display: flex;
+}
+.specs-column {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    flex-flow: column;
+    width: 48%;
+    display: flex;
+}
+
+.spec-wrapper {
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    background-color: #FFF;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    display: flex;
+}
+.spec-text {
+    font-size: 14px;
+    font-weight: 400;
+}
+.spec-text.spec-value {
+    font-weight: 700;
+}
+.car-features-wrapper {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+.feature-wrapper{
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    background-color: #F6f6f6;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    display: flex;
+}
+.feature-name {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .specs-column{
+        width: auto;
+    }
+        .car-specs-wrapper {
+        grid-column-gap: 12px;
+        grid-row-gap: 12px;
+        flex-flow: column;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .car-benefits-wrapper, .car-features-wrapper {
+        grid-template-columns: 1fr;
+    }
+        .benefit-icon {
+        width: 28px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .car-features-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 991px) {
+    .car-features-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media only screen and (max-width: 600px) {
   .hero-bg-section, .steps, .footer-section{margin:0}
   .hero-bg-wrapper, .steps, .stepColumn, .footer-section{border-radius:0;}
   .hero-bg-title{font-size:50px}
   .hero-bg-wrap{width:100%;}
   .pl-6rem, .pl-3rem{padding-left:0!important}
+      .feature-wrapper {
+        grid-column-gap: 14px;
+        grid-row-gap: 14px;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 14px 18px;
+    }
 }

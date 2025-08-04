@@ -132,7 +132,7 @@ export default function OurFleet() {
                 <div className={styles.carCard}>
                   <div className={styles.carListingBrandWrapper}>
                     <Link
-                      href={`/car-makes/${car.brand.toLowerCase()}`}
+                       href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
                       className={`${styles.carListingBrand} w-inline-block`}
                     >
                       <Image
