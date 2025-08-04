@@ -31,7 +31,7 @@ export default function Header() {
                 </div>
               </div>
               <Link href="/services">Our Services</Link>
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </nav>
 
             {/* Burger Icon */}
