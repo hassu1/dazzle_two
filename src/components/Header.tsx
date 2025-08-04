@@ -4,6 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
 
+const vehicleBrands = [
+  { name: "Audi", slug: "audi" },
+  { name: "Mercedes", slug: "mercedes" },
+  { name: "BMW", slug: "bmw" },
+  { name: "Ferrari", slug: "ferrari" },
+  { name: "Lamborghini", slug: "lamborghini" }
+];
+
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
@@ -24,10 +32,13 @@ export default function Header() {
               <Link href="/">Home</Link>
               <Link href="/about">About Us</Link>
               <div className={styles.dropdown}>
-                <span style={{fontWeight:600,color:'#FFF'}}>All Vehicles ▾</span>
+                <span className={styles.dropdownLabel} style={{color:'#FFF'}}>All Vehicles ▾</span>
                 <div className={styles.dropdownMenu}>
-                  <Link href="/vehicles/audi">Audi</Link>
-                  <Link href="/vehicles/mercedes">Mercedes</Link>
+                  {vehicleBrands.map((brand) => (
+                    <Link key={brand.slug} href={`/all-vehicles/${brand.slug}`}>
+                      {brand.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
               <Link href="/services">Our Services</Link>
@@ -53,14 +64,19 @@ export default function Header() {
           <li><Link href="/" onClick={toggleSidebar}>Home</Link></li>
           <li><Link href="/about" onClick={toggleSidebar}>About Us</Link></li>
           <li>
-            <details>
-              <summary>All Vehicles</summary>
-              <ul>
-                <li><Link href="/vehicles/audi" onClick={toggleSidebar}>Audi</Link></li>
-                <li><Link href="/vehicles/mercedes" onClick={toggleSidebar}>Mercedes</Link></li>
-              </ul>
-            </details>
-          </li>
+              <details>
+                <summary className='text-white'>All Vehicles</summary>
+                <ul>
+                  {vehicleBrands.map((brand) => (
+                    <li key={brand.slug}>
+                      <Link href={`/all-vehicles/${brand.slug}`} onClick={toggleSidebar}>
+                        {brand.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </li>
           <li><Link href="/services" onClick={toggleSidebar}>Our Services</Link></li>
           <li><Link href="/contact" onClick={toggleSidebar}>Contact Us</Link></li>
         </ul>
