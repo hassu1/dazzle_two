@@ -5,7 +5,7 @@ import { Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/thumbs";
 import { useParams } from "next/navigation";
-import { cars, slugify } from '../../../libs/data/cars';
+import { cars, slugify } from "../../../libs/data/cars";
 import type { Swiper as SwiperType } from "swiper";
 import Header from "@components/components/Header";
 import Footer from "@components/components/Footer";
@@ -13,8 +13,7 @@ import Footer from "@components/components/Footer";
 import Image from "next/image";
 
 export default function Detail() {
-    
-   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   // Sample images
   const images = [
@@ -26,35 +25,52 @@ export default function Detail() {
     "/img/lamborghini-urus.jpg",
   ];
 
-    const params = useParams();
+  const params = useParams();
 
-const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
-const model = Array.isArray(params.model) ? params.model[0] : params.model;
+  const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
+  const model = Array.isArray(params.model) ? params.model[0] : params.model;
 
-if (!brand || !model) {
-  return (
-    <>
-      <Header />
-      <div className="text-center py-40 text-white" style={{ paddingTop: '200px' }}>
-        <h1 className="text-dark">Car Not Found</h1>
-        <p className="text-dark">The vehicle you are looking for does not exist.</p>
-      </div>
-      <Footer />
-    </>
-  );
-}
-  
-    const car = cars.find(
-    (c) => c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
+  if (!brand || !model) {
+    return (
+      <>
+        <Header />
+        <section
+          style={{ backgroundColor: "#1D1D1D", paddingTop: "200px" }}
+        ></section>
+        <div
+          className="text-center py-40 text-white"
+          style={{ paddingTop: "200px" }}
+        >
+          <h1 className="text-dark">Car Not Found</h1>
+          <p className="text-dark">
+            The vehicle you are looking for does not exist.
+          </p>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
+  const car = cars.find(
+    (c) =>
+      c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
   );
 
   if (!car) {
     return (
       <>
         <Header />
-        <div className="text-center py-40 text-white" style={{ paddingTop: '200px' }}>
+        <section
+          style={{ backgroundColor: "#1D1D1D", paddingTop: "200px" }}
+        ></section>
+        <div
+          className="text-center py-40 text-white"
+          style={{ paddingTop: "200px" }}
+        >
           <h1 className="text-dark">Car Not Found</h1>
-          <p className="text-dark">The vehicle you are looking for does not exist.</p>
+          <p className="text-dark">
+            The vehicle you are looking for does not exist.
+          </p>
         </div>
         <Footer />
       </>
@@ -65,7 +81,10 @@ if (!brand || !model) {
     <>
       <Header />
 
-      <section style={{ paddingTop: "200px" }}>
+      <section
+        style={{ backgroundColor: "#000", paddingTop: "200px" }}
+      ></section>
+      <section style={{ paddingTop: "30px" }}>
         <div className="container">
           <div className="row">
             <div className="d-flex justify-content-between mb-3">
@@ -74,7 +93,7 @@ if (!brand || !model) {
               <h2>AED 680,000</h2>
             </div>
             {/* Main Image & Thumbnails */}
-            <div className="col-md-8">
+            <div className="col-md-7">
               {/* Main Swiper */}
               <Swiper
                 style={{ width: "100%", borderRadius: "10px" }}
@@ -133,59 +152,59 @@ if (!brand || !model) {
                     textTransform: "uppercase",
                   }}
                 >
-                  Specifications
+                  Features
                 </h3>
                 <div className="car-specs-wrapper">
                   <div className="specs-column">
                     <div className="spec-wrapper">
-                      <div className="spec-text">Car Make</div>
-                      <div className="spec-text spec-value">Audi</div>
+                      <div className="spec-text">Free Pickup-Drop Off</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Car Type</div>
-                      <div className="spec-text spec-value">Convertible</div>
+                      <div className="spec-text">Bluetooth</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Car Condition</div>
-                      <div className="spec-text spec-value">New</div>
+                      <div className="spec-text">Parking Sensor</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Fuel Type</div>
-                      <div className="spec-text spec-value">Diesel</div>
+                      <div className="spec-text">Full Insurance</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Transmission</div>
-                      <div className="spec-text spec-value">Manual</div>
+                      <div className="spec-text">Payment Type</div>
+                      <div className="spec-text spec-value">Credit Card & Cash</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Year</div>
-                      <div className="spec-text spec-value">2023</div>
+                      <div className="spec-text">24/7 Customer Service</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                   </div>
                   <div className="specs-column">
                     <div className="spec-wrapper">
-                      <div className="spec-text">Cylinders</div>
-                      <div className="spec-text spec-value">8</div>
+                      <div className="spec-text">Cruise Control</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Engine</div>
-                      <div className="spec-text spec-value">5.2L</div>
+                      <div className="spec-text">Automatic</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Mileage (KM)</div>
-                      <div className="spec-text spec-value">90</div>
+                      <div className="spec-text">Navigation</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Horsepower</div>
-                      <div className="spec-text spec-value">602 HP</div>
+                      <div className="spec-text">Security Type</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Body Color</div>
-                      <div className="spec-text spec-value">Jet Black</div>
+                      <div className="spec-text">Free Cancellation</div>
+                      <div className="spec-text spec-value">Yes</div>
                     </div>
                     <div className="spec-wrapper">
-                      <div className="spec-text">Stock ID</div>
-                      <div className="spec-text spec-value">ABC1234</div>
+                      <div className="spec-text">Mileage Daily</div>
+                      <div className="spec-text spec-value">250km/day</div>
                     </div>
                   </div>
                 </div>
@@ -212,7 +231,7 @@ if (!brand || !model) {
             </div>
 
             {/* Sidebar */}
-            <div className="col-md-4">
+            <div className="col-md-5">
               <div className="sidebar">
                 <div className="vehicleDetaiBox">
                   <div
@@ -233,9 +252,9 @@ if (!brand || !model) {
                     <button className="customButton">
                       <i className="fa fa-phone"></i> Phone
                     </button>
-                    <button className="customButton">
-                      <i className="fa fa-book"></i> Book Now
-                    </button>
+                    <form>
+                      
+                    </form>
                   </div>
                   <div
                     className="bg-white p-4 d-flex flex-column gap-4 mb-3"
@@ -250,80 +269,86 @@ if (!brand || !model) {
                       }}
                       className="mb-1"
                     >
-                      Features
+                      Car Details
                     </h3>
-                    <div className="car-features-wrapper">
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728eb4b515a3e8da3069820_bluetooth.svg"
-                          loading="lazy"
-                          alt="Bluetooth Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">Bluetooth</div>
+                    <div className="row">
+                      <div className="col-md-6 mb-2">
+                        <div className="car-benefits-wrapper">
+                          <div className="benefit-wrapper">
+                            <img
+                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
+                              loading="lazy"
+                              alt="Checkmark Icon"
+                              className="benefit-icon"
+                            />
+                            <div className="benefit-name">No Deposit</div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f30f63994d2a5f2c04cb_gps.svg"
-                          loading="lazy"
-                          alt="Built-in GPS Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">Built-in GPS</div>
+                      <div className="col-md-6 mb-2">
+                        <div className="car-benefits-wrapper">
+                          <div className="benefit-wrapper">
+                            <img
+                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
+                              loading="lazy"
+                              alt="Checkmark Icon"
+                              className="benefit-icon"
+                            />
+                            <div className="benefit-name">250KM/Day</div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f30f100b5c010a62df97_charger.svg"
-                          loading="lazy"
-                          alt="Wireless Qi Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">Wireless Qi</div>
+                       <div className="col-md-6 mb-2">
+                        <div className="car-benefits-wrapper">
+                          <div className="benefit-wrapper">
+                            <img
+                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
+                              loading="lazy"
+                              alt="Checkmark Icon"
+                              className="benefit-icon"
+                            />
+                            <div className="benefit-name">I6 Engine</div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f310b7cb2ef2a9cbd6fb_camera.svg"
-                          loading="lazy"
-                          alt="360° Camera Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">360° Camera</div>
+                       <div className="col-md-6 mb-2">
+                        <div className="car-benefits-wrapper">
+                          <div className="benefit-wrapper">
+                            <img
+                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
+                              loading="lazy"
+                              alt="Checkmark Icon"
+                              className="benefit-icon"
+                            />
+                            <div className="benefit-name">2 Seats</div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f30f79a4bfc922fa3977_sound.svg"
-                          loading="lazy"
-                          alt="Sound System Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">Sound System</div>
+                       <div className="col-md-6 mb-2">
+                        <div className="car-benefits-wrapper">
+                          <div className="benefit-wrapper">
+                            <img
+                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
+                              loading="lazy"
+                              alt="Checkmark Icon"
+                              className="benefit-icon"
+                            />
+                            <div className="benefit-name">2 Doors</div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="feature-wrapper w-condition-invisible">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f30fb867088cd8ad437e_headlights.svg"
-                          loading="lazy"
-                          alt="LED Headlights Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">LED Headlight</div>
-                      </div>
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f30fc699962cf27f5b23_seat.svg"
-                          loading="lazy"
-                          alt="Leather Seats Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">Leather Seats</div>
-                      </div>
-                      <div className="feature-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6728f30fa44f2cc6e368f5a5_security.svg"
-                          loading="lazy"
-                          alt="Security Icon"
-                          className="benefit-icon"
-                        />
-                        <div className="feature-name">Security</div>
+                       <div className="col-md-6 mb-2">
+                        <div className="car-benefits-wrapper">
+                          <div className="benefit-wrapper">
+                            <img
+                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
+                              loading="lazy"
+                              alt="Checkmark Icon"
+                              className="benefit-icon"
+                            />
+                            <div className="benefit-name">1 Luggage</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

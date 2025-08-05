@@ -5,11 +5,10 @@ import Detail from '../../components/Detail';
 export default function VehicleDetails(){
     return(
         <>
-                <Header />
-                
+
+        
                 <Detail />
 
-                <Footer />
         </>
     )
 }
