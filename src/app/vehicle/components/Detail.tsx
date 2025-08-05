@@ -7,7 +7,7 @@ import "swiper/css/thumbs";
 import { useParams } from "next/navigation";
 import { cars, slugify } from "../../../libs/data/cars";
 import type { Swiper as SwiperType } from "swiper";
-import Header from "@components/components/Header";
+import HeaderTwo from "@components/components/HeaderTwo";
 import Footer from "@components/components/Footer";
 
 import Image from "next/image";
@@ -33,7 +33,7 @@ export default function Detail() {
   if (!brand || !model) {
     return (
       <>
-        <Header />
+        <HeaderTwo />
         <section
           style={{ backgroundColor: "#1D1D1D", paddingTop: "200px" }}
         ></section>
@@ -59,10 +59,7 @@ export default function Detail() {
   if (!car) {
     return (
       <>
-        <Header />
-        <section
-          style={{ backgroundColor: "#1D1D1D", paddingTop: "200px" }}
-        ></section>
+        <HeaderTwo />
         <div
           className="text-center py-40 text-white"
           style={{ paddingTop: "200px" }}
@@ -79,12 +76,9 @@ export default function Detail() {
 
   return (
     <>
-      <Header />
+      <HeaderTwo />
 
-      <section
-        style={{ backgroundColor: "#000", paddingTop: "200px" }}
-      ></section>
-      <section style={{ paddingTop: "30px" }}>
+      <section style={{ paddingTop: "80px" }}>
         <div className="container">
           <div className="row">
             <div className="d-flex justify-content-between mb-3">
