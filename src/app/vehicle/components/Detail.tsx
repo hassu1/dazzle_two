@@ -11,6 +11,8 @@ import HeaderTwo from "@components/components/HeaderTwo";
 import Footer from "@components/components/Footer";
 
 import Image from "next/image";
+import { url } from "inspector";
+import Header from "@components/components/Header";
 
 export default function Detail() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -34,9 +36,15 @@ export default function Detail() {
     return (
       <>
         <HeaderTwo />
-        <section
-          style={{ backgroundColor: "#1D1D1D", paddingTop: "200px" }}
-        ></section>
+       <section
+      style={{
+        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '50vh',
+      }}
+    >
+    </section>
         <div
           className="text-center py-40 text-white"
           style={{ paddingTop: "200px" }}
@@ -60,6 +68,15 @@ export default function Detail() {
     return (
       <>
         <HeaderTwo />
+        <section
+      style={{
+        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '50vh',
+      }}
+    >
+    </section>
         <div
           className="text-center py-40 text-white"
           style={{ paddingTop: "200px" }}
@@ -76,15 +93,25 @@ export default function Detail() {
 
   return (
     <>
-      <HeaderTwo />
+      <Header />
 
-      <section style={{ paddingTop: "80px" }}>
+    <section
+      style={{
+        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '50vh',
+      }}
+    >
+    </section>
+
+      <section style={{ paddingTop: "30px" }}>
         <div className="container">
           <div className="row">
             <div className="d-flex justify-content-between mb-3">
               <h1>Audi</h1>
 
-              <h2>AED 680,000</h2>
+              <h2>AED 680 Per Day</h2>
             </div>
             {/* Main Image & Thumbnails */}
             <div className="col-md-7">
@@ -241,11 +268,8 @@ export default function Detail() {
                       }}
                       className="mb-1"
                     >
-                      Get In Touch
+                      Booking Form
                     </h3>
-                    <button className="customButton">
-                      <i className="fa fa-phone"></i> Phone
-                    </button>
                     <form>
                       
                     </form>

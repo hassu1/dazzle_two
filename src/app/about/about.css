@@ -13,6 +13,7 @@
 .b-20{border-radius: 20px;}
 .border-endd{border-right: 1px solid #E5AF3E!important}
 
+
 @media only screen and (max-width: 600px) {
     .heading-lg{font-size:40px}
     .m-20, .b-20{

@@ -15,7 +15,7 @@ header{
       position: absolute;
     width: 100%;
     z-index: 9;
-    top:50px;
+    top:25px;
 }
 .hero-bg-section{margin:20px;}
 .hero-bg-wrapper {
@@ -384,7 +384,7 @@ html,body{overflow-x: hidden;}
     background-color: #f6f6f6;
     justify-content: flex-start;
     align-items: center;
-    padding: 12px;
+    padding: 5px;
     display: flex;
 }
 @media screen and (max-width: 767px) {

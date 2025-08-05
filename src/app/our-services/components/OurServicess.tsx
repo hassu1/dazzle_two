@@ -8,6 +8,15 @@ export default function OurServicess() {
   return (
     <>
       <Header />
+      <section
+      style={{
+        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '50vh',
+      }}
+    >
+    </section>
 
       <section className="section-padding" style={{ paddingTop: "200px" }}>
         <div className="container">

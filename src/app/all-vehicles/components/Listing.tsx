@@ -38,7 +38,7 @@ export default function Listing() {
   const createPageLink = (page: number) => `/vehicles/${brandName.toLowerCase()}?page=${page}`;
 
   return (
-    <section style={{ padding: "200px 0px 10px 0px" }}>
+    <section style={{ padding: "50px 0px 10px 0px" }}>
       <div className="container">
         <div className="row">
           {filteredCars.length === 0 ? (
