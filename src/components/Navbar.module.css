@@ -33,15 +33,30 @@
   top: 100%;
   left: 0;
   background-color: #161618;
-  display: none;
   flex-direction: column;
-  padding: 10px;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: 0;
   z-index: 10;
+  display:flex;
+
+  /* 👇 Transition styles */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  pointer-events: none;
 }
 
 .dropdown:hover .dropdownMenu {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
+/* .dropdown:hover .dropdownMenu {
+  display: flex;
+} */
 
 .dropdownMenu a {
   color: white;

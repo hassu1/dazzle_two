@@ -36,15 +36,15 @@ export default function Detail() {
     return (
       <>
         <HeaderTwo />
-       <section
-      style={{
-        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '50vh',
-      }}
-    >
-    </section>
+        <section
+          style={{
+            backgroundImage:
+              "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "50vh",
+          }}
+        ></section>
         <div
           className="text-center py-40 text-white"
           style={{ paddingTop: "200px" }}
@@ -69,14 +69,14 @@ export default function Detail() {
       <>
         <HeaderTwo />
         <section
-      style={{
-        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '50vh',
-      }}
-    >
-    </section>
+          style={{
+            backgroundImage:
+              "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "50vh",
+          }}
+        ></section>
         <div
           className="text-center py-40 text-white"
           style={{ paddingTop: "200px" }}
@@ -95,24 +95,24 @@ export default function Detail() {
     <>
       <Header />
 
-    <section
-      style={{
-        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '50vh',
-      }}
-    >
-    </section>
+      <section
+        style={{
+          backgroundImage:
+            "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "50vh",
+        }}
+      ></section>
 
       <section style={{ paddingTop: "30px" }}>
         <div className="container">
           <div className="row">
-            <div className="d-flex justify-content-between mb-3">
+            {/* <div className="d-flex justify-content-between mb-3">
               <h1>Audi</h1>
 
               <h2>AED 680 Per Day</h2>
-            </div>
+            </div> */}
             {/* Main Image & Thumbnails */}
             <div className="col-md-7">
               {/* Main Swiper */}
@@ -195,7 +195,9 @@ export default function Detail() {
                     </div>
                     <div className="spec-wrapper">
                       <div className="spec-text">Payment Type</div>
-                      <div className="spec-text spec-value">Credit Card & Cash</div>
+                      <div className="spec-text spec-value">
+                        Credit Card & Cash
+                      </div>
                     </div>
                     <div className="spec-wrapper">
                       <div className="spec-text">24/7 Customer Service</div>
@@ -256,6 +258,54 @@ export default function Detail() {
               <div className="sidebar">
                 <div className="vehicleDetaiBox">
                   <div
+                    className="bg-white p-4 mb-3 d-flex justify-content-between flex-wrap"
+                    style={{ borderRadius: "20px" }}
+                  >
+                    <div className="box">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          lineHeight: "130%",
+                          textTransform: "uppercase",
+                        }}
+                        className="mb-1"
+                      >
+                        AED 600
+                      </h3>
+                      <p>Per Day</p>
+                    </div>
+                    <div className="box">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          lineHeight: "130%",
+                          textTransform: "uppercase",
+                        }}
+                        className="mb-1"
+                      >
+                        AED 6000
+                      </h3>
+                      <p>Per Wekk</p>
+                    </div>
+                     <div className="box">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          lineHeight: "130%",
+                          textTransform: "uppercase",
+                        }}
+                        className="mb-1"
+                      >
+                        AED 150,00
+                      </h3>
+                      <p>Per Month</p>
+                    </div>
+                  </div>
+
+                         <div
                     className="bg-white p-4 d-flex flex-column gap-4 mb-3"
                     style={{ borderRadius: "20px" }}
                   >
@@ -270,10 +320,24 @@ export default function Detail() {
                     >
                       Booking Form
                     </h3>
-                    <form>
-                      
+                    <form action="">
+                      <div className="row justify-content-center">
+                          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                            <div className="form-group">
+                              <label htmlFor="">Start Date</label>
+                              <input type="date" className="form-control" />
+                            </div>
+                          </div>
+                         <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                            <div className="form-group">
+                              <label htmlFor="">Start Date</label>
+                              <input type="date" className="form-control" />
+                            </div>
+                          </div>
+                      </div>
                     </form>
                   </div>
+
                   <div
                     className="bg-white p-4 d-flex flex-column gap-4 mb-3"
                     style={{ borderRadius: "20px" }}
@@ -290,7 +354,7 @@ export default function Detail() {
                       Car Details
                     </h3>
                     <div className="row">
-                      <div className="col-md-6 mb-2">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -303,7 +367,7 @@ export default function Detail() {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-6 mb-2">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -316,7 +380,7 @@ export default function Detail() {
                           </div>
                         </div>
                       </div>
-                       <div className="col-md-6 mb-2">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -329,7 +393,7 @@ export default function Detail() {
                           </div>
                         </div>
                       </div>
-                       <div className="col-md-6 mb-2">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -342,7 +406,7 @@ export default function Detail() {
                           </div>
                         </div>
                       </div>
-                       <div className="col-md-6 mb-2">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -355,7 +419,7 @@ export default function Detail() {
                           </div>
                         </div>
                       </div>
-                       <div className="col-md-6 mb-2">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
