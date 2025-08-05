@@ -17,7 +17,9 @@ export default function Home() {
   return (
     <>
       <AOSInitializer />
-      <Header />
+      <div style={{ position:'relative', top:'25px'}}>
+        <Header />
+      </div>
       <Banner />
       {/* <DarkSlider /> */}
       <BannerForm />
