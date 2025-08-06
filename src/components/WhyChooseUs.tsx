@@ -29,6 +29,11 @@ export default function WhyChooseUs() {
   return (
     <section style={{ padding: '5px 0px 10px 0px' }}>
       <div className="container">
+        <div className="row mb-4">
+          <div className="col-md-12 text-center">
+            <h2>What We Offer</h2>
+          </div>
+        </div>
         <div className="row">
           {features.map((item, i) => (
             <div key={i} className="col-lg-3 col-md-6 col-12 mb-4"

@@ -521,6 +521,10 @@ input::placeholder {
   vertical-align: middle;
 }
 
+.benefit-name{
+  font-size:19px;
+  font-weight: 600;
+}
 
 @media only screen and (max-width: 600px) {
   .hero-bg-section, .steps, .footer-section{margin:0}

@@ -17,7 +17,7 @@ export default function About() {
       <section
         style={{
           backgroundImage:
-            "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+            "linear-gradient(45deg, black, transparent),url('/img/about-us-banner.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "40vh",

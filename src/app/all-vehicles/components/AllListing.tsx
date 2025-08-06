@@ -6,7 +6,7 @@ import { useMemo } from "react";
 import styles from "@components/components/OurFleet.module.css";
 import { cars } from "../../../libs/data/cars";
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 12;
 
 export default function AllListing() {
   // For query params, use `useSearchParams` in Next.js 13+

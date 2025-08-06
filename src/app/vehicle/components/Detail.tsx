@@ -353,7 +353,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
 
                   <div
                     className="p-4 d-flex flex-column gap-4 mb-3"
-                    style={{ backgroundColor: "#161616" }}
+                    style={{ backgroundColor: "#161616", borderBottomLeftRadius:'20px', borderBottomRightRadius:'20px' }}
                   >
                     <h3
                       style={{
@@ -530,7 +530,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                       Car Details
                     </h3>
                     <div className="row">
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -543,7 +543,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                           </div>
                         </div>
                       </div>
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -556,7 +556,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                           </div>
                         </div>
                       </div>
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -569,7 +569,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                           </div>
                         </div>
                       </div>
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -582,7 +582,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                           </div>
                         </div>
                       </div>
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img
@@ -595,7 +595,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                           </div>
                         </div>
                       </div>
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
                             <img

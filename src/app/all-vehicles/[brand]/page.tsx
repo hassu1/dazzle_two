@@ -8,7 +8,7 @@ export default function AllVehicles(){
             <section
         style={{
           backgroundImage:
-            "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+            "linear-gradient(45deg, black, transparent),url('/img/all-vechicle-banner.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "40vh",
