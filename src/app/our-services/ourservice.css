@@ -1,0 +1,30 @@
+.card-news {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    max-width: 100%;
+    width: 100%;
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+        background-color: #FFF;
+}
+.card-news .card-image {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+.card-news .card-info {
+    padding: 30px 31px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    position: relative;
+    margin-top: -40px;
+}
+.card-news .card-info .card-program {
+    position: relative;
+}
+.card-news .card-info .card-program .endtime {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

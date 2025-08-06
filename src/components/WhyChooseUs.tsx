@@ -4,6 +4,7 @@ export default function WhyChooseUs() {
       icon: "fas fa-crown",
       title: "First Class Service",
       description: "We offer services, easy booking and instant delivery",
+      img: '/img/about-service-icon-8.png',
     },
     {
       icon: "fas fa-car",
@@ -31,6 +32,7 @@ export default function WhyChooseUs() {
             >
               <div className="text-center d-flex flex-column gap-3" style={{padding:'15px', boxShadow:'rgba(149, 157, 165, 0.2) 0px 8px 24px' , borderRadius:'10px'}}>
                 <i className={item.icon} style={{ fontSize: '20px' , background:'#E5AF3E', padding:'10px', borderRadius:'100%', height:'50px', width:'50px' , color:'#FFF', lineHeight:'inherit'}}></i>
+                {/* <img src="https://cdn-icons-png.flaticon.com/128/4634/4634590.png" style={{width: '50px', height:'auto'}} /> */}
                 <h3 className="text-start" style={{color:'#161618',fontSize:'22px',fontWeight:600,lineHeight:'1.2em'}}>{item.title}</h3>
                 <p className="text-start" style={{ fontSize:'18px' , lineHeight:'normal', color:'#393935'}}>{item.description}</p>
               </div>

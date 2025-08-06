@@ -3,94 +3,124 @@ import Header from "@components/components/Header";
 import Footer from "@components/components/Footer";
 import Image from "next/image";
 import ContactForm from "@components/app/contact-us/components/ContactForm";
+import '../ourservice.css';
 
 export default function OurServicess() {
   return (
     <>
       <Header />
-      <section
-      style={{
-        backgroundImage: "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '50vh',
-      }}
-    >
-    </section>
-
-      <section className="section-padding" style={{ paddingTop: "200px" }}>
+       <section
+        style={{
+          backgroundImage:
+            "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "40vh",
+          padding:'130px 0px',
+          position:'relative'
+        }}
+      >
+        <div style={{position:'absolute', backgroundColor:'rgba(0, 0, 0, 0.6)',inset:'0px',zIndex:1}}></div>
         <div className="container">
           <div className="row">
-            <div className="col-md-4 col-12 mb-3">
-              <div className="p-2">
-                <Image
-                  src="/img/carDesert.jpg"
-                  alt=""
-                  width={800}
-                  height={500}
-                  className="img-fluid"
-                  style={{ width: "100%", height: "auto", borderRadius:'20px' }}
-                />
-                <h3 className="text-dark mt-3 text-center">Desert Safari</h3>
-                <p className="text-dark text-center">
-                  We have a team To assist you with desert safari packages offer
-                  entertainment and has proven to be excellent in services and
-                  capturing the hearts of our valuable guests. It provides
-                  guests a fun and thrilling experience in the desert, For
-                  bookings and other enquiries, feel free to get in touch with
-                  us.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4 col-12 mb-3">
-              <div className="p-2">
-                <Image
-                  src="/img/yacht.jpg"
-                  alt=""
-                  width={800}
-                  height={500}
-                  className="img-fluid"
-                   style={{ width: "100%", height: "auto", borderRadius:'20px' }}
-                />
-                <h3 className="text-dark mt-3 text-center">Yachts</h3>
-                <p className="text-dark text-center">
-                  We Can Help You with luxury yachts to allow guests to enjoy a
-                  truly memorable cruise along the outstanding coastline of
-                  Dubai. Relax under the warmth of the sun or treat your eyes to
-                  unbeatable views of the Dubai skyline as you cruise through
-                  the sparkling waters. Whether you opt for the yacht to
-                  celebrate a birthday or have a fun day out with friends, we
-                  ensure to tailor it in line with your specific needs. So,
-                  contact us today to book a yacht.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4 col-12 mb-3">
-              <div className="p-2">
-                <Image
-                  src="/img/hotel.jpg"
-                  alt=""
-                  width={800}
-                  height={500}
-                  className="img-fluid"
-             style={{ width: "100%", height: "auto", borderRadius:'20px' }}
-                />
-                <h3 className="text-dark mt-3 text-center">Hotel Booking</h3>
-                <p className="text-dark text-center">
-                  We can help you book hotels, We&apos;re passionate about
-                  travel and aim to inspire millions of travelers across the
-                  globe. So, when it comes to booking the perfect hotel,
-                  we&apos;ve got you covered.
-                </p>
-              </div>
+            <div className="col-md-12 text-center">
+              <h1 style={{ fontSize:'40px', color:'#1b1b1b', lineHeight:'1.25em', position:'relative',marginBottom:'0', zIndex:3, top:'50%'}}>
+                <span style={{ color: '#FFF'}}>Our Services</span>
+              </h1>
             </div>
           </div>
         </div>
       </section>
 
-       <section className="p3" style={{ paddingTop:'30px'}}>
+      <section className="section-padding" style={{ paddingTop: "50px" }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4 col-12 mb-3">
+              <div className="card-news">
+                <div className="card-image">
+                  <Image
+                    src="/img/carDesert.jpg"
+                    alt=""
+                    width={800}
+                    height={500}
+                    className="img-fluid"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "20px",
+                    }}
+                  />
+                </div>
+                 <div className="card-info">
+                <div className="card-title mb-3">
+                  <h3 style={{fontSize:'20px'}}>Daily and Weekly Car Rentals </h3>
+                  <p className="text-md-medium neutral-500 mt-2">
+                    Flexible rental options available for both short-term and weekly stays ideal for vacations, business trips, or quick getaways. Enjoy comfort, convenience, and value throughout your stay.
+                  </p>
+                </div>
+              </div>
+              </div>
+             
+            </div>
+            <div className="col-md-4 col-12 mb-3">
+              <div className="card-news">
+                <div className="card-image">
+                   <Image
+                  src="/img/yacht.jpg"
+                  alt=""
+                  width={800}
+                  height={500}
+                  className="img-fluid"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "20px",
+                  }}
+                />
+                </div>
+                 <div className="card-info">
+                <div className="card-title mb-3">
+                  <h3 style={{fontSize:'20px'}}>Yachts</h3>
+                  <p className="text-md-medium neutral-500 mt-2">
+                  Experience a luxury yacht cruise along Dubais stunning coastline. Perfect for birthdays, gatherings, or a relaxing day at sea each trip is customized to your needs. Enjoy the sun, skyline views, and unforgettable moments. Book your yacht today!
+                  </p>
+                </div>
+              </div>
+              </div>
+             
+            </div>
+            <div className="col-md-4 col-12 mb-3">
+              <div className="card-news">
+                <div className="card-image">
+                   <Image
+                  src="/img/hotel.jpg"
+                  alt=""
+                  width={800}
+                  height={500}
+                  className="img-fluid"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "20px",
+                  }}
+                />
+                </div>
+                 <div className="card-info">
+                <div className="card-title mb-3">
+                  <h3 style={{fontSize:'20px'}}>Hotel Booking</h3>
+                  <p className="text-md-medium neutral-500 mt-2">
+                    We can help you book hotels, Were passionate about travel and aim to inspire millions of travelers across the globe. So, when it comes to booking the perfect hotel, weve got you covered.
+                  </p>
+                </div>
+              </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="p3" style={{ paddingTop: "30px" }}>
         <div className="container-fluid p-5">
           <div className="row justify-content-center">
             <div className="col-md-9 col-12 m-auto">
@@ -157,7 +187,7 @@ export default function OurServicess() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </>

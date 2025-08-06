@@ -11,6 +11,7 @@ img {
     max-width: 100%;
     display: inline-block;
 }
+/* h1,h2,h3,h4,h5,h6,p,a,span{ font-family: 'poppins';} */
 header{
       position: absolute;
     width: 100%;
@@ -387,6 +388,66 @@ html,body{overflow-x: hidden;}
     padding: 5px;
     display: flex;
 }
+
+.vehicleDetaiBox .item{
+      position: relative;
+    background-color: #f5b754;
+    padding: 35px 30px 25px 30px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+
+.vehicleDetaiBox .item h4 {
+    font-size: 32px;
+    line-height: 1.2em;
+    color: #1b1b1b;
+    font-weight: 700;
+    margin: 0;
+}
+.vehicleDetaiBox .item h4 > span {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #1b1b1b;
+    font-weight: 300;
+}
+.benefit-icon{
+  width:20px;
+}
+.custom-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width:100%;
+}
+
+.custom-input-wrapper input[type="date"],
+.custom-input-wrapper input[type="time"] {
+  padding-right: 30px; /* Leave space for icon */
+  -webkit-appearance: none; /* Hide default icon (Chrome/Safari) */
+     -moz-appearance: none; /* Hide default icon (Firefox) */
+          appearance: none;
+}
+
+.custom-input-wrapper i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+}
+
+.form-group .customButton:hover{
+     color: #e5af3e;
+    background-color: #121212;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
     .specs-column{
         width: auto;

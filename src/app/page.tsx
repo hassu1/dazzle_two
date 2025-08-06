@@ -22,7 +22,7 @@ export default function Home() {
       </div>
       <Banner />
       {/* <DarkSlider /> */}
-      <BannerForm />
+      {/* <BannerForm /> */}
       <Sponsor />
       <CarCategory />
       <OurFleet />

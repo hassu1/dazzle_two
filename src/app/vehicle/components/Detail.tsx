@@ -101,9 +101,39 @@ export default function Detail() {
             "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "50vh",
+          height: "40vh",
+          padding: "130px 0px",
+          position: "relative",
         }}
-      ></section>
+      >
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            inset: "0px",
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h1
+                style={{
+                  fontSize: "40px",
+                  color: "#1b1b1b",
+                  lineHeight: "1.25em",
+                  position: "relative",
+                  marginBottom: "0",
+                  zIndex: 3,
+                  top: "50%",
+                }}
+              >
+                <span style={{ color: "#FFF" }}>Audi</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section style={{ paddingTop: "30px" }}>
         <div className="container">
@@ -257,57 +287,26 @@ export default function Detail() {
             <div className="col-md-5">
               <div className="sidebar">
                 <div className="vehicleDetaiBox">
-                  <div
-                    className="bg-white p-4 mb-3 d-flex justify-content-between flex-wrap"
-                    style={{ borderRadius: "20px" }}
-                  >
-                    <div className="box">
-                      <h3
+                  <div className="item">
+                    <h4>
+                      {" "}
+                      <Image
+                        width={35}
+                        height={35}
+                        alt=""
+                        src="/img/dirham.png"
                         style={{
-                          fontSize: "18px",
-                          fontWeight: 700,
-                          lineHeight: "130%",
-                          textTransform: "uppercase",
+                          marginTop: "-5px",
+                          marginRight: "-9px",
                         }}
-                        className="mb-1"
-                      >
-                        AED 600
-                      </h3>
-                      <p>Per Day</p>
-                    </div>
-                    <div className="box">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: 700,
-                          lineHeight: "130%",
-                          textTransform: "uppercase",
-                        }}
-                        className="mb-1"
-                      >
-                        AED 6000
-                      </h3>
-                      <p>Per Wekk</p>
-                    </div>
-                     <div className="box">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: 700,
-                          lineHeight: "130%",
-                          textTransform: "uppercase",
-                        }}
-                        className="mb-1"
-                      >
-                        AED 150,00
-                      </h3>
-                      <p>Per Month</p>
-                    </div>
+                      />{" "}
+                      600 <span>/ rent per day</span>
+                    </h4>
                   </div>
 
-                         <div
-                    className="bg-white p-4 d-flex flex-column gap-4 mb-3"
-                    style={{ borderRadius: "20px" }}
+                  <div
+                    className="p-4 d-flex flex-column gap-4 mb-3"
+                    style={{ backgroundColor: "#161616" }}
                   >
                     <h3
                       style={{
@@ -315,25 +314,171 @@ export default function Detail() {
                         fontWeight: 700,
                         lineHeight: "130%",
                         textTransform: "uppercase",
+                        color: "#FFF",
                       }}
                       className="mb-1"
                     >
                       Booking Form
                     </h3>
+
                     <form action="">
                       <div className="row justify-content-center">
-                          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                            <div className="form-group">
-                              <label htmlFor="">Start Date</label>
-                              <input type="date" className="form-control" />
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              Start Date
+                            </label>
+                            <div className="custom-input-wrapper">
+                              <input
+                                type="date"
+                                id="dateInput"
+                                className="form-control"
+                              />
+                              <i className="fa fa-calendar-alt"></i>
                             </div>
                           </div>
-                         <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                            <div className="form-group">
-                              <label htmlFor="">Start Date</label>
-                              <input type="date" className="form-control" />
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              End Date
+                            </label>
+                             <div className="custom-input-wrapper">
+                              <input
+                                type="date"
+                                id="dateInput"
+                                className="form-control"
+                              />
+                              <i className="fa fa-calendar-alt"></i>
                             </div>
                           </div>
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              Start Time
+                            </label>
+                            <div className="custom-input-wrapper">
+                              <input
+                                type="time"
+                                id="dateInput"
+                                className="form-control"
+                              />
+                              <i className="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              End Time
+                            </label>
+                            <div className="custom-input-wrapper">
+                              <input
+                                type="time"
+                                id="dateInput"
+                                className="form-control"
+                              />
+                              <i className="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              Name
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Your Name"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              className="custom-field one"
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              Email
+                            </label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              placeholder="Your Email"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                          <div className="form-group">
+                            <label
+                              htmlFor=""
+                              style={{
+                                fontWeight: 600,
+                                color: "#FFF",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              Contact Number
+                            </label>
+                            <input
+                              type="tel"
+                              className="form-control"
+                              placeholder="Your Contact Number"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+                          <div className="form-group">
+                            <button
+                              className="customButton w-100"
+                              style={{ borderRadius: "20px" }}
+                            >
+                              Book Now
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </form>
                   </div>
