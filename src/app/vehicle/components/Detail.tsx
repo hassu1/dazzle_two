@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import React, { useEffect, useRef , useState} from 'react';
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper/modules";
 import "swiper/css";
@@ -10,12 +12,54 @@ import type { Swiper as SwiperType } from "swiper";
 import HeaderTwo from "@components/components/HeaderTwo";
 import Footer from "@components/components/Footer";
 
+
 import Image from "next/image";
 import { url } from "inspector";
 import Header from "@components/components/Header";
 
 export default function Detail() {
+
+
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
+const startDateRef = useRef<HTMLInputElement>(null);
+const endDateRef = useRef<HTMLInputElement>(null);
+const startTimeRef = useRef<HTMLInputElement>(null);
+const endTimeRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+  if (startDateRef.current) {
+    flatpickr(startDateRef.current, {
+      dateFormat: 'Y-m-d',
+       minDate: "today"
+    });
+  }
+
+  if (endDateRef.current) {
+    flatpickr(endDateRef.current, {
+      dateFormat: 'Y-m-d',
+       minDate: "today"
+    });
+  }
+
+  if (startTimeRef.current) {
+    flatpickr(startTimeRef.current, {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: 'H:i',
+      time_24hr: false,
+    });
+  }
+
+  if (endTimeRef.current) {
+    flatpickr(endTimeRef.current, {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: 'H:i',
+      time_24hr: false,
+    });
+  }
+}, []);
 
   // Sample images
   const images = [
@@ -335,12 +379,8 @@ export default function Detail() {
                             >
                               Start Date
                             </label>
-                            <div className="custom-input-wrapper">
-                              <input
-                                type="date"
-                                id="dateInput"
-                                className="form-control"
-                              />
+                            <div className="custom-input-wrapper" style={{ overflow:'hidden'}}>
+                              <input type="text" ref={startDateRef} placeholder="Select date" className="form-control" />
                               <i className="fa fa-calendar-alt"></i>
                             </div>
                           </div>
@@ -358,11 +398,7 @@ export default function Detail() {
                               End Date
                             </label>
                              <div className="custom-input-wrapper">
-                              <input
-                                type="date"
-                                id="dateInput"
-                                className="form-control"
-                              />
+                             <input type="text" ref={endDateRef} placeholder="Select date" className="form-control" />
                               <i className="fa fa-calendar-alt"></i>
                             </div>
                           </div>
@@ -380,11 +416,7 @@ export default function Detail() {
                               Start Time
                             </label>
                             <div className="custom-input-wrapper">
-                              <input
-                                type="time"
-                                id="dateInput"
-                                className="form-control"
-                              />
+                             <input type="text" ref={startTimeRef} placeholder="Select time" className="form-control" />
                               <i className="fa-solid fa-clock-rotate-left"></i>
                             </div>
                           </div>
@@ -402,11 +434,7 @@ export default function Detail() {
                               End Time
                             </label>
                             <div className="custom-input-wrapper">
-                              <input
-                                type="time"
-                                id="dateInput"
-                                className="form-control"
-                              />
+                             <input type="text" ref={endTimeRef} placeholder="Select time" className="form-control" />
                               <i className="fa-solid fa-clock-rotate-left"></i>
                             </div>
                           </div>
