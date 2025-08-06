@@ -31,14 +31,15 @@ const endTimeRef = useRef<HTMLInputElement>(null);
   if (startDateRef.current) {
     flatpickr(startDateRef.current, {
       dateFormat: 'Y-m-d',
-       minDate: "today"
+       minDate: "today",
+        disableMobile: true,
     });
   }
 
   if (endDateRef.current) {
     flatpickr(endDateRef.current, {
       dateFormat: 'Y-m-d',
-       minDate: "today"
+       minDate: "today", disableMobile: true,
     });
   }
 
@@ -48,6 +49,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
       noCalendar: true,
          dateFormat: 'h:i K',
       time_24hr: false,
+       disableMobile: true,
     });
   }
 
@@ -57,6 +59,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
       noCalendar: true,
           dateFormat: 'h:i K',
       time_24hr: false,
+       disableMobile: true,
     });
   }
 }, []);

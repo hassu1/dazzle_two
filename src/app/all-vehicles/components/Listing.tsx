@@ -6,7 +6,7 @@ import { useMemo } from "react";
 import styles from "@components/components/OurFleet.module.css";
 import { cars } from "../../../libs/data/cars";
 
-const ITEMS_PER_PAGE = 6; // Number of items per page
+const ITEMS_PER_PAGE = 3; // Number of items per page
 
 export default function Listing() {
   const params = useParams();
