@@ -43,9 +43,9 @@ export default function AboutSection() {
             <h2 className="">The Best Car Rental Service in the World</h2>
             <p className="para_p mt-4" style={{fontSize:'17px'}}>
               Dazzle Wheels Car Rental offers premium luxury and sports car
-              rentals in Dubai. With a fleet of over 50 high-end vehicles, we’re
+              rentals in Dubai. With a fleet of over 50 high-end vehicles, we&apos;re
               known for our top-tier service and attention to detail. Whether
-              you're looking for a supercar, SUV, or luxury ride for the day,
+              you&apos;re looking for a supercar, SUV, or luxury ride for the day,
               our expert team ensures a smooth, unforgettable experience.
               Contact us today to explore our collection.
             </p>
