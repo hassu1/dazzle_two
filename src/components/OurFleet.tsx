@@ -155,7 +155,7 @@ export default function OurFleet() {
                   </div>
 
                   <Link
-                    href={`/cars/${car.slug}`}
+                      href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
                     className={`${styles.listingImageWrapper} w-inline-block`}
                   >
                     <Image
@@ -226,7 +226,7 @@ export default function OurFleet() {
                     <div className={styles.carListingPriceWrapper}>
                       <div className={styles.listingPrice}> <Image width={30} height={30} alt="" src="/img/dirham.png" style={{filter: 'brightness(0) invert(1)', marginTop:'-4px', paddingRight:'3px'}} />{car.price}</div>
                       <Link
-                        href={`/cars/${car.slug}`}
+                          href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
                         className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                       >
                         Book Now
