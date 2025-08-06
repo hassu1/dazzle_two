@@ -15,9 +15,9 @@ export default function CarCategory() {
     <section className={`${styles.carTypes} section-padding`}>
       <div className="container">
         <div className="row">
-            <div className="col-md-6 col-12 m-auto">
-                    <h2 className="text-center" style={{ color:'#161616'}}>Our Fleet Categories</h2>
-            </div>
+               <div className="col-md-12 text-center">
+          <h2 className="section-heading center">Our Fleet Categories</h2>
+        </div>
         </div>
         <div className={styles.gridWrapper}>
         {categories.map((category, index) => (

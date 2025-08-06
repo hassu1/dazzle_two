@@ -57,7 +57,8 @@ export default function Counter() {
         <div className="row text-center">
           <div className="col-xs-12 col-md-3">
             <div className="counter">
-              <i className="fa fa-user fa-2x stats-icon"></i>
+              {/* <i className="fa fa-user fa-2x stats-icon"></i> */}
+              {/* <img src="   https://cdn-icons-png.flaticon.com/512/2673/2673061.png " style={{ width:'60px',padding:'5px',filter:'brightness(0) invert(1)'}} /> */}
               <h2 ref={coffee.ref} className="count-title count-number">{coffee.count}+</h2>
               <div className="stats-line-black"></div>
               <p className="stats-text">Satisfied Customers</p>
@@ -65,7 +66,7 @@ export default function Counter() {
           </div>
           <div className="col-xs-12 col-md-3">
             <div className="counter">
-              <i className="fa fa-car fa-2x stats-icon"></i>
+              {/* <i className="fa fa-id-badge fa-2x stats-icon"></i> */}
               <h2 ref={code.ref} className="count-title count-number">{code.count}+</h2>
               <div className="stats-line-black"></div>
               <p className="stats-text">Cars In Fleet</p>
@@ -73,7 +74,7 @@ export default function Counter() {
           </div>
           <div className="col-xs-12 col-md-3">
             <div className="counter">
-              <i className="fa fa-id-badge fa-2x stats-icon"></i>
+              {/* <i className="fa fa-id-badge fa-2x stats-icon"></i> */}
               <h2 ref={experience.ref} className="count-title count-number">{experience.count}+</h2>
               <div className="stats-line-black"></div>
               <p className="stats-text">Drivers We Have</p>
@@ -81,7 +82,7 @@ export default function Counter() {
           </div>
           <div className="col-xs-12 col-md-3">
             <div className="counter">
-              <i className="fa fa-briefcase fa-2x stats-icon"></i>
+              {/* <i className="fa fa-briefcase fa-2x stats-icon"></i> */}
               <h2 ref={projects.ref} className="count-title count-number">{projects.count}+</h2>
               <div className="stats-line-black"></div>
               <p className="stats-text">Years In Business</p>

@@ -25,9 +25,7 @@ export default function OurServicess() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1 style={{ fontSize:'40px', color:'#1b1b1b', lineHeight:'1.25em', position:'relative',marginBottom:'0', zIndex:3, top:'50%'}}>
-                <span style={{ color: '#FFF'}}>Our Services</span>
-              </h1>
+              <h1 className="section-title text-white modern-heading"><span>Our Services</span></h1>
             </div>
           </div>
         </div>

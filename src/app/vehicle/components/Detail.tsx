@@ -167,19 +167,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1
-                style={{
-                  fontSize: "40px",
-                  color: "#1b1b1b",
-                  lineHeight: "1.25em",
-                  position: "relative",
-                  marginBottom: "0",
-                  zIndex: 3,
-                  top: "50%",
-                }}
-              >
-                <span style={{ color: "#FFF" }}>Audi</span>
-              </h1>
+              <h1 className="section-title text-white modern-heading"><span>Audi</span></h1>
             </div>
           </div>
         </div>
@@ -350,7 +338,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                           marginRight: "-9px",
                         }}
                       />{" "}
-                      600 <span>/ rent per day</span>
+                      600 <span style={{fontWeight:700}}>/ Rent Per Day</span>
                     </h4>
                   </div>
 
@@ -536,51 +524,31 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
-                            <img
-                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
-                              loading="lazy"
-                              alt="Checkmark Icon"
-                              className="benefit-icon"
-                            />
-                            <div className="benefit-name">No Deposit</div>
+                            <i className="fa fa-check" style={{padding:'5px',background:'#e5af3e',color:'#FFF', clipPath:'circle()', fontSize:'8px', marginLeft:'5px'}}></i>
+                            <div className="benefit-name">5000</div>
                           </div>
                         </div>
                       </div>
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
-                            <img
-                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
-                              loading="lazy"
-                              alt="Checkmark Icon"
-                              className="benefit-icon"
-                            />
-                            <div className="benefit-name">250KM/Day</div>
+                                                        <i className="fa fa-check" style={{padding:'5px',background:'#e5af3e',color:'#FFF', clipPath:'circle()', fontSize:'8px', marginLeft:'5px'}}></i>
+                            <div className="benefit-name">200KM/Day</div>
                           </div>
                         </div>
                       </div>
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
-                            <img
-                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
-                              loading="lazy"
-                              alt="Checkmark Icon"
-                              className="benefit-icon"
-                            />
-                            <div className="benefit-name">I6 Engine</div>
+                                                       <i className="fa fa-check" style={{padding:'5px',background:'#e5af3e',color:'#FFF', clipPath:'circle()', fontSize:'8px', marginLeft:'5px'}}></i>
+                            <div className="benefit-name">V8 Engine</div>
                           </div>
                         </div>
                       </div>
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
-                            <img
-                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
-                              loading="lazy"
-                              alt="Checkmark Icon"
-                              className="benefit-icon"
-                            />
+                                                       <i className="fa fa-check" style={{padding:'5px',background:'#e5af3e',color:'#FFF', clipPath:'circle()', fontSize:'8px', marginLeft:'5px'}}></i>
                             <div className="benefit-name">2 Seats</div>
                           </div>
                         </div>
@@ -588,12 +556,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
-                            <img
-                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
-                              loading="lazy"
-                              alt="Checkmark Icon"
-                              className="benefit-icon"
-                            />
+                                                       <i className="fa fa-check" style={{padding:'5px',background:'#e5af3e',color:'#FFF', clipPath:'circle()', fontSize:'8px', marginLeft:'5px'}}></i>
                             <div className="benefit-name">2 Doors</div>
                           </div>
                         </div>
@@ -601,12 +564,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                         <div className="car-benefits-wrapper">
                           <div className="benefit-wrapper">
-                            <img
-                              src="https://cdn.prod.website-files.com/67043699dee425d32afcd59a/6727d5fe85b73f5678b3881b_check-circle.svg"
-                              loading="lazy"
-                              alt="Checkmark Icon"
-                              className="benefit-icon"
-                            />
+                                                       <i className="fa fa-check" style={{padding:'5px',background:'#e5af3e',color:'#FFF', clipPath:'circle()', fontSize:'8px', marginLeft:'5px'}}></i>
                             <div className="benefit-name">1 Luggage</div>
                           </div>
                         </div>

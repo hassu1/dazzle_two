@@ -27,20 +27,8 @@ export default function AboutSection() {
 
           {/* Text on the right */}
           <div className="col-md-6 col-12 text-center text-md-start">
-            <span
-              style={{
-                display: "block",
-                width: "max-content",
-                padding: "9px 10px",
-                background: "#E5AF3E",
-                color: "#161616",
-                borderRadius: "50px",
-                marginBottom: "15px",
-              }}
-            >
-              Explore the world
-            </span>
-            <h2 className="">The Best Car Rental Service in the World</h2>
+            <span className="tagline-badge">Explore the world</span>
+          <h2 className="section-heading left">The Best Car Rental Service in the World</h2>
             <p className="para_p mt-4" style={{fontSize:'17px'}}>
               Dazzle Wheels Car Rental offers premium luxury and sports car
               rentals in Dubai. With a fleet of over 50 high-end vehicles, we&apos;re
@@ -52,21 +40,20 @@ export default function AboutSection() {
             <div className="row">
               <div className="col-md-6 col-12 mb-2">
                 <div className="box">
-                  <i className="fa fa-phone"></i>
-                  <h3>Certified Hiking Guides</h3>
+                  <img src="   https://cdn-icons-png.flaticon.com/512/10434/10434252.png " style={{ width:'68px', clipPath:'circle()', padding:'5px'}} />
+                                    {/* <i className="fas fa-rocket" style={{padding:'10px', background:'#e5af3e', color:'#FFF', fontSize:'30px', width: 'max-content' , borderRadius:'50px'}}></i> */}
+                  <h3>Our Vision</h3>
                   <p>
-                    Join expert-led treks that ensure safety and adventure in
-                    every step.
+                   To become the world’s most trusted and innovative luxury car rental company by delivering premium service, world-class vehicles, and a consistently outstanding customer experience.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 col-12 mb-2">
-                  <div className="box">
-                  <i className="fa fa-phone"></i>
-                  <h3>Certified Hiking Guides</h3>
-                  <p>
-                    Join expert-led treks that ensure safety and adventure in
-                    every step.
+                  <div className="box" style={{ marginTop:'15px'}}>
+                    <img src="   https://cdn-icons-png.flaticon.com/512/3721/3721184.png " style={{ width:'62px', clipPath:'circle()', padding:'5px'}} />
+                  {/* <i className="fas fa-bullseye" style={{padding:'10px', background:'#e5af3e', color:'#FFF', fontSize:'30px', width: 'max-content' , borderRadius:'50px'}}></i> */}
+                  <h3>Our Mision</h3>
+                  <p>To provide a high-quality, hassle-free car rental experience through a modern, well-maintained fleet, transparent pricing, and personalized customer support.
                   </p>
                 </div>
               </div>

@@ -20,6 +20,7 @@
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  text-transform: uppercase;
 }
 
 /* ===== Dropdown (Desktop) ===== */
@@ -127,6 +128,7 @@
   color: white;
   text-decoration: none;
   font-size: 18px;
+    text-transform: uppercase;
 }
 
 /* Dropdown in sidebar */

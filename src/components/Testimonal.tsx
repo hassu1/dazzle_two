@@ -40,12 +40,18 @@ const testimonials = [
 
 export default function Testimonal() {
   return (
-    <section style={{ padding: '40px 0 60px 0', background: '#f9f9f9', margin:'20px', borderRadius:'20px' }}>
+   <section style={{
+      padding: '60px 0',
+      background: '#f2f2f2',
+      margin: '20px',
+      borderRadius: '20px',
+      overflow: 'hidden'
+    }}>
       <div className="container">
         <div className="row mb-4">
-              <div className="col-md-6 col-12 m-auto">
-                    <h2 className="text-center" style={{ color:'#161616' , fontSize:'40px'}}>Feedback</h2>
-            </div>
+                <div className="col-md-12 text-center">
+          <h2 className="section-heading center">Feedback</h2>
+        </div>
         </div>
         <Swiper
           modules={[Pagination]}
@@ -59,6 +65,7 @@ export default function Testimonal() {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div
+              className='testii'
                 style={{
                   background: '#fff',
                   borderRadius: '10px',

@@ -104,9 +104,7 @@ export default function OurFleet() {
       <div className="container">
         <div className="row justify-content-center mb-4">
           <div className="d-flex justify-content-between">
-            <h2 className="text-center" style={{ color: "#161616" }}>
-              Featured Cars
-            </h2>
+                  <h2 className="section-heading center">Featured Cars</h2>
             <button
               className="customButton"
               style={{
