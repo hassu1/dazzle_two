@@ -97,7 +97,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                 <div className="form_item_wrapper">
                   <button
                     type="submit"
-                    className="custom_btn bg_default_red text-uppercase"
+                    className="custom_btn bg_default_red"
                   >
                     Search
                   </button>
