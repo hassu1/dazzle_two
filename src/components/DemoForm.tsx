@@ -1,12 +1,11 @@
 "use client";
-import "./BannerForm.css";
+import "./DemoForm.css";
 
 import React, { useEffect, useRef , useState} from 'react';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import Image from 'next/image';
 
-export default function BannerForm() {
+export default function DemoForm() {
 
 
 const startDateRef = useRef<HTMLInputElement>(null);
@@ -69,31 +68,30 @@ const endTimeRef = useRef<HTMLInputElement>(null);
               <div className="form_row_wrapper">
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"> <i className="fa-light fa-calendar-alt"></i>Start Date</h4>
-                   <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
+                   <div className="custom-input-wrapper" style={{ overflow:'hidden'}}>
                               <input type="text" ref={startDateRef} placeholder="Choose Your Date" className="form-control" />
-                              {/* <i className="fa-light fa-plus"></i> */}
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <i className="fa-light fa-plus"></i>
                      </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"><i className="fa-light fa-calendar-alt"></i>End Date</h4>
-                   <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
+                   <div className="custom-input-wrapper">
                              <input type="text" ref={endDateRef} placeholder="Choose Your Date" className="form-control" />
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <i className="fa-light fa-plus"></i>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"><i className="fa-light fa-clock-rotate-left"></i>Start Time</h4>
-                   <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
+                   <div className="custom-input-wrapper">
                              <input type="text" ref={startTimeRef} placeholder="Choose Your Time" className="form-control" />
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <i className="fa-light fa-plus"></i>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"><i className="fa-light fa-clock-rotate-left"></i>End Time</h4>
-                   <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
+                   <div className="custom-input-wrapper">
                              <input type="text" ref={endTimeRef} placeholder="Choose Your Time" className="form-control" />
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <i className="fa-light fa-plus"></i>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
