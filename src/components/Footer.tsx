@@ -163,10 +163,11 @@ export default function Footer() {
             <div className="row">
               <div className="d-flex justify-content-between gap-2 flex-wrap">
                 <div className="copyright-text">
-                  <p>
-                    Copyright &copy; 2025 <Link href="/">Dazzle Wheels</Link>{" "}
-                    All Right Reserved
-                  </p>
+                 <p>
+                Copyright &copy; {new Date().getFullYear()}{" "}
+                <Link href="/">Dazzle Wheels</Link> All Rights Reserved
+                </p>
+
                 </div>
                 <div className="footer-menu">
                   <ul className="mb-0">
@@ -174,8 +175,8 @@ export default function Footer() {
                       <Image
                         src="/img/payment-cards-6.png"
                         alt=""
-                        width={100}
-                        height={100}
+                        width={150}
+                        height={150}
                         style={{ width: "100%", height: "auto" }}
                       />
                     </li>

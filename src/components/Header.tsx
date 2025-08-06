@@ -65,7 +65,7 @@ export default function Header() {
           <li><Link href="/about" onClick={toggleSidebar}>About Us</Link></li>
           <li>
               <details>
-                <summary className='text-white'>All Vehicles</summary>
+                <summary className='text-white' style={{textTransform:'uppercase'}}>All Vehicles</summary>
                 <ul>
                   {vehicleBrands.map((brand) => (
                     <li key={brand.slug}>
@@ -77,8 +77,8 @@ export default function Header() {
                 </ul>
               </details>
             </li>
-          <li><Link href="/services" onClick={toggleSidebar}>Our Services</Link></li>
-          <li><Link href="/contact" onClick={toggleSidebar}>Contact Us</Link></li>
+          <li><Link href="/our-services" onClick={toggleSidebar}>Our Services</Link></li>
+          <li><Link href="/contact-us" onClick={toggleSidebar}>Contact Us</Link></li>
         </ul>
       </div>
 
