@@ -63,36 +63,35 @@ const endTimeRef = useRef<HTMLInputElement>(null);
             data-bg-color="rgb(22 22 22 / 88%)"
             data-aos="fade-up"
             data-aos-delay="100"
-            style={{ backgroundColor: "rgb(22 22 22 / 88%)" }}
           >
-            <form action="#">
+            <form action="#" style={{borderRadius:'10px', padding:'10px', background:'#f6f6f6'}}>
               <div className="form_row_wrapper">
                 <div className="form_item_wrapper">
-                  <h4 className="input_title text-white">Start Date</h4>
+                  <h4 className="input_title text-dark"> <i className="fa-light fa-calendar-alt"></i>Start Date</h4>
                    <div className="custom-input-wrapper" style={{ overflow:'hidden'}}>
-                              <input type="text" ref={startDateRef} placeholder="Select date" className="form-control" />
-                              <i className="fa fa-calendar-alt"></i>
+                              <input type="text" ref={startDateRef} placeholder="Choose Your Date" className="form-control" />
+                              <i className="fa-light fa-plus"></i>
                      </div>
                 </div>
                 <div className="form_item_wrapper">
-                  <h4 className="input_title text-white">End Date</h4>
+                  <h4 className="input_title text-dark"><i className="fa-light fa-calendar-alt"></i>End Date</h4>
                    <div className="custom-input-wrapper">
-                             <input type="text" ref={endDateRef} placeholder="Select date" className="form-control" />
-                              <i className="fa fa-calendar-alt"></i>
+                             <input type="text" ref={endDateRef} placeholder="Choose Your Date" className="form-control" />
+                              <i className="fa-light fa-plus"></i>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
-                  <h4 className="input_title text-white">Start Time</h4>
+                  <h4 className="input_title text-dark"><i className="fa-light fa-clock-rotate-left"></i>Start Time</h4>
                    <div className="custom-input-wrapper">
-                             <input type="text" ref={startTimeRef} placeholder="Select time" className="form-control" />
-                              <i className="fa-solid fa-clock-rotate-left"></i>
+                             <input type="text" ref={startTimeRef} placeholder="Choose Your Time" className="form-control" />
+                              <i className="fa-light fa-plus"></i>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
-                  <h4 className="input_title text-white">End Time</h4>
+                  <h4 className="input_title text-dark"><i className="fa-light fa-clock-rotate-left"></i>End Time</h4>
                    <div className="custom-input-wrapper">
-                             <input type="text" ref={endTimeRef} placeholder="Select time" className="form-control" />
-                              <i className="fa-solid fa-clock-rotate-left"></i>
+                             <input type="text" ref={endTimeRef} placeholder="Choose Your Time" className="form-control" />
+                              <i className="fa-light fa-plus"></i>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
@@ -100,7 +99,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                     type="submit"
                     className="custom_btn bg_default_red text-uppercase"
                   >
-                    Find A Car
+                    Search
                   </button>
                 </div>
               </div>

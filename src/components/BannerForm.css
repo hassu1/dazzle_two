@@ -3,8 +3,9 @@
     margin-top: -60px;
     position: relative;
     box-shadow: rgba(10, 41, 46, 0.32) 0px -5px 12px 1px;
-    padding: 40px;
+    padding: 9px;
     border-radius: 20px;
+    background:#FFF;
 }
 
 .advance_search_form2 .form_item {
@@ -16,20 +17,23 @@
     margin-bottom: 30px;
 }
 .input_title {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     margin-bottom: 10px;
     color: #FFF;
+    display:flex;
+    gap:7px;
 }
 .form_item_wrapper input {
-    height: 42px;
+    height: 40px;
 }
 .form_item_wrapper input, .form_item_wrapper textarea {
     width: 100%;
     display: block;
     color: rgb(110, 118, 132);
     font-size: 16px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background:transparent;
     outline: none;
     padding: 0px 20px;
     border-radius: 4px;
@@ -79,18 +83,19 @@
     background-color: #E5AF3E
 }
 .custom_btn {
-  height: 60px;
-  color: #161616;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  display: inline-block;
-  padding: 0 30px;
-  border-radius: 4px;
-  line-height: 60px; /* match height */
-  transition: 0.3s ease;
-  width:100%;
-  border:none;
+    color: #161616;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all .3s;
+    display: inline-block;
+    position: relative;
+    top: -6px;
 }
 
 .custom_btn:hover{
