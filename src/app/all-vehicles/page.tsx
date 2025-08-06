@@ -1,6 +1,8 @@
+import { Suspense } from 'react';
 import Header from '@components/components/Header';
 import Footer from '@components/components/Footer';
 import AllListing from './components/AllListing'
+
 export default function VehicleAll(){
     return(
         <>
@@ -27,7 +29,9 @@ export default function VehicleAll(){
           </div>
         </div>
       </section>
-            <AllListing />
+            <Suspense fallback={<div>Loading...</div>}>
+               <AllListing />
+              </Suspense>
             <Footer />
         </>
     )
