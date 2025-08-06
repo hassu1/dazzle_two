@@ -115,7 +115,7 @@ export default function OurFleet() {
                 padding: "5px 30px",
               }}
             >
-              <Link href="#" style={{ color: "#FFF" }}>
+              <Link href="/all-vehicles" style={{ color: "#FFF" }}>
                 Show All
               </Link>
             </button>

@@ -32,7 +32,7 @@ export default function Header() {
               <Link href="/">Home</Link>
               <Link href="/about">About Us</Link>
               <div className={styles.dropdown}>
-                <span className={styles.dropdownLabel} style={{color:'#FFF'}}>All Vehicles ▾</span>
+                <span className={styles.dropdownLabel} style={{color:'#FFF'}}><Link href="/all-vehicles">All Vehicles ▾</Link></span>
                 <div className={styles.dropdownMenu}>
                   {vehicleBrands.map((brand) => (
                     <Link key={brand.slug} href={`/all-vehicles/${brand.slug}`}>

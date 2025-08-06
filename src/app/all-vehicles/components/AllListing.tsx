@@ -1,41 +1,28 @@
 'use client';
 import Link from "next/link";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation"; // for safer query params in Next.js 13+
 import { useMemo } from "react";
 import styles from "@components/components/OurFleet.module.css";
 import { cars } from "../../../libs/data/cars";
 
-const ITEMS_PER_PAGE = 6; // Number of items per page
+const ITEMS_PER_PAGE = 6;
 
-export default function Listing() {
-  const params = useParams();
-  const brandParam = params?.brand;
-  const brandName = typeof brandParam === "string" ? brandParam : "";
+export default function AllListing() {
+  // For query params, use `useSearchParams` in Next.js 13+
+  const searchParams = useSearchParams();
+  const currentPage = parseInt(searchParams.get('page') || '1');
 
-  // Get current page from URL query params
-  const searchParams = new URLSearchParams(window.location.search);
-  const currentPage = parseInt(searchParams.get('page') || '1'); // Default to page 1
-
-  // Filter cars based on the brand
-  const filteredCars = brandName
-    ? cars.filter((car) => car.brand.toLowerCase() === brandName.toLowerCase())
-    : cars;
+  const filteredCars = cars; // no brand filter
 
   const totalPages = Math.ceil(filteredCars.length / ITEMS_PER_PAGE);
-  
-  // Get the cars for the current page
+
   const paginatedCars = useMemo(() => {
     return filteredCars.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
   }, [filteredCars, currentPage]);
 
-  const capitalized =
-    brandName.length > 0
-      ? brandName.charAt(0).toUpperCase() + brandName.slice(1)
-      : "";
-
-  // Function to generate the page link
-  const createPageLink = (page: number) => `/all-vehicles/${brandName.toLowerCase()}?page=${page}`;
+  // Page link generator
+  const createPageLink = (page: number) => `/all-vehicles?page=${page}`;
 
   return (
     <section style={{ padding: "50px 0px 10px 0px" }}>
@@ -43,16 +30,11 @@ export default function Listing() {
         <div className="row">
           {filteredCars.length === 0 ? (
             <div className="col-12 text-center">
-              <h4 style={{ color: "#999" }}>
-                No cars found for
-                <span style={{ color: "#000", fontWeight: "bold" }}>
-                  &quot;{capitalized}&quot;
-                </span>
-              </h4>
+              <h4 style={{ color: "#999" }}>No cars found.</h4>
             </div>
           ) : (
             paginatedCars.map((car, index) => (
-              <div key={index} className="col-lg-4 col-md-6 col-12 mb-5">
+               <div key={index} className="col-lg-4 col-md-6 col-12 mb-5">
                 <div role="listitem" className={styles.collectionItem}>
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
@@ -165,10 +147,7 @@ export default function Listing() {
                   const page = i + 1;
                   return (
                     <li key={page}>
-                      <Link
-                        href={createPageLink(page)}
-                        className={page === currentPage ? 'active' : ''}
-                      >
+                      <Link href={createPageLink(page)} className={page === currentPage ? 'active' : ''}>
                         {page}
                       </Link>
                     </li>
