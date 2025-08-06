@@ -1,37 +1,53 @@
 "use client";
 import "./BannerForm.css";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef , useState} from 'react';
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 
 export default function BannerForm() {
 
-  const startDateRef = useRef<HTMLInputElement | null>(null);
-  const endDateRef = useRef<HTMLInputElement | null>(null);
-  const startTimeRef = useRef<HTMLInputElement | null>(null);
-  const endTimeRef = useRef<HTMLInputElement | null>(null);
+
+const startDateRef = useRef<HTMLInputElement>(null);
+const endDateRef = useRef<HTMLInputElement>(null);
+const startTimeRef = useRef<HTMLInputElement>(null);
+const endTimeRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const refs = [startDateRef, endDateRef, startTimeRef, endTimeRef];
-    refs.forEach(ref => {
-      if (ref.current) {
-        // ✅ Only attach event if supported
-        ref.current.addEventListener("click", () => {
-          ref.current?.showPicker?.();
-        });
-      }
+  if (startDateRef.current) {
+    flatpickr(startDateRef.current, {
+      dateFormat: 'Y-m-d',
+       minDate: "today"
     });
+  }
 
-    // Optional cleanup
-    return () => {
-      refs.forEach(ref => {
-        if (ref.current) {
-          ref.current.removeEventListener("click", () => {
-            ref.current?.showPicker?.();
-          });
-        }
-      });
-    };
-  }, []);
+  if (endDateRef.current) {
+    flatpickr(endDateRef.current, {
+      dateFormat: 'Y-m-d',
+       minDate: "today"
+    });
+  }
+
+  if (startTimeRef.current) {
+    flatpickr(startTimeRef.current, {
+      enableTime: true,
+      noCalendar: true,
+         dateFormat: 'h:i K',
+      time_24hr: false,
+    });
+  }
+
+  if (endTimeRef.current) {
+    flatpickr(endTimeRef.current, {
+      enableTime: true,
+      noCalendar: true,
+          dateFormat: 'h:i K',
+      time_24hr: false,
+    });
+  }
+}, []);
+
+
 
   return (
     <>
@@ -49,19 +65,31 @@ export default function BannerForm() {
               <div className="form_row_wrapper">
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-white">Start Date</h4>
-                  <input type="date" className="form-control" name="start_date" ref={startDateRef} />
+                   <div className="custom-input-wrapper" style={{ overflow:'hidden'}}>
+                              <input type="text" ref={startDateRef} placeholder="Select date" className="form-control" />
+                              <i className="fa fa-calendar-alt"></i>
+                     </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-white">End Date</h4>
-                  <input type="date" name="end_date" ref={endDateRef} />
+                   <div className="custom-input-wrapper">
+                             <input type="text" ref={endDateRef} placeholder="Select date" className="form-control" />
+                              <i className="fa fa-calendar-alt"></i>
+                            </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-white">Start Time</h4>
-                  <input type="time" name="start_time" ref={startTimeRef} />
+                   <div className="custom-input-wrapper">
+                             <input type="text" ref={startTimeRef} placeholder="Select time" className="form-control" />
+                              <i className="fa-solid fa-clock-rotate-left"></i>
+                            </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-white">End Time</h4>
-                  <input type="time" name="end_time" ref={endTimeRef} />
+                   <div className="custom-input-wrapper">
+                             <input type="text" ref={endTimeRef} placeholder="Select time" className="form-control" />
+                              <i className="fa-solid fa-clock-rotate-left"></i>
+                            </div>
                 </div>
                 <div className="form_item_wrapper">
                   <button

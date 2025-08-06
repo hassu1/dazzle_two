@@ -46,7 +46,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
     flatpickr(startTimeRef.current, {
       enableTime: true,
       noCalendar: true,
-      dateFormat: 'H:i',
+         dateFormat: 'h:i K',
       time_24hr: false,
     });
   }
@@ -55,7 +55,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
     flatpickr(endTimeRef.current, {
       enableTime: true,
       noCalendar: true,
-      dateFormat: 'H:i',
+          dateFormat: 'h:i K',
       time_24hr: false,
     });
   }
