@@ -1,7 +1,7 @@
 .statistic-section {
      padding-top: 70px;
      padding-bottom: 70px;
-     background: linear-gradient(45deg, black, transparent),url(/img/about-countdown-bg.jpg);
+     background: linear-gradient(45deg, black, #e5af3ea8),url(/img/about-countdown-bg.jpg);
      background-size:cover;
      background-repeat: no-repeat;
 }

@@ -52,7 +52,7 @@ export default function Counter() {
   const projects = useCountUp(8, 1000);
 
   return (
-    <section id="statistic" className="statistic-section one-page-section">
+    <section id="statistic" className="statistic-section one-page-section m20">
       <div className="container">
         <div className="row text-center">
           <div className="col-xs-12 col-md-3">

@@ -16,8 +16,10 @@ header{
       position: absolute;
     width: 100%;
     z-index: 9;
-    top:25px;
+    top:50px;
 }
+.m20{margin:20px;border-radius:20px}
+.borderRadius-20{border-radius:20px;}
 .hero-bg-section{margin:20px;}
 .hero-bg-wrapper {
     border-radius: 20px;
@@ -443,7 +445,7 @@ input::placeholder {
 .form-control {
   font-size: 14px!important;
 }
-.flatpickr-months, .flatpickr-day.selected{
+.flatpickr-months, .flatpickr-day.selected, .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month{
       background: #f5b754!important;
     border: #f5b754!important;
     color: #fff!important;
@@ -453,6 +455,10 @@ input::placeholder {
 .flatpickr-weekdays .flatpickr-weekdaycontainer span{color:#FFF!important;}
 .flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover, .flatpickr-day.nextMonthDay{color: rgba(57, 57, 57, .5)!important;}
 .flatpickr-day{color:#FFF!important;}
+.flatpickr-current-month input.cur-year, .flatpickr-current-month .flatpickr-monthDropdown-months{
+  font-weight:600!important;
+  color:#161616!important;
+}
 
 
 @media screen and (max-width: 767px) {
@@ -527,8 +533,8 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 600px) {
-  .hero-bg-section, .steps, .footer-section{margin:0}
-  .hero-bg-wrapper, .steps, .stepColumn, .footer-section{border-radius:0;}
+  .hero-bg-section, .steps, .footer-section, .m20{margin:0}
+  .hero-bg-wrapper, .steps, .stepColumn, .footer-section, .m20, .borderRadius-20{border-radius:0;}
   .hero-bg-title{font-size:50px}
   .hero-bg-wrap{width:100%;}
   .pl-6rem, .pl-3rem{padding-left:0!important}

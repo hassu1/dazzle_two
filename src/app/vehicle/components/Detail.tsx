@@ -82,8 +82,9 @@ const endTimeRef = useRef<HTMLInputElement>(null);
   if (!brand || !model) {
     return (
       <>
-        <HeaderTwo />
+        <Header />
         <section
+         className="m20"
           style={{
             backgroundImage:
               "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
@@ -143,6 +144,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
       <Header />
 
       <section
+      className="m20"
         style={{
           backgroundImage:
             "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
@@ -154,6 +156,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
         }}
       >
         <div
+        className="borderRadius-20"
           style={{
             position: "absolute",
             backgroundColor: "rgba(0, 0, 0, 0.6)",

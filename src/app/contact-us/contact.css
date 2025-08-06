@@ -84,7 +84,7 @@
     border-radius: 16px;
     background-color: #FFF;
     width: 100%;
-    max-width: 580px;
+    max-width: 100%;
     padding: 40px;
     position: relative;
 }
@@ -103,7 +103,7 @@
     flex-flow: column;
     justify-content: center;
     width: 100%;
-    min-height: 559px;
+    min-height: auto;
     margin-bottom: 0;
     display: flex
 ;
@@ -120,7 +120,7 @@
 }
 .form-fields-wrapper {
     grid-column-gap: 20px;
-    grid-row-gap: 40px;
+    grid-row-gap: 10px;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
@@ -129,7 +129,7 @@
 }
 .label-field-wrapper {
     grid-column-gap: 12px;
-    grid-row-gap: 12px;
+    grid-row-gap: 0;
     flex-flow: column;
     display: flex
 ;
@@ -143,7 +143,7 @@
     border-radius: 10px;
     background-color: #FFF;
     color: #0e1523;
-    min-height: 58px;
+    min-height: 42px;
     margin-bottom: 0;
     padding-left: 20px;
     padding-right: 20px;
@@ -161,8 +161,8 @@ textarea.w-input, textarea.w-select
     background-color: #FFF;
     color: #0e1523;
     min-width: 100%;
-    max-width: 496px;
-    min-height: 150px;
+    max-width: 100%;
+    min-height: 100px;
     max-height: 200px;
     margin-bottom: 0;
     padding: 14px 20px;

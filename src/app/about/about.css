@@ -13,6 +13,23 @@
 .b-20{border-radius: 20px;}
 .border-endd{border-right: 1px solid #E5AF3E!important}
 
+.aboutSection .box{
+    /* padding: 25px; */
+    /* border: 1px solid #E5AF3E;; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius:20px;
+    margin-top:10px;
+}
+.aboutSection .box i{color:#E5AF3E;font-size:20px;}
+
+.aboutSection .box h3{
+        font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.aboutSection .box p{font-size:13px;}
 
 @media only screen and (max-width: 600px) {
     .heading-lg{font-size:40px}

@@ -72,28 +72,28 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                    <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
                               <input type="text" ref={startDateRef} placeholder="Choose Your Date" className="form-control" />
                               {/* <i className="fa-light fa-plus"></i> */}
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15} style={{filter:'contrast(2%)'}}/>
                      </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"><i className="fa-light fa-calendar-alt"></i>End Date</h4>
                    <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
                              <input type="text" ref={endDateRef} placeholder="Choose Your Date" className="form-control" />
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15} style={{filter:'contrast(2%)'}}/>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"><i className="fa-light fa-clock-rotate-left"></i>Start Time</h4>
                    <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
                              <input type="text" ref={startTimeRef} placeholder="Choose Your Time" className="form-control" />
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15} style={{filter:'contrast(2%)'}}/>
                             </div>
                 </div>
                 <div className="form_item_wrapper">
                   <h4 className="input_title text-dark"><i className="fa-light fa-clock-rotate-left"></i>End Time</h4>
                    <div className="custom-input-wrapper d-flex align-items-center" style={{ overflow:'hidden'}}>
                              <input type="text" ref={endTimeRef} placeholder="Choose Your Time" className="form-control" />
-                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15}/>
+                              <Image alt="" src={'/img/arrow.svg'} width={15} height={15} style={{filter:'contrast(2%)'}}/>
                             </div>
                 </div>
                 <div className="form_item_wrapper">

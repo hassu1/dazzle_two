@@ -8,6 +8,7 @@ export default function VehicleAll(){
         <>
             <Header />
                <section
+               className="m20"
         style={{
           backgroundImage:
             "linear-gradient(45deg, black, transparent),url('/img/all-vechicle-banner.jpg')",
@@ -18,7 +19,7 @@ export default function VehicleAll(){
           position:'relative'
         }}
       >
-        <div style={{position:'absolute', backgroundColor:'rgba(0, 0, 0, 0.6)',inset:'0px',zIndex:1}}></div>
+        <div className="borderRadius-20" style={{position:'absolute', backgroundColor:'rgba(0, 0, 0, 0.6)',inset:'0px',zIndex:1}}></div>
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">

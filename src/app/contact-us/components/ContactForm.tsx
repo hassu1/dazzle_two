@@ -3,11 +3,11 @@ import Link from 'next/link';
 export default function ContactForm() {
   return (
     <>
-      <section className="section extra-padding-section">
-        <div className="content-wrapper">
-          <div className="contact-section-wrapper">
+      <section className="section" style={{padding:'30px 0'}}>
+        <div className="container">
+          <div className="contact-section-wrapper m20">
             <div className="contact-content-wrapper">
-              <div className="contact-details-wrapper">
+              {/* <div className="contact-details-wrapper">
                 <div className="contact-text-wrapper">
                   <h2 className="section-heading white-section-heading">
                     Contact Information
@@ -59,7 +59,7 @@ export default function ContactForm() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="contact-form-wrapper">
                 <div className="contact-form-group w-form">
                   <form
@@ -146,7 +146,7 @@ export default function ContactForm() {
                         ></textarea>
                       </div>
                     </div>
-                    <div className="form-button-wrapper">
+                    <div className="form-button-wrapper text-center m-auto">
                       <input
                         type="submit"
                         data-wait="Please wait..."
