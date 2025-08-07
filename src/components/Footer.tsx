@@ -7,46 +7,37 @@ export default function Footer() {
     <>
       <footer className="footer-section">
         <div className="container">
-          <div className="footer-cta pt-5 pb-5">
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-12 col-12 mb-30">
-                <div
-                  className="single-cta animate-cta"
-                  
-                >
-                  <i className="fas fa-map-marker-alt"></i>
-                  <div className="cta-text">
-                    <h4>Find us</h4>
-                    <span>
-                      Office 6, Crystal Tower, Business Bay, Dubai, UAE
-                    </span>
-                  </div>
+          <div className="footer-cta pt-5 pb-4">
+                <div className="row">
+                    <div className="col-xl-5 col-lg-5 col-md-12 mb-30">
+                        <div className="single-cta">
+                            <i className="fas fa-map-marker-alt"></i>
+                            <div className="cta-text">
+                                <h4>Find us</h4>
+                                <span>  Office 6, Crystal Tower, Business Bay, Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 col-lg-4 col-md-12 mb-30">
+                        <div className="single-cta">
+                            <i className="fas fa-phone"></i>
+                            <div className="cta-text">
+                                <h4>Call us</h4>
+                                <span>+971527277464</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-md-12 mb-30">
+                        <div className="single-cta">
+                            <i className="far fa-envelope-open"></i>
+                            <div className="cta-text">
+                                <h4>Mail us</h4>
+                                <span>info@dazzlewheels.ae</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-12 col-12 mb-30">
-                <div
-                  className="single-cta animate-cta"
-                >
-                  <i className="fas fa-phone"></i>
-                  <div className="cta-text">
-                    <h4>Call us</h4>
-                    <span>+971527277464</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-12 col-12 mb-30">
-                <div
-                  className="single-cta animate-cta"
-                >
-                  <i className="far fa-envelope-open"></i>
-                  <div className="cta-text">
-                    <h4>Mail us</h4>
-                    <span>info@dazzlewheels.ae</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
 
           <div className="footer-content pt-5 pb-5">
             <div className="row">
@@ -152,13 +143,13 @@ export default function Footer() {
                   </div>
                   <div className="footer-social-icon mt-3">
                     <span>Follow us</span>
-                    <Link href="#">
+                    <Link href="javascript:void()">
                       <i className="fab fa-facebook-f facebook-bg"></i>
                     </Link>
-                    <Link href="#">
+                    <Link href="javascript:void()">
                       <i className="fab fa-twitter twitter-bg"></i>
                     </Link>
-                    <Link href="#">
+                    <Link href="javascript:void()">
                       <i className="fab fa-google-plus-g google-bg"></i>
                     </Link>
                   </div>

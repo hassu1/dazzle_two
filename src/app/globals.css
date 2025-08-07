@@ -296,6 +296,7 @@ h1 {
 /* Extra small devices (very narrow, less than 480px) */
 @media (max-width: 479px) {
   .single-cta {
+    display:flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 1rem;
@@ -870,4 +871,10 @@ input::placeholder {
   .hero-bg-title{font-size:50px}
   .hero-bg-wrap{width:100%;}
   .pl-6rem, .pl-3rem{padding-left:0!important}
+  .copyright-text p {font-size:12px}
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1160px) {
+  /* Styles for tablets or mid-size devices go here */
+  .cta-text span{font-size:13px;}
 }
