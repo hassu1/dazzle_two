@@ -198,54 +198,28 @@ h1 {
   padding: 0 15px;
 }
 
-.single-cta {
-  background: #111;
-  border-radius: 15px;
-  padding: 1.8rem 2rem;
-  display: flex;
-  align-items: center;
-  /* box-shadow: 0 8px 30px rgb(229 175 62 / 0.15); */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-  color: #fff;
-  min-height: 150px;
-}
+
 
 .footer-content{border-top:1px solid}
 .single-cta i {
+  color: #e5af3e;
   font-size: 30px;
-  color: #161616;
-  background: linear-gradient(135deg, #e5af3e, #ffd75f);
-  padding: 15px;
-  border-radius: 50%;
-  margin-right: 18px;
-  /* box-shadow: 0 0 15px #e5af3e; */
-  flex-shrink: 0;
-  transition: box-shadow 0.3s ease;
+  float: left;
+  margin-top: 8px;
 }
-
-.single-cta:hover {
-  transform: translateY(-10px);
-  cursor: pointer;
-  /* box-shadow: 0 14px 40px rgb(229 175 62 / 0.3); */
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
 }
-
-/* .single-cta:hover i {
-  box-shadow: 0 0 30px #ffd75f;
-} */
-
 .cta-text h4 {
-  font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-  letter-spacing: 0.02em;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
 }
-
 .cta-text span {
-  font-weight: 400;
-  color: #d4d4d4;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  color: #757575;
+  font-size: 15px;
 }
 
 /* Animate fade in + slide up */
@@ -301,7 +275,7 @@ h1 {
     flex-direction: row;
     padding: 1.3rem 1.5rem;
     min-height: auto;
-    box-shadow: 0 6px 20px rgb(229 175 62 / 0.1);
+    /* box-shadow: 0 6px 20px rgb(229 175 62 / 0.1); */
   }
 
   .single-cta i {
