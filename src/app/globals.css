@@ -298,6 +298,7 @@ h1 {
     align-items: flex-start;
     padding: 1rem 1rem;
     min-height: auto;
+    margin-left:-1rem;
   }
 
   .single-cta i {
