@@ -14,13 +14,17 @@ export default function AboutSection() {
             <div className={styles.imageWrapper}>
               <div className={styles.mainImage}>
                 <Image
-                  alt="Main"
-                  src="/img/background-1.png"
-                  width={421}
-                  height={281}
-                  className="img-fluid"
-                  priority
-                />
+  alt="Main"
+  src="/img/420x520-2.jpg"
+  width={800}
+  height={500}
+  style={{
+    width:'100%',
+    height:'auto',
+    objectFit:'cover',
+  }}
+/>
+                {/* <img src={'/img/420x520-2.jpg'} /> */}
               </div>
             </div>
           </div>
@@ -29,7 +33,7 @@ export default function AboutSection() {
           <div className="col-md-6 col-12 text-center text-md-start">
             <span className="tagline-badge">Explore the world</span>
           <h2 className="section-heading left">The Best Car Rental Service in the World</h2>
-            <p className="para_p mt-4" style={{fontSize:'17px'}}>
+            <p className="para_p mt-4" style={{fontSize:'15.5px'}}>
               Dazzle Wheels Car Rental offers premium luxury and sports car
               rentals in Dubai. With a fleet of over 50 high-end vehicles, we&apos;re
               known for our top-tier service and attention to detail. Whether
@@ -40,7 +44,7 @@ export default function AboutSection() {
             <div className="row">
               <div className="col-md-6 col-12 mb-2">
                 <div className="box">
-                  <img src="   https://cdn-icons-png.flaticon.com/512/10434/10434252.png " style={{ width:'68px', clipPath:'circle()', padding:'5px'}} />
+                  {/* <img src="   https://cdn-icons-png.flaticon.com/512/10434/10434252.png " style={{ width:'68px', clipPath:'circle()', padding:'5px'}} /> */}
                                     {/* <i className="fas fa-rocket" style={{padding:'10px', background:'#e5af3e', color:'#FFF', fontSize:'30px', width: 'max-content' , borderRadius:'50px'}}></i> */}
                   <h3>Our Vision</h3>
                   <p>
@@ -50,7 +54,7 @@ export default function AboutSection() {
               </div>
               <div className="col-md-6 col-12 mb-2">
                   <div className="box" style={{ marginTop:'15px'}}>
-                    <img src="   https://cdn-icons-png.flaticon.com/512/3721/3721184.png " style={{ width:'62px', clipPath:'circle()', padding:'5px'}} />
+                    {/* <img src="   https://cdn-icons-png.flaticon.com/512/3721/3721184.png " style={{ width:'62px', clipPath:'circle()', padding:'5px'}} /> */}
                   {/* <i className="fas fa-bullseye" style={{padding:'10px', background:'#e5af3e', color:'#FFF', fontSize:'30px', width: 'max-content' , borderRadius:'50px'}}></i> */}
                   <h3>Our Mision</h3>
                   <p>To provide a high-quality, hassle-free car rental experience through a modern, well-maintained fleet, transparent pricing, and personalized customer support.

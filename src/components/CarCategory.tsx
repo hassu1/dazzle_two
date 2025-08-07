@@ -24,7 +24,7 @@ export default function CarCategory() {
           <div className={styles.gridItem} key={index}
           >
             <div className={styles.item}>
-              <Link href={category.link}>
+              <Link href={'/all-vehicles'}>
                 <div>
                   <span className={category.icon}></span>
                   <h6>{category.name}</h6>
