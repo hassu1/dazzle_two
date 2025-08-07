@@ -100,27 +100,24 @@ const cars = [
 
 export default function OurFleet() {
   return (
-    <section style={{ padding: "40px 0px 0px 0px" }}>
+    <section style={{ padding: "40px 0px" }}>
       <div className="container">
         <div className="row justify-content-center mb-4">
-          <div className="d-flex justify-content-between align-items-center flex-wrap">
-  <h2 className="section-heading text-center text-md-start w-100 w-md-auto">
-    Featured Cars
-  </h2>
-
-  <button
-    className="customButton d-none d-md-block"
-    style={{
-      borderRadius: "10px",
-      backgroundColor: "#161616",
-      padding: "5px 30px",
-    }}
-  >
-    <Link href="/all-vehicles" style={{ color: "#FFF" }}>
-      Show All
-    </Link>
-  </button>
-</div>
+          <div className="d-flex customJustifyBetween">
+                  <h2 className="section-heading center">Featured Cars</h2>
+            <button
+              className="customButton mobilee"
+              style={{
+                borderRadius: "10px",
+                backgroundColor: "#161616",
+                padding: "5px 30px",
+              }}
+            >
+              <Link href="/all-vehicles" style={{ color: "#FFF" }}>
+                Show All
+              </Link>
+            </button>
+          </div>
         </div>
 
         <div className="row">
