@@ -807,25 +807,26 @@ input::placeholder {
 }
 
 .tagline-badge {
+  color:#e5af3e!important;
   display: inline-block;
-  padding: 9px 18px;
-  background: linear-gradient(135deg, #e5af3e, #f7ce68);
+  padding: 9px 0px;
+  /* background: linear-gradient(135deg, #e5af3e, #f7ce68); */
   color: #161616;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
   cursor: pointer;
   user-select: none;
   margin-bottom:15px;
 }
 
-.tagline-badge:hover {
+/* .tagline-badge:hover {
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
+} */
 
 /*  */
 .modern-heading {
