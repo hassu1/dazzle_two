@@ -5,7 +5,7 @@ export default function WhyChooseUs() {
       title: "First Class Service",
       description: "We offer services, easy booking and instant delivery",
      
-        img: 'https://cdn-icons-png.flaticon.com/512/2359/2359603.png',
+        img: 'https://cdn-icons-png.flaticon.com/128/9802/9802277.png',
 
     },
     {
