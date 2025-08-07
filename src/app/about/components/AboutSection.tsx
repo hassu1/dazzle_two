@@ -6,7 +6,7 @@ import styles from "../AboutSection.module.css"; // CSS module for custom image 
 
 export default function AboutSection() {
   return (
-    <section className="aboutSection" style={{ padding: "50px" }}>
+    <section className="aboutSection">
       <div className="container">
         <div className="row align-items-center">
           {/* Images on the left */}

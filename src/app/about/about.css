@@ -12,7 +12,7 @@
 .m-20{margin:20px;}
 .b-20{border-radius: 20px;}
 .border-endd{border-right: 1px solid #E5AF3E!important}
-
+.aboutSection{padding:50px}
 .aboutSection .box{
     /* padding: 25px; */
     /* border: 1px solid #E5AF3E;; */
@@ -37,6 +37,7 @@
         margin:0;
         border-radius:0;
     }
+    .aboutSection{padding:50px 0}
 }
 
 
