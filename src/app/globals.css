@@ -402,11 +402,11 @@ h1 {
     width: 80px;
 }
 
-.footer-logo img , .headerLogo{
+/* .footer-logo img , .headerLogo{
   max-width: 180px;
   filter: drop-shadow(0 0 6px #e5af3e88);
   transition: filter 0.3s ease;
-}
+} */
 
 .footer-widget ul li a:hover {
   color: #E5AF3E;
