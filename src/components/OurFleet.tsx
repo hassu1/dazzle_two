@@ -100,7 +100,7 @@ const cars = [
 
 export default function OurFleet() {
   return (
-    <section style={{ padding: "40px 0px" }}>
+    <section style={{ padding: "40px 0px 0px 0px" }}>
       <div className="container">
         <div className="row justify-content-center mb-4">
           <div className="d-flex justify-content-between align-items-center flex-wrap">
