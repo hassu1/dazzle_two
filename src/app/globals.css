@@ -873,7 +873,12 @@ input::placeholder {
     .flexDirectionColumnReverse{
         flex-direction: column-reverse;
   }
+  .stepTitle{
+    font-size:19px;
+  }
+  .stepDesp{font-size:14px;}
 }
+
 
 @media only screen and (min-width: 760px) and (max-width: 1160px) {
   /* Styles for tablets or mid-size devices go here */

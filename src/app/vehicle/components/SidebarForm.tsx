@@ -274,7 +274,14 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                                     <div className="car-benefits-wrapper">
                                       <div className="benefit-wrapper">
-                                        <i className="flaticon-gas" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i>
+                                           <Image
+                                                                  src="/img/sd/icons-7-8-25-4.png"
+                                                                  alt="Engine"
+                                                                  width={20}
+                                                                  height={20}
+                                                                  style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
+                                                                />
+                                        {/* <i className="flaticon-gas" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
                                         <div className="benefit-name">200KM/Day</div>
                                       </div>
                                     </div>
@@ -282,7 +289,14 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                                     <div className="car-benefits-wrapper">
                                       <div className="benefit-wrapper">
-                                                                   <i className="fas fa-engine" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i>
+                                          <Image
+                                                                  src="/img/sd/icons-7-8-25-2.png"
+                                                                  alt="Engine"
+                                                                  width={20}
+                                                                  height={20}
+                                                                  style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
+                                                                />
+                                                                   {/* <i className="fas fa-engine" style={{padding:'5px', color:'#e5af3e', fontSize:'15px'}}></i> */}
                                         <div className="benefit-name">V8 Engine</div>
                                       </div>
                                     </div>
