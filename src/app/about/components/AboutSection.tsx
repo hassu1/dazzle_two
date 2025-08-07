@@ -12,21 +12,21 @@ export default function AboutSection() {
           {/* Images on the left */}
           <div className="col-md-6 col-12 mb-4">
             <div className={styles.imageWrapper}>
-              <div className={styles.mainImage}>
-                <Image
-  alt="Main"
-  src="/img/420x520-2.jpg"
-  width={800}
-  height={500}
-  style={{
-    width:'100%',
-    height:'auto',
-    objectFit:'cover',
-  }}
-/>
-                {/* <img src={'/img/420x520-2.jpg'} /> */}
-              </div>
+            <div className={styles.mainImageWrapper}>
+              <Image
+                alt="Main"
+                src="/img/FS.jpg"
+                width={800}
+                height={400}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'cover',
+                }}
+              />
             </div>
+          </div>
+
           </div>
 
           {/* Text on the right */}

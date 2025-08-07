@@ -8,7 +8,6 @@ import Image from 'next/image';
 
 export default function BannerForm() {
 
-
 const startDateRef = useRef<HTMLInputElement>(null);
 const endDateRef = useRef<HTMLInputElement>(null);
 const startTimeRef = useRef<HTMLInputElement>(null);
@@ -51,8 +50,6 @@ const endTimeRef = useRef<HTMLInputElement>(null);
     });
   }
 }, []);
-
-
 
   return (
     <>

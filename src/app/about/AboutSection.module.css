@@ -1,23 +1,27 @@
 .imageWrapper {
   position: relative;
-  max-width: 445px;
+  max-width: 100%;
   margin: auto;
 }
 
-.mainImage {
-  width: 100%;
-  border-radius: 10px;
+.mainImageWrapper {
+  position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
-.overlayImage {
+.mainImageWrapper::before {
+  content: '';
   position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-15%);
-  width: 300px;
-  max-width: 80%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.mainImageWrapper:hover::before {
+  left: 125%;
 }
