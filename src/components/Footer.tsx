@@ -18,7 +18,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-4 col-lg-4 col-md-12 mb-30">
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-6 mb-30">
                         <div className="single-cta">
                             <i className="fas fa-phone"></i>
                             <div className="cta-text">
@@ -27,7 +27,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-12 mb-30">
+                    <div className="col-xl-3 col-lg-3 col-md-12 col-6 mb-30">
                         <div className="single-cta">
                             <i className="far fa-envelope-open"></i>
                             <div className="cta-text">
@@ -161,7 +161,7 @@ export default function Footer() {
         <div className="copyright-area">
           <div className="container">
             <div className="row">
-              <div className="d-flex justify-content-between gap-2 flex-wrap">
+              <div className="d-flex justify-content-between justify-content-center gap-2 flex-wrap text-center text-md-start footer-bottom-wrapper">
                 <div className="copyright-text">
                   <p>
                     Copyright &copy; {new Date().getFullYear()}{" "}

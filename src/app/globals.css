@@ -197,9 +197,6 @@ h1 {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-
-
 .footer-content{border-top:1px solid}
 .single-cta i {
   color: #e5af3e;
@@ -873,9 +870,68 @@ input::placeholder {
   .pl-6rem, .pl-3rem{padding-left:0!important}
   .copyright-text p {font-size:12px}
   .section-heading{font-size:1.6rem!important;}
+    .flexDirectionColumnReverse{
+        flex-direction: column-reverse;
+  }
 }
 
 @media only screen and (min-width: 760px) and (max-width: 1160px) {
   /* Styles for tablets or mid-size devices go here */
   .cta-text span{font-size:13px;}
 }
+
+
+@media (max-width: 767px) {
+  .footer-widget {
+    text-align: center;
+  }
+
+  .footer-widget ul {
+    padding-left: 0;
+    display:flex;
+    flex-direction:column;
+  }
+  .footer-widget ul li::marker {
+    color: #e5af3e;
+}
+
+  .footer-widget ul li {
+    display: inline-block;
+    margin: 0 8px 10px;
+  }
+
+  .footer-social-icon {
+    justify-content: center;
+  }
+
+  .footer-social-icon a {
+    margin: 0 5px;
+  }
+
+  .subscribe-form {
+    text-align: center;
+  }
+
+  .subscribe-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-form input {
+    margin-bottom: 10px;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-widget-heading h3:before, .section-heading.center:after, .section-heading.left:after{display:none;}
+  .copyright-text{margin:auto;}
+  .footer-menu{width:100%;}
+  .footer-menu ul{padding-left:0;}
+  .footer-cta{padding:0;}
+  .mobilee{display:none;}
+
+}
+
