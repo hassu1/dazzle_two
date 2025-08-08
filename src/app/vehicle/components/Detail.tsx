@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef , useState} from 'react';
+import React, { useEffect, useRef , useState, Suspense} from 'react';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper/modules";
@@ -176,7 +176,7 @@ export default function Detail() {
               </Swiper>
 
               <div className="d-xl-none d-lg-none d-md-none d-sm-none d-block">
-                <SidebarForm />
+               <Suspense fallback={<div>Loading...</div>}> <SidebarForm /> </Suspense>
               </div>
 
               <div className="vehicleDetaiBox mt-4">
@@ -271,7 +271,7 @@ export default function Detail() {
             {/* Sidebar */}
             <div className="col-md-5 mobilee">
               <div className="sidebar">
-                <SidebarForm />
+                <Suspense fallback={<div>Loading...</div>}> <SidebarForm /> </Suspense>
               </div>
             </div>
           </div>

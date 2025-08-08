@@ -1,93 +1,91 @@
 "use client";
-import React, { useEffect, useRef , useState} from 'react';
-import flatpickr from 'flatpickr';
-import 'flatpickr/dist/flatpickr.min.css';
-import styles from "../../../components/OurFleet.module.css";
+import React, { useEffect, useRef } from "react";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { cars, slugify } from "../../../libs/data/cars";
 
-export default function SidebarForm(){
-
+export default function SidebarForm() {
   const params = useParams();
+  const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
+  const model = Array.isArray(params.model) ? params.model[0] : params.model;
 
- const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
-   const model = Array.isArray(params.model) ? params.model[0] : params.model;
- 
-   if (!brand || !model) {
-     return (
-       <>
-    
-         <section
-          className="m20"
-           style={{
-             backgroundImage:
-               "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
-             backgroundSize: "cover",
-             backgroundPosition: "center",
-             height: "50vh",
-           }}
-         ></section>
-         <div
-           className="text-center py-40 text-white"
-           style={{ paddingTop: "200px" }}
-         >
-           <h1 className="text-dark">Car Not Found</h1>
-           <p className="text-dark">
-             The vehicle you are looking for does not exist.
-           </p>
-         </div>
-    
-       </>
-     );
-   }
- 
-   const car = cars.find(
-     (c) =>
-       c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
-   );
-
-const startDateRef = useRef<HTMLInputElement>(null);
-const endDateRef = useRef<HTMLInputElement>(null);
-const startTimeRef = useRef<HTMLInputElement>(null);
-const endTimeRef = useRef<HTMLInputElement>(null);
+  // ✅ Always declare hooks at top level
+  const startDateRef = useRef<HTMLInputElement>(null);
+  const endDateRef = useRef<HTMLInputElement>(null);
+  const startTimeRef = useRef<HTMLInputElement>(null);
+  const endTimeRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-  if (startDateRef.current) {
-    flatpickr(startDateRef.current, {
-      dateFormat: 'Y-m-d',
-       minDate: "today",
+    if (startDateRef.current) {
+      flatpickr(startDateRef.current, {
+        dateFormat: "Y-m-d",
+        minDate: "today",
         disableMobile: true,
-    });
+      });
+    }
+
+    if (endDateRef.current) {
+      flatpickr(endDateRef.current, {
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        disableMobile: true,
+      });
+    }
+
+    if (startTimeRef.current) {
+      flatpickr(startTimeRef.current, {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "h:i K",
+        time_24hr: false,
+        disableMobile: true,
+      });
+    }
+
+    if (endTimeRef.current) {
+      flatpickr(endTimeRef.current, {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "h:i K",
+        time_24hr: false,
+        disableMobile: true,
+      });
+    }
+  }, []);
+
+  if (!brand || !model) {
+    return (
+      <>
+        <section
+          className="m20"
+          style={{
+            backgroundImage:
+              "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "50vh",
+          }}
+        ></section>
+        <div
+          className="text-center py-40 text-white"
+          style={{ paddingTop: "200px" }}
+        >
+          <h1 className="text-dark">Car Not Found</h1>
+          <p className="text-dark">
+            The vehicle you are looking for does not exist.
+          </p>
+        </div>
+      </>
+    );
   }
 
-  if (endDateRef.current) {
-    flatpickr(endDateRef.current, {
-      dateFormat: 'Y-m-d',
-       minDate: "today", disableMobile: true,
-    });
-  }
-
-  if (startTimeRef.current) {
-    flatpickr(startTimeRef.current, {
-      enableTime: true,
-      noCalendar: true,
-         dateFormat: 'h:i K',
-      time_24hr: false,
-       disableMobile: true,
-    });
-  }
-
-  if (endTimeRef.current) {
-    flatpickr(endTimeRef.current, {
-      enableTime: true,
-      noCalendar: true,
-          dateFormat: 'h:i K',
-      time_24hr: false,
-       disableMobile: true,
-    });
-  }
-}, []);
+  const car = cars.find(
+    (c) =>
+      c.brand.toLowerCase() === brand.toLowerCase() &&
+      slugify(c.name) === model
+  );
 
     return(
         <>

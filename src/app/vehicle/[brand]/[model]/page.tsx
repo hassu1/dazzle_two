@@ -1,13 +1,15 @@
-import Header from '@components/components/Header';
-import Footer from '@components/components/Footer';
+
 import Detail from '../../components/Detail';
+import { Suspense } from "react";
 
 export default function VehicleDetails(){
     return(
         <>
 
-        
+
+              <Suspense fallback={<div>Loading...</div>}>
                 <Detail />
+                </Suspense> 
 
         </>
     )

@@ -11,8 +11,7 @@ import Testimonal from "@components/components/Testimonal";
 import CompanyLocation from "@components/components/CompanyLocation";
 import Gallery from "@components/components/Gallery";
 import AOSInitializer from "@components/components/AOSInitializer";
-import DemoForm from "@components/components/DemoForm";
-
+import { Suspense } from "react";
 export default function Home() {
   return (
     <>
@@ -25,7 +24,9 @@ export default function Home() {
       <BannerForm />
       <Sponsor />
       <CarCategory />
+          <Suspense fallback={<div>Loading...</div>}>
       <OurFleet />
+      </Suspense>
       <WhyChooseUs />
       <Steps />
       <Testimonal />
