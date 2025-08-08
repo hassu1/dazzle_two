@@ -882,12 +882,18 @@ input::placeholder {
   }
   .stepDesp{font-size:14px;}
   .customJustifyBetween{justify-content:center}
+  .modern-heading{
+    font-size:20px;
+  }
 }
 
 
 @media only screen and (min-width: 760px) and (max-width: 1160px) {
   /* Styles for tablets or mid-size devices go here */
   .cta-text span{font-size:13px;}
+  .modern-heading{
+    font-size:25px;
+  }
 }
 
 

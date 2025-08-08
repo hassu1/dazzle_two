@@ -4,11 +4,15 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import styles from "../../../components/OurFleet.module.css";
 import Image from "next/image";
-
+import { useParams } from "next/navigation";
 
 
 export default function SidebarForm(){
 
+  const params = useParams();
+
+  const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
+  const model = Array.isArray(params.model) ? params.model[0] : params.model;
 
 const startDateRef = useRef<HTMLInputElement>(null);
 const endDateRef = useRef<HTMLInputElement>(null);

@@ -19,8 +19,8 @@ export default function Listing() {
 
   // Filter cars based on the brand
   const filteredCars = brandName
-    ? cars.filter((car) => car.brand.toLowerCase() === brandName.toLowerCase())
-    : cars;
+  ? cars.filter((car) => car.brand.toLowerCase().replace(" ", "-") === brandName.toLowerCase())
+  : cars;
 
   const totalPages = Math.ceil(filteredCars.length / ITEMS_PER_PAGE);
   

@@ -7,9 +7,11 @@ import styles from './Navbar.module.css';
 const vehicleBrands = [
   { name: "Audi", slug: "audi" },
   { name: "Mercedes", slug: "mercedes" },
-  { name: "BMW", slug: "bmw" },
   { name: "Ferrari", slug: "ferrari" },
-  { name: "Lamborghini", slug: "lamborghini" }
+  { name: "Lamborghini", slug: "lamborghini" },
+  { name: "Rolls Royce" , slug: "rolls-royce"},
+  { name: "Range Rover" , slug: "range-rover"},
+  { name: "Porsche" , slug: "porsche"},
 ];
 
 export default function Header() {

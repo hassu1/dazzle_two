@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef , useState} from 'react';
-import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper/modules";
@@ -9,7 +8,7 @@ import "swiper/css/thumbs";
 import { useParams } from "next/navigation";
 import { cars, slugify } from "../../../libs/data/cars";
 import type { Swiper as SwiperType } from "swiper";
-import HeaderTwo from "@components/components/HeaderTwo";
+
 import Footer from "@components/components/Footer";
 
 
@@ -20,19 +19,20 @@ import SidebarForm from './SidebarForm';
 
 export default function Detail() {
 
-
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
 
   // Sample images
-  const images = [
-    "/img/lamborghini-urus.jpg",
-    "/img/lamborghini-urus.jpg",
-    "/img/lamborghini-urus.jpg",
-    "/img/lamborghini-urus.jpg", // reuse for demo
-    "/img/lamborghini-urus.jpg",
-    "/img/lamborghini-urus.jpg",
-  ];
+  // const images = [
+  //   "/img/lamborghini-urus.jpg",
+  //   "/img/lamborghini-urus.jpg",
+  //   "/img/lamborghini-urus.jpg",
+  //   "/img/lamborghini-urus.jpg", // reuse for demo
+  //   "/img/lamborghini-urus.jpg",
+  //   "/img/lamborghini-urus.jpg",
+  // ];
+
+
 
   const params = useParams();
 
@@ -75,7 +75,7 @@ export default function Detail() {
   if (!car) {
     return (
       <>
-        <HeaderTwo />
+        <Header />
         <section
           style={{
             backgroundImage:
@@ -98,7 +98,8 @@ export default function Detail() {
       </>
     );
   }
-
+   const images = [car.image, car.image, car.image, car.image, car.image]; // Using the car's image for simplicity
+  
   return (
     <>
       <Header />
@@ -127,7 +128,7 @@ export default function Detail() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1 className="section-title text-white modern-heading"><span>Audi</span></h1>
+              <h1 className="section-title text-white modern-heading"><span>{model}</span></h1>
             </div>
           </div>
         </div>
