@@ -884,6 +884,7 @@ input::placeholder {
   .customJustifyBetween{justify-content:center}
   .modern-heading{
     font-size:20px;
+    margin-top:1.5rem;
   }
 }
 

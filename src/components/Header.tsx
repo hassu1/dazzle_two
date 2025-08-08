@@ -68,7 +68,12 @@ export default function Header() {
           <li><Link href="/about" onClick={toggleSidebar}>About Us</Link></li>
           <li>
               <details>
-                <summary className='text-white' style={{textTransform:'uppercase'}}>All Vehicles</summary>
+                    <summary className='text-white' style={{ textTransform: 'uppercase' }}>
+                    <Link href="/all-vehicles">
+                      All Vehicles
+                    </Link>
+                  </summary>
+
                 <ul>
                   {vehicleBrands.map((brand) => (
                     <li key={brand.slug}>
