@@ -7,6 +7,7 @@ import styles from './Navbar.module.css';
 const vehicleBrands = [
   { name: "Audi", slug: "audi" },
   { name: "Mercedes", slug: "mercedes" },
+  { name: "McLaren", slug: "mcLaren" },
   { name: "Ferrari", slug: "ferrari" },
   { name: "Lamborghini", slug: "lamborghini" },
   { name: "Rolls Royce" , slug: "rolls-royce"},

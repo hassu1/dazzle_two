@@ -5,14 +5,47 @@ import 'flatpickr/dist/flatpickr.min.css';
 import styles from "../../../components/OurFleet.module.css";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-
+import { cars, slugify } from "../../../libs/data/cars";
 
 export default function SidebarForm(){
 
   const params = useParams();
 
-  const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
-  const model = Array.isArray(params.model) ? params.model[0] : params.model;
+ const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
+   const model = Array.isArray(params.model) ? params.model[0] : params.model;
+ 
+   if (!brand || !model) {
+     return (
+       <>
+    
+         <section
+          className="m20"
+           style={{
+             backgroundImage:
+               "linear-gradient(45deg, black, transparent),url('/img/1.jpg')",
+             backgroundSize: "cover",
+             backgroundPosition: "center",
+             height: "50vh",
+           }}
+         ></section>
+         <div
+           className="text-center py-40 text-white"
+           style={{ paddingTop: "200px" }}
+         >
+           <h1 className="text-dark">Car Not Found</h1>
+           <p className="text-dark">
+             The vehicle you are looking for does not exist.
+           </p>
+         </div>
+    
+       </>
+     );
+   }
+ 
+   const car = cars.find(
+     (c) =>
+       c.brand.toLowerCase() === brand.toLowerCase() && slugify(c.name) === model
+   );
 
 const startDateRef = useRef<HTMLInputElement>(null);
 const endDateRef = useRef<HTMLInputElement>(null);
@@ -74,7 +107,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                       marginRight: "-9px",
                                     }}
                                   />{" "}
-                                  600 <span style={{fontWeight:700}}>/ Rent Per Day</span>
+                                  {car?.price} <span style={{fontWeight:700}}>/ Rent Per Day</span>
                                 </h4>
                               </div>
             
@@ -271,7 +304,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                                                   className={styles.listingDetailIcon}
                                                                 /> */}
                                         <i className="fa fa-money-bill" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i>
-                                        <div className="benefit-name">5000 Deposit</div>
+                                        <div className="benefit-name" style={{marginLeft:'-5px'}}>{car?.deposit} Deposit</div>
                                       </div>
                                     </div>
                                   </div>
@@ -286,7 +319,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                         {/* <i className="flaticon-gas" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">200KM/Day</div>
+                                        <div className="benefit-name">{car?.mileage}/Day</div>
                                       </div>
                                     </div>
                                   </div>
@@ -301,7 +334,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="fas fa-engine" style={{padding:'5px', color:'#e5af3e', fontSize:'15px'}}></i> */}
-                                        <div className="benefit-name">V8 Engine</div>
+                                        <div className="benefit-name">{car?.engine} Engine</div>
                                       </div>
                                     </div>
                                   </div>
@@ -316,7 +349,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="omfi-passengers" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">2 Seats</div>
+                                        <div className="benefit-name">{car?.Seats} Seats</div>
                                       </div>
                                     </div>
                                   </div>
@@ -331,7 +364,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="omfi-door" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">2 Doors</div>
+                                        <div className="benefit-name">{car?.door} Doors</div>
                                       </div>
                                     </div>
                                   </div>
@@ -346,7 +379,7 @@ const endTimeRef = useRef<HTMLInputElement>(null);
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="fa omfi-luggage" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">1 Luggage</div>
+                                        <div className="benefit-name">{car?.Luggage} Luggage</div>
                                       </div>
                                     </div>
                                   </div>

@@ -21,19 +21,6 @@ export default function Detail() {
 
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
-
-  // Sample images
-  // const images = [
-  //   "/img/lamborghini-urus.jpg",
-  //   "/img/lamborghini-urus.jpg",
-  //   "/img/lamborghini-urus.jpg",
-  //   "/img/lamborghini-urus.jpg", // reuse for demo
-  //   "/img/lamborghini-urus.jpg",
-  //   "/img/lamborghini-urus.jpg",
-  // ];
-
-
-
   const params = useParams();
 
   const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;

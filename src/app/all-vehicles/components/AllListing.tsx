@@ -83,7 +83,7 @@ export default function AllListing() {
                             height={20}
                             className={styles.listingDetailIcon}
                           />
-                          <div className={styles.carDetailValue}>{car.mileage} km</div>
+                          <div className={styles.carDetailValue}>{car.Seats}</div>
                         </div>
                         <div className={styles.carDetail}>
                           <Image
@@ -97,11 +97,11 @@ export default function AllListing() {
                         </div>
                         <div className={styles.carDetail}>
                           <i className="omfi-door" style={{ color: "#E5AF3E", fontSize: "18px" }}></i>
-                          <div className={styles.carDetailValue}>2</div>
+                          <div className={styles.carDetailValue}>{car.door}</div>
                         </div>
                         <div className={styles.carDetail}>
                           <i className="fas fa-money-bill" style={{ color: "#E5AF3E" }}></i>
-                          <div className={styles.carDetailValue}>{car.price}</div>
+                          <div className={styles.carDetailValue}>{car.deposit}</div>
                         </div>
                       </div>
 
@@ -114,7 +114,7 @@ export default function AllListing() {
                             src="/img/dirham.png"
                             style={{ filter: "brightness(0) invert(1)", marginTop: "-4px", paddingRight: "3px" }}
                           />
-                          {car.price}
+                          {car.price} Per Day
                         </div>
                         <Link
                           href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}

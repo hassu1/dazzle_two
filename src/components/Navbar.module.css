@@ -40,7 +40,7 @@
   border: 0;
   z-index: 10;
   display:flex;
-
+  width:150px;
   /* 👇 Transition styles */
   opacity: 0;
   visibility: hidden;
@@ -63,6 +63,7 @@
   color: white;
   padding: 5px 0;
   text-decoration: none;
+  font-size:14px;
 }
 
 /* ===== Burger Icon ===== */
