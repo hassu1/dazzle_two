@@ -29,7 +29,7 @@ export default function OurFleet() {
 
 
   return (
-    <section style={{ padding: "40px 0px" }}>
+    <section style={{ padding: "40px 0px 0px 0px" }}>
       <div className="container">
         <div className="row justify-content-center mb-4">
           <div className="d-flex customJustifyBetween">
@@ -49,7 +49,7 @@ export default function OurFleet() {
           </div>
         </div>
 
-       <div className="row">
+       <div className="row mb-2">
           {filteredCars.length === 0 ? (
             <div className="col-12 text-center">
               <h4 style={{ color: "#999" }}>No cars found.</h4>
@@ -153,6 +153,22 @@ export default function OurFleet() {
           )}
         </div>
 
+          <div className="row justify-content-center d-xl-none d-lg-none d-md-none d-sm-none d-block mb-4">
+            <div className="col-md-12 text-center m-auto">
+                <button
+              className="customButton"
+              style={{
+                borderRadius: "10px",
+                backgroundColor: "#161616",
+                padding: "5px 30px",
+              }}
+            >
+              <Link href="/all-vehicles" style={{ color: "#FFF" }}>
+                Show All
+              </Link>
+            </button>
+            </div>
+          </div>
       </div>
     </section>
   );
