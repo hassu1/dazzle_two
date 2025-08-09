@@ -81,13 +81,19 @@ export default function Footer() {
                       <Link href="/all-vehicles/mercedes">Mercedes</Link>
                     </li>
                     <li className="mb-3">
+                      <Link href="/all-vehicles/mclaren">Mclaren</Link>
+                    </li>
+                    <li className="mb-3">
                       <Link href="/all-vehicles/lamborghini">Lamborghini</Link>
                     </li>
                     <li className="mb-3">
                       <Link href="/all-vehicles/ferrari">Ferrari</Link>
                     </li>
                     <li className="mb-3">
-                      <Link href="/all-vehicles/bmw">BMW</Link>
+                      <Link href="/all-vehicles/range-rover">Range Rover</Link>
+                    </li>
+                      <li className="mb-3">
+                      <Link href="/all-vehicles/rolls-royce">Rolls Royce</Link>
                     </li>
                     <li className="mb-3">
                       <Link href="/all-vehicles/porsche">Porsche</Link>
