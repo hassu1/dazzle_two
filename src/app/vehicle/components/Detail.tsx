@@ -259,11 +259,8 @@ export default function Detail() {
                 >
                   Description
                 </h3>
-                <p style={{ fontSize: "17px" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit, cum excepturi. Nostrum, qui dicta? Ea accusantium nemo
-                  sed maxime debitis, nam reiciendis itaque odit quibusdam
-                  laborum quia rerum architecto explicabo.
+                <p style={{ fontSize: "13px" }}>
+                  {car.description}
                 </p>
               </div>
             </div>

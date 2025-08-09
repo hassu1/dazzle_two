@@ -34,6 +34,7 @@ export const cars = [
     image: "/img/products/ROLLS-ROYCE-WRAITH.png",
     logo: "/img/rolls-royce.jpg",
     slug: "rolls-royce-wraith",
+    description: "Rolls Royce is one of the premium sleek designs which has breathtaking features like a luxurious jet. The interiors are so up to the mark and premium that you do not want to stop a car once you start your journey in it. It has the solid roof top with coupe styled front and powerful engine of V12. It has 2 doors with 4 seats a sedan type thing but seems like a super racing car. It has the most vigorous engine power of 6.6-liters, turbo-charged V12 engine which has the power to jump from 0 to 60mPH within 4.4 seconds. it has the daily mileage of 250 KM. with a capacity for 2 luggage. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our rolls Royce wraith, provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both."
     
   },
   {
@@ -54,8 +55,10 @@ export const cars = [
     image: "/img/products/ROLLCE-ROYCE-DAWN.png",
     logo: "/img/rolls-royce.jpg",
     slug: "rolls-royce-dawn",
+    description:"Rolls Royce Dawn is the most attractive and super luxury convertible car of all times. For exquisite ride and finest driving experience the car comes with V12 Engine which gives you thrilling experience of your life. The whole profile view from windshield is breathtaking. It has the capacity of 4 seats with 2 luggage capacity and 2 doors with convertible roof top. The whole roof top experience is so lag free and smooth within 22 sec your car changes from open to closed or vice versa. It gives you 563 HP at 575 lb. FT torque at 1500 RPM. Rolls Royce Dawn is at your service with seamless smooth drive. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both."
   },
   {
+    description:"Travelling is the lifetime experience, and while visiting city like Dubai, spending a little bit extra from budget on Luxury super ride is worthy enough. We offer you super classy cars in exceptional rates. You can have luggage of 4 with you within our Rolls Royce Cullinan with an engine power V12 and 563 HP at 5000 rpm. This SUV car is the best choice for a family ride in a super luxury car. To make your whole experience remarkable and memorable our Rolls Royce Cullinan is at your service with the best specs and faultless smooth drive. 5 finest and comfortable passenger seats capacity with 5 doors and 4 luggage room. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Rolls-Royce",
     name: "Rolls-Royce Cullinan",
     year: "2024",
@@ -77,6 +80,7 @@ export const cars = [
 
   // Range Rover
   {
+    description:"A car which has stunning athletic physiques and fastest speed both, with spacious and luxury specifications and interior is the name of Range rover SVR 1600. The muscular look from front body makes it more attractive for sporty SUV lovers. This model is coming in with a 575 Horsepower interpretation of the 5.0-liter V8 engine and boom to 516 lb. Ft torque. The looks from inside out are captivating. Having 4 seats with 5 luggage room and 5 doors layout. This car has a cruise control as well to enhance your driving experience. And give the daily mileage of 250 km. To make your whole journey remarkable and memorable, our Range Rover SVR 1600, is at your service with effortless smooth drive with automatic transmission. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Range-Rover",
     name: "Range Rover SVR",
     year: "2024",
@@ -96,6 +100,7 @@ export const cars = [
     slug: "range-rover-svr",
   },
   {
+    description: "Range Rover Sport car with muscular looks and smooth textured modern outlook, seems like a compact SUV car with sporty features, but from inside it has a premium and luxe cut with outclass interior. This car is going to give you a comfortable and seamless ride off-road & on roadside with an engine V8 370 hp (276 kW) and 510 Nm. (376 lb. Ft). A perfect selection for 5 passengers who want to enjoy the long journey in a relaxed luxury manner. Range Rover Sport is quite spacious that is why luggage around 3 is not a big deal to carry in this car. A layout of sporty motor is 5 doors. To enhance the whole driving experience with automatic transmission and the cruise control is one of the luxury features of this car. The Range Rover Sport ease your whole journey, and make it more fun with their Bluetooth, Aux and USB availability. And you do not have to worry about the locations either, because in this car you going to have navigation system as well. Or Parking is not an issue as well, with the parking sensors. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Range-Rover",
     name: "Range Rover Sport",
     year: "2024",
@@ -117,6 +122,7 @@ export const cars = [
 
   // Porsche
   {
+    description: "Want to experience the feel of supercar but worried about the seat’s capacity? Porsche Cayenne Coupe is a type of supercar which allows you to drive with whole family. Sleek looks make it look classy while running on roads. It has an engine power of v6 it gives you an acceleration of 0 to 100 km/h within just 6.0 sec. and a top speed of 243km/h and max torque of 450 NM. All these specs show this car is not less then any super car. It has 5 seats with 5 doors lay out and 3 luggage space. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Porsche Cayenne Coupe, is at your service with seamless smooth drive. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Porsche",
     name: "Porsche Cayenne Coupe",
     year: "2024",
@@ -136,6 +142,7 @@ export const cars = [
     slug: "porsche-cayenne-coupe",
   },
   {
+    description: "A sleek look with 2 doors is a range of Coupe super cars. It is the perfect choice for couples who want to experience the super speed with the luxury comfort. This car has an engine power of v10 and the top speed of 308 km/h and goes like crazy from 0 to 100 in just 3.7 sec. lay out of this car is 2 doors with 2 passenger’s seats. And 1 luggage capacity. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Porsche 911 Carrera Coupe, is at your service with seamless smooth drive. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Porsche",
     name: "Porsche 911 Carrera S Coupe",
     year: "2024",
@@ -155,6 +162,7 @@ export const cars = [
     slug: "porsche-911-carrera-s-coupe",
   },
   {
+    description: "A convertible car has their own type of attraction for cabrio lovers. This gives you pleasure of both open-air and covered roof drive in a same motor. It has 3.0L V8 twin-turbo engine and HP of 443 @6500 RPM. This car is capable to reach from 0 to 100 km/h within 3.5 secs. This car supports for 2 passenger seats of finest quality. And 1 luggage capacity with 2 doors layout. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Porsche 911 Carrera S cabriolet, is at your service with seamless smooth drive. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Porsche",
     name: "Porsche 911 Carrera S Cabriolet",
     year: "2024",
@@ -176,6 +184,7 @@ export const cars = [
 
   // Mercedes
   {
+    description: "Mercedes GT63 S variant is one of the most top of the line cars amongst all. Or you can say it is an elite class of all GTs. It is a 4-door super car with an engine of V8 and torque of 500Nm at 369 lb. Ft. The interior of Mercedes GT 63 S is extremely executive and supreme which makes it the most demanding for business class rental services. It has 4 passenger’s seats. With luggage capacity for 3 and 4 doors. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Mercedes GT 63 S, is at your service with seamless smooth drive. With automatic transmission. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Mercedes",
     name: "Mercedes GT63S",
     year: "2024",
@@ -195,6 +204,7 @@ export const cars = [
     slug: "mercedes-gt63s",
   },
   {
+    description:"Mercedes G class is the great luxurious SUV, which has a spacious and lavish type cabin and comfortable seats with restful leg space. Experiencing the thrill and aggression of militaria feel cars is the dream of many jeep lovers. It is the best luxury car for off-road ride while travelling with numbers of family members or colleagues. This car has the bit bulky body with powerful engine of V8 capacity. Seating competence for 5 passengers, having 5 doors and 3 luggage can be easily cater in this spacious SUV. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Mercedes G class, is at your service with seamless smooth drive. With automatic transmission. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Mercedes",
     name: "Mercedes G Class",
     year: "2024",
@@ -214,6 +224,7 @@ export const cars = [
     slug: "mercedes-g-class",
   },
   {
+    description:"A convertible or cabriolet car has its own charm while driving, it gives you comfort in day light and an open-air experience at night. A well-equipped combination of amazing interiors and crispy exterior. This car has an engine of V6 with 3L twin turbo capacity. And 9 speed automatic transmission. four seats for passengers to travel a hassle-free long journey. Mercedes c class Cabriolet is capable enough to cater the luggage for 1. And having 2 doors lay out with extremely crisp and sound exteriors. This car has a cruise control as well to enhance your driving experience. And give the daily mileage of 250 km. To make your whole journey remarkable and memorable, our Mercedes e450 class Cabriolet, is at your service with effortless smooth drive with automatic transmission. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Mercedes",
     name: "Mercedes E 450 Class Cabriolet",
     year: "2024",
@@ -233,6 +244,7 @@ export const cars = [
     slug: "mercedes-e-450-class-cabriolet",
   },
   {
+    description:"Mercedes C class is a convertible car. And it is highly recommended for those who want to experience both the experiences of open-air and covered roof top in a same trip. Under lining the power-retractable fabric-top, you'll find a beautifully crafted interior that offers plenty of standard configurations. This car has the engine power of V6 and four seats for passengers to travel a hassle-free long journey. Mercedes c class Cabriolet is capable enough to cater the luggage for 1. And having 2 doors lay out with extremely crisp and sound exteriors. This car has a cruise control as well to enhance your driving experience. And give the daily mileage of 250 km. To make your whole journey remarkable and memorable, our Mercedes c class Cabriolet, is at your service with effortless smooth drive with automatic transmission. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Mercedes",
     name: "Mercedes C300 Cabriolet",
     year: "2024",
@@ -269,6 +281,7 @@ export const cars = [
     image: "/img/products/MERCEDES-A35-AMG.png",
     logo: "/img/mercedes.jpg",
     slug: "mercedes-a35-amg",
+    description:"Mercedes A35 AMG is one of the sophisticated cars, especially for those who want comfort ride with not so vigorously super car feel. It is basically a compact sedan based upon Mercedes A class engine and interior. It has the 2.0L engine with turbocharging and accelerating around 225KW at 306 HP. And max torque of 400 NM. Mercedes AMG A35 has the seating capacity of 4 with 4 doors and 3 luggage space. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Mercedes A35 AMG, is at your service with seamless smooth drive. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both."
   },
 
   // Lamborghini
@@ -290,8 +303,10 @@ export const cars = [
     image: "/img/products/LAMBORGHINI-URUS.png",
     logo: "/img/lamborghini.jpg",
     slug: "lamborghini-urus",
+    description:"Lamborghini Urus is going to give you a smooth ride with merged experience of sporty hulk with spacious interior of SUV. It is a best choice while travelling with family, and dream to drive out something in sports range cars. Lamborghini Urus has a twin-turbo engine power of V8 it goes boom from 0 to 62 mph in just 3.6 seconds and reaches a top speed of 190 mph within few seconds. This luxurious SUV with sporty engine is wise selection to stay in budget and travel in an exclusive style. It has a luggage capacity of 2 and seats for 5, with 4 doors layout. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Lamborghini Urus, is at your service with seamless smooth drive. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
   },
   {
+    description:" Huracan Evo spider is the premium choice of thrill and speed lovers. With an amazing look and innovative technology this car has maintained the highest standard for supercars. Planning to visit a gigantic infrastructure of Dubai in your luxurious super car? With an engine power of 5.2 L / V10 and Horsepower 631 at 8000 RPM and torque power at 600 NM. It gives you aggressive boosting speed of 100 KM/h at 3.1 sec. This car has a cruise control as well to enhance your driving experience. Lamborghini Hurracan Evo Spider has a layout of 2 doors with 2 comfortable seats and 1 luggage capacity. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. Our Lamborghini Hurracan Evo Spider gives you 250KM mileage for daily routes. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Lamborghini",
     name: "Lamborghini Huracan Evo Spider",
     year: "2024",
@@ -311,6 +326,7 @@ export const cars = [
     slug: "lamborghini-huracan-evo-spider",
   },
   {
+    description:"Lamborghini Huracan Coupe, is a name of seamless smooth drive with powerful performance. Planning to be sightseeing whole Dubai? So, what could be better than a supercar for visiting such a beautiful infrastructure in your luxurious ride? The dynamic design and exotic interior make this car exclusive amongst all coupe car range. The look of slopy trunk and EVO aerodynamics of Huracan is the best combination for speed and power of V10 Engine. The Horsepower of car is RPM. 630 At 8000; Maximum Torque @ RPM. 442 which gives the thrilling yet effortless ride on challenging roads. With the capacity of 2 passenger’s seat with 1 baggage space and 2 doors layout, that make this car the best for an induvial or for couple. With the daily mileage of 250KM. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Lamborghini",
     name: "Lamborghini Huracan Evo Coupe",
     year: "2024",
@@ -332,6 +348,7 @@ export const cars = [
 
   // Ferrari
   {
+    description:"Ferrari 488 spider is the open top super car. This car allows you to experience the open-air ride all over the city with a premium and thrilling manner. It has the most powerful V8 engine and goes like crazy from 0 to100 within 3 seconds only and this beast accelerates around 661 HP with almost 561 lb. Ft torque production which make this an effortless car to drive. Ferrari 488 spider has 2 passenger seats and 1 luggage capacity with the fits out of 2 doors. This car comes with a cruise control to enhance your whole driving experience. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. Our Ferrari 488 Spider gives you 250KM mileage for daily routes. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Ferrari",
     name: "Ferrari 488 Spider",
     year: "2024",
@@ -368,6 +385,7 @@ export const cars = [
     image: "/img/products/FERRARI-488-SPIDER.png",
     logo: "/img/ferrari.jpg",
     slug: "ferrari-f8-tributo",
+    description:"Ferrari F8 tributo is the powerful mid-engine super car. This motor of Ferrari is going to impress speed lovers with inexorable engine and exterior dynamics. The breathtaking design and luxurious interior with the top speed is the game changer for F8. This car has V8 engine which accelerates 710 HP at 8000 RPM and crazy boom from 0 to 100km/h in 2.9 secs. And maximum torque is 568 lb. Ft. at 3250 RPM. Ferrari F8 Tributo has 2 passenger seats and 1 luggage capacity with the fits out of 2 doors. This car comes with a cruise control to enhance your whole driving experience. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. Our Ferrari F8 Tributo gives you 250KM mileage for daily routes. At Dazzle wheels you are allowed pay your payments through cash or card both.",
   },
   {
     brand: "Ferrari",
@@ -387,6 +405,7 @@ export const cars = [
     image: "/img/products/FERRARI-488-GTB.png",
     logo: "/img/ferrari.jpg",
     slug: "ferrari-488-gtb",
+    description:"Ferrari GTB 488, is top line amongst all 488 range. Dreaming to challenge your own speed limit? Dazzle wheels are here to let you experience the aggressive speed of Ferrari 488 GTB. Which has the super engine power of V8. The engine boost from 0 to 100 km/h within just 3.1 seconds and this speed giant generates 661 HP with almost 561 lb. Ft torque production which make this an effortless car to drive. Ferrari 488 GTB has 2 passenger seats and 1 luggage capacity with the fits out of 2 doors. This car comes with a cruise control to enhance your whole driving experience. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. Our Ferrari 488 GTB gives you 250KM mileage for daily routes. At Dazzle wheels you are allowed pay your payments through cash or card both.",
   },
 
   // Audi
@@ -408,6 +427,7 @@ export const cars = [
     image: "/img/products/AUDI-R8-SPYDER.png",
     logo: "/img/audi.jpg",
     slug: "audi-r8-spyder",
+    description:"Experiencing the thrill and aggression of sporty cars is the dream of many. Dazzle wheels are here to fulfill your dreams with their Audi R8 Spyder which has a vigorous engine power of V10. This car is going to give you an everlasting memory that stays bright in your mind and soul even after ages. So, idea to invest a little bit more while travelling a place like Dubai is full proof and substantial. Audi R8 Spyder is a beast with boost of around 532 HP at 398 lb. ft. with 7 speed automatic system. This car has a cruise control as well to enhance your driving experience. Audi R8 has a layout of 2 doors with 2 comfortable seats and 1 luggage capacity. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. Our Audi R8 Spyder gives you 250KM mileage for daily routes. At Dazzle wheels you are allowed pay your payments through cash or card both."
   },
   {
     brand: "McLaren",
@@ -427,6 +447,8 @@ export const cars = [
     image: "/img/products/MCLAREN-570S-CABRIOLET.png",
     logo: "/img/mclaren.jpg",  // McLaren logo
     slug: "mclaren-570s-cabriolet",  // Slug for URL
+    description:" A convertible car has their own type of attraction for cabrio lovers. This gives you pleasure of both open-air and covered roof drive in a same motor. It has 3.8 L V8 twin-turbo engine and HP of 562 @7500 RPM. This car is capable to reach from 0 to 100 km/h within 3.2 secs. This car supports for 2 passenger seats of finest premium quality. And 1 luggage capacity with 2 doors layout. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our McLaren 570 S cabriolet, is at your service with seamless smooth drive. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
+
   },
 ];
 
