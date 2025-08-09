@@ -18,7 +18,7 @@ export const cars = [
   // Rolls-Royce
   {
     brand: "Rolls-Royce",
-    name: "Rolls-Royce Wraith",
+    name: "Rolls Royce Wraith",
     year: "2024",
     type: "Coupe",
     condition: "New",
@@ -39,7 +39,7 @@ export const cars = [
   },
   {
     brand: "Rolls-Royce",
-    name: "Rolls-Royce Dawn",
+    name: "Rolls Royce Dawn",
     year: "2024",
     type: "Convertible",
     condition: "New",
@@ -60,7 +60,7 @@ export const cars = [
   {
     description:"Travelling is the lifetime experience, and while visiting city like Dubai, spending a little bit extra from budget on Luxury super ride is worthy enough. We offer you super classy cars in exceptional rates. You can have luggage of 4 with you within our Rolls Royce Cullinan with an engine power V12 and 563 HP at 5000 rpm. This SUV car is the best choice for a family ride in a super luxury car. To make your whole experience remarkable and memorable our Rolls Royce Cullinan is at your service with the best specs and faultless smooth drive. 5 finest and comfortable passenger seats capacity with 5 doors and 4 luggage room. This car comes with a cruise control to enhance your whole driving experience. at our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with Bluetooth, Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Rolls-Royce",
-    name: "Rolls-Royce Cullinan",
+    name: "Rolls Royce Cullinan",
     year: "2024",
     type: "SUV",
     condition: "New",
