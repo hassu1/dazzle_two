@@ -178,7 +178,7 @@ export default function Footer() {
                   <ul className="mb-0">
                     <li>
                       <Image
-                        src="/img/payment-cards-6.png"
+                        src="/img/payment-cards-05.png"
                         alt=""
                         width={150}
                         height={150}
