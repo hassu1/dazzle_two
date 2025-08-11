@@ -72,7 +72,9 @@ export default function Listing() {
                         <h3 className={`${styles.carListingName} mb-0`}>{car.name}</h3>
                         <div className={styles.carListingSpecs}>
                           <div className={styles.listingDetailsDivider}></div>
-                          <div className={styles.listingSpec}>{car.type}</div>
+                            <div className={styles.listingSpec}>
+                            {(Array.isArray(car.type) ? car.type : [car.type]).join(" * ")}
+                            </div>
                         </div>
                       </div>
                     </div>
