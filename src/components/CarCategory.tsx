@@ -4,12 +4,13 @@ import styles from "./CarCategory.module.css"; // 👈 import CSS module
 
 export default function CarCategory() {
   const categories = [
-    { name: "Economy", icon: "flaticon-coupe-car", link: "/all-vehicle-type/economy" },
-    { name: "Sport Cars", icon: "flaticon-sportive-car", link: "/all-vehicle-type/sport" },
-    { name: "SUVs", icon: "flaticon-car-suv", link: "/all-vehicle-type/suv" },
+    { name: "Sport Cars", icon: "flaticon-sportive-car", link: "/all-vehicle-type/sports" },
     { name: "Convertible", icon: "flaticon-cabrio-car", link: "/all-vehicle-type/convertible" },
     { name: "Luxury Cars", icon: "flaticon-sportive-car", link: "/all-vehicle-type/luxury" },
     { name: "Coupe", icon: "flaticon-coupe-car", link: "/all-vehicle-type/coupe" },
+    { name: "SUVs", icon: "flaticon-car-suv", link: "/all-vehicle-type/suv" },
+    { name: "Economy", icon: "flaticon-coupe-car", link: "/all-vehicle-type/economy" },
+
   ];
 
   return (

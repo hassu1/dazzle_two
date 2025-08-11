@@ -20,9 +20,15 @@ export default function VehicleType() {
   const currentPage = parseInt(searchParams.get('page') || '1'); // Default to page 1
 
   // Filter cars based on the category
-  const filteredCars = categoryName
-    ? cars.filter((car) => car.type.toLowerCase().replace(" ", "-") === categoryName.toLowerCase())
-    : cars;
+const filteredCars = categoryName
+  ? cars.filter((car) => {
+      if (Array.isArray(car.type)) {
+        return car.type.some((t) => t.toLowerCase() === categoryName.toLowerCase());
+      } else {
+        return car.type.toLowerCase() === categoryName.toLowerCase();
+      }
+    })
+  : cars;
 
   const totalPages = Math.ceil(filteredCars.length / ITEMS_PER_PAGE);
 
@@ -97,7 +103,9 @@ export default function VehicleType() {
                           <h3 className={`${styles.carListingName} mb-0`}>{car.name}</h3>
                           <div className={styles.carListingSpecs}>
                             <div className={styles.listingDetailsDivider}></div>
-                            <div className={styles.listingSpec}>{car.type}</div>
+                           <div className={styles.listingSpec}>
+                            {(Array.isArray(car.type) ? car.type : [car.type]).join(" * ")}
+                            </div>
                           </div>
                         </div>
                       </div>
