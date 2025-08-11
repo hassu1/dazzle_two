@@ -8,6 +8,7 @@ const vehicleBrands = [
   { name: "Audi", slug: "audi" },
   { name: "Mercedes", slug: "mercedes" },
   { name: "McLaren", slug: "mcLaren" },
+  { name: "MG", slug: "mg" },
   { name: "Ferrari", slug: "ferrari" },
   { name: "Lamborghini", slug: "lamborghini" },
   { name: "Rolls Royce" , slug: "rolls-royce"},
