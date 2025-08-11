@@ -13,6 +13,8 @@ const vehicleBrands = [
   { name: "Rolls Royce" , slug: "rolls-royce"},
   { name: "Range Rover" , slug: "range-rover"},
   { name: "Porsche" , slug: "porsche"},
+  { name: "Suzuki" , slug: "suzuki"},
+  { name: "Toyota" , slug: "toyota"},
 ];
 
 export default function Header() {

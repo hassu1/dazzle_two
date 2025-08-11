@@ -65,7 +65,7 @@
 
 .gridWrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   margin-top: 40px;
 }
@@ -87,6 +87,6 @@
 /* For mobile phones (≤ 480px) — 1 column */
 @media (max-width: 480px) {
   .gridWrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 }
