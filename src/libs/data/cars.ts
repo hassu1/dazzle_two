@@ -468,7 +468,7 @@ export const cars = [
     image: "/img/products/SUZUKI-VOLEO.jpg",
     logo: "/img/suzuki.jpg",
     slug: "suzuki-voleo",
-    description: "A practical and fuel-efficient hatchback with a 1.2L engine and 300KM mileage. It offers seating for 5 people and ample luggage space for family trips. Features include easy handling, manual transmission, and all the latest connectivity options.",
+    description: "A practical and fuel-efficient hatchback with a 1.2L engine and 250KM mileage. It offers seating for 5 people and ample luggage space for family trips. Features include easy handling, manual transmission, and all the latest connectivity options.",
   },
   {
     brand: "Toyota",
@@ -488,7 +488,7 @@ export const cars = [
     image: "/img/products/TOYOTA-YARIS.jpg",
     logo: "/img/toyota.jpg",
     slug: "toyota-yaris",
-    description: "A compact sedan with a 1.5L engine, offering a mileage of 350KM. The Toyota Yaris comes with automatic transmission, 5 seats, and 2 luggage spaces. A perfect choice for city drives and long journeys with modern features like Bluetooth and advanced safety systems.",
+    description: "A compact sedan with a 1.5L engine, offering a mileage of 250KM. The Toyota Yaris comes with automatic transmission, 5 seats, and 2 luggage spaces. A perfect choice for city drives and long journeys with modern features like Bluetooth and advanced safety systems.",
   },
   {
     brand: "Audi",
@@ -508,7 +508,7 @@ export const cars = [
     image: "/img/products/AUDI-A3.jpg",
     logo: "/img/audi.jpg",
     slug: "audi-a3",
-    description: "The 2024 Audi A3 combines luxury and performance with a 2.0L engine and 400KM mileage. Offering 5 seats and 3 luggage capacity, it's perfect for business or pleasure. Features include advanced tech like a premium sound system, navigation, and safety features.",
+    description: "The 2024 Audi A3 combines luxury and performance with a 2.0L engine and 250KM mileage. Offering 5 seats and 3 luggage capacity, it's perfect for business or pleasure. Features include advanced tech like a premium sound system, navigation, and safety features.",
   },
   {
     brand: "Mercedes",
@@ -528,7 +528,7 @@ export const cars = [
     image: "/img/products/MERCEDES-C200.jpg",
     logo: "/img/mercedes.jpg",
     slug: "mercedes-c200",
-    description: "A sleek and stylish 2024 Mercedes C200 Coupe with a 2.0L engine, offering 500KM mileage. Seats 4 passengers and has 2 luggage capacity. Features include a high-end infotainment system, automatic transmission, and a sporty yet luxurious driving experience.",
+    description: "A sleek and stylish 2024 Mercedes C200 Coupe with a 2.0L engine, offering 250KM mileage. Seats 4 passengers and has 2 luggage capacity. Features include a high-end infotainment system, automatic transmission, and a sporty yet luxurious driving experience.",
   },
   {
     "brand": "MG",
@@ -548,7 +548,7 @@ export const cars = [
     "image": "/img/products/MG5.jpg",
     "logo": "/img/MG.jpg",
     "slug": "mg5-2023",
-    "description": "The 2023 MG5 is a stylish sedan featuring a 1.5L engine and a 300KM mileage. It comfortably seats 5 passengers and offers 3 luggage capacity. Equipped with automatic transmission, it delivers a smooth, fuel-efficient ride with modern technology and safety features."
+    "description": "The 2023 MG5 is a stylish sedan featuring a 1.5L engine and a 250KM mileage. It comfortably seats 5 passengers and offers 3 luggage capacity. Equipped with automatic transmission, it delivers a smooth, fuel-efficient ride with modern technology and safety features."
 }
 ];
 
