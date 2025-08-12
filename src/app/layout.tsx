@@ -22,7 +22,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link rel="icon" href="/img/56x56.png" />
+        <link rel="icon" href="/img/128x128-b.png" />
 
         {/* <link rel="icon" href="/img/favIcons/16x16.png" sizes="16x16" style={{objectFit:'cover'}}/>
         <link rel="icon" href="/img/favIcons/32x32.png" sizes="32x32" style={{objectFit:'cover'}}/>
