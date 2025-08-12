@@ -214,7 +214,7 @@ export const cars = [
     mileage: "250KM",
     engine: "V8",
     Seats: "5",
-    price: "300",
+    price: "1300",
     door: "5",
     deposit: "3000",
     fuel: "Petrol",
