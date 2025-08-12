@@ -22,15 +22,15 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        {/* <link rel="icon" href="/img/favicon.png" /> */}
+        <link rel="icon" href="/img/5.png" />
 
-        <link rel="icon" href="/img/favIcons/16x16.png" sizes="16x16" />
-        <link rel="icon" href="/img/favIcons/32x32.png" sizes="32x32" />
-        <link rel="icon" href="/img/favIcons/48x48.png" sizes="48x48" />
-        <link rel="icon" href="/img/favIcons/64x64.png" sizes="64x64" />
-        <link rel="icon" href="/img/favIcons/128x128.png" sizes="128x128.png" />
-        <link rel="apple-touch-icon" href="/img/favIcons/180x180.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/img/favIcons/192x192.png" />
+        {/* <link rel="icon" href="/img/favIcons/16x16.png" sizes="16x16" style={{objectFit:'cover'}}/>
+        <link rel="icon" href="/img/favIcons/32x32.png" sizes="32x32" style={{objectFit:'cover'}}/>
+        <link rel="icon" href="/img/favIcons/48x48.png" sizes="48x48" style={{objectFit:'cover'}}/>
+        <link rel="icon" href="/img/favIcons/64x64.png" sizes="64x64" style={{objectFit:'cover'}}/>
+        <link rel="icon" href="/img/favIcons/128x128.png" sizes="128x128.png" style={{objectFit:'cover'}}/>
+        <link rel="apple-touch-icon" href="/img/favIcons/180x180.png" style={{objectFit:'cover'}}/>
+        <link rel="icon" type="image/png" sizes="192x192" href="/img/favIcons/192x192.png" style={{objectFit:'cover'}}/> */}
 
         {/* Styles */}
          <link rel="stylesheet" href="/css/plugins/bootstrap.min.css"/>
