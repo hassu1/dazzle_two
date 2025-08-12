@@ -22,7 +22,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link rel="icon" href="/img/favIcons/fav.png" />
+        <link rel="icon" href="/img/favIcons/aaaaa.png" />
 
         {/* Styles */}
          <link rel="stylesheet" href="/css/plugins/bootstrap.min.css"/>
