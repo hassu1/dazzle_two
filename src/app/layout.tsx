@@ -22,7 +22,15 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link rel="icon" href="/img/favIcons/aaaaa.png" />
+        {/* <link rel="icon" href="/img/favIcons/aaaaa.png" /> */}
+
+        <link rel="icon" href="/img/favIcons/aaaaa.png" sizes="16x16" />
+<link rel="icon" href="/img/favIcons/aaaaa.png" sizes="32x32" />
+<link rel="icon" href="/img/favIcons/aaaaa.png" sizes="48x48" />
+<link rel="icon" href="/img/favIcons/aaaaa.png" sizes="64x64" />
+<link rel="icon" href="/img/favIcons/aaaaa.png" sizes="128x128" />
+<link rel="apple-touch-icon" href="/img/favIcons/aaaaa.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favIcons/aaaaa.png" />
 
         {/* Styles */}
          <link rel="stylesheet" href="/css/plugins/bootstrap.min.css"/>
