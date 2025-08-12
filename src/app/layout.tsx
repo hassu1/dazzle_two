@@ -22,7 +22,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link rel="icon" href="https://www.dazzlewheels.ae/img/128x128-b.png" style={{objectFit:'cover'}} type="image/png" sizes="any"/>
+        <link rel="icon" href="https://www.dazzlewheels.ae/img/128x128-b.png" type="image/png" sizes="any" />
 
         {/* <link rel="icon" href="/img/128x128-b.png" sizes="16x16" style={{objectFit:'cover'}}/>
         <link rel="icon" href="/img/128x128-b.png" sizes="32x32" style={{objectFit:'cover'}}/>
