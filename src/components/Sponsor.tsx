@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 export default function Sponsor() {
-  // Sample images – replace with your actual sponsor image paths
+
   const sponsors = [
     '/img/logos/1.png',
     '/img/logos/2.png',
@@ -37,7 +37,7 @@ export default function Sponsor() {
         {sponsors.map((src, i) => (
           <SwiperSlide key={i}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Image src={src} alt={`Sponsor ${i + 1}`} width={800} height={500} objectFit="cover" style={{width:'50%', height:'auto'}} />
+              <Image src={src} alt={`Sponsor ${i + 1}`} width={800} height={500}  style={{width:'50%', height:'auto', objectFit:'cover' }} />
             </div>
           </SwiperSlide>
         ))}

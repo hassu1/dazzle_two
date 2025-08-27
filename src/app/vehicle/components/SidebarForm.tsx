@@ -4,14 +4,13 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { cars, slugify } from "../../../libs/data/cars";
 
-export default function SidebarForm() {
+export default function SidebarForm({ data }: { data: Car }) {
   const params = useParams();
   const brand = Array.isArray(params.brand) ? params.brand[0] : params.brand;
   const model = Array.isArray(params.model) ? params.model[0] : params.model;
 
-  // ✅ Always declare hooks at top level
+  // Always declare hooks at top level
   const startDateRef = useRef<HTMLInputElement>(null);
   const endDateRef = useRef<HTMLInputElement>(null);
   const startTimeRef = useRef<HTMLInputElement>(null);
@@ -80,13 +79,7 @@ export default function SidebarForm() {
       </>
     );
   }
-
-  const car = cars.find(
-    (c) =>
-      c.brand.toLowerCase() === brand.toLowerCase() &&
-      slugify(c.name) === model
-  );
-
+  
     return(
         <>
                 <div className="vehicleDetaiBox">
@@ -105,7 +98,7 @@ export default function SidebarForm() {
                                       marginRight: "-9px",
                                     }}
                                   />{" "}
-                                  {car?.price} <span style={{fontWeight:700}}>/ Rent Per Day</span>
+                                    {Math.floor(Number(data?.daily_rate))} <span style={{fontWeight:700}}>/ Rent Per Day</span>
                                 </h4>
                               </div>
             
@@ -294,15 +287,9 @@ export default function SidebarForm() {
                                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
                                     <div className="car-benefits-wrapper">
                                       <div className="benefit-wrapper">
-                                                                 {/* <Image
-                                                                  src="/img/sd/icons-7-8-25-1.png"
-                                                                  alt="Engine"
-                                                                  width={20}
-                                                                  height={20}
-                                                                  className={styles.listingDetailIcon}
-                                                                /> */}
                                         <i className="fa fa-money-bill" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i>
-                                        <div className="benefit-name" style={{marginLeft:'-5px'}}>{car?.deposit} Deposit</div>
+                                        <div className="benefit-name" style={{marginLeft:'-5px'}}>
+                                            {Math.floor(Number(data?.deposit))} Deposit</div>
                                       </div>
                                     </div>
                                   </div>
@@ -317,7 +304,7 @@ export default function SidebarForm() {
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                         {/* <i className="flaticon-gas" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">{car?.mileage}/Day</div>
+                                        <div className="benefit-name">{data?.daily_mileage}KM/Day</div>
                                       </div>
                                     </div>
                                   </div>
@@ -332,7 +319,7 @@ export default function SidebarForm() {
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="fas fa-engine" style={{padding:'5px', color:'#e5af3e', fontSize:'15px'}}></i> */}
-                                        <div className="benefit-name">{car?.engine} Engine</div>
+                                        <div className="benefit-name">{data?.engine} Engine</div>
                                       </div>
                                     </div>
                                   </div>
@@ -347,7 +334,7 @@ export default function SidebarForm() {
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="omfi-passengers" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">{car?.Seats} Seats</div>
+                                        <div className="benefit-name">{data?.seats} Seats</div>
                                       </div>
                                     </div>
                                   </div>
@@ -362,7 +349,7 @@ export default function SidebarForm() {
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="omfi-door" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">{car?.door} Doors</div>
+                                        <div className="benefit-name">{data?.doors} Doors</div>
                                       </div>
                                     </div>
                                   </div>
@@ -377,7 +364,7 @@ export default function SidebarForm() {
                                                                   style={{width:'5%',height:'auto', marginLeft:'0.6rem'}}
                                                                 />
                                                                    {/* <i className="fa omfi-luggage" style={{padding:'5px', color:'#e5af3e', fontSize:'15px', marginLeft:'5px'}}></i> */}
-                                        <div className="benefit-name">{car?.Luggage} Luggage</div>
+                                        <div className="benefit-name">{data?.luggage} Luggage</div>
                                       </div>
                                     </div>
                                   </div>

@@ -1,95 +1,164 @@
 'use client';
 import Link from "next/link";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useMemo } from "react";
+import { useParams, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import styles from "@components/components/OurFleet.module.css";
-import { cars } from "../../../libs/data/cars";
 
-const ITEMS_PER_PAGE = 12; // Number of items per page
+
+const ITEMS_PER_PAGE = 12;
 
 export default function Listing() {
+
   const params = useParams();
-  const brandParam = params?.brand;
-  const brandName = typeof brandParam === "string" ? brandParam : "";
+  const brandParam = params?.brand as string;
+  const searchParams = useSearchParams();
+  const currentPage = parseInt(searchParams.get("page") || "1");
 
-  // Get current page from URL query params
-  const searchParams = new URLSearchParams(window.location.search);
-  const currentPage = parseInt(searchParams.get('page') || '1'); // Default to page 1
+  const [cars, setCars] = useState<Car[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Filter cars based on the brand
-  const filteredCars = brandName
-  ? cars.filter((car) => car.brand.toLowerCase().replace(" ", "-") === brandName.toLowerCase())
-  : cars;
+  useEffect(() => {
+    async function fetchCars() {
+      try {
+        const res = await fetch("/api/cars");
+        const result: ApiResponse = await res.json();
 
-  const totalPages = Math.ceil(filteredCars.length / ITEMS_PER_PAGE);
-  
-  // Get the cars for the current page
+        if (result.success && result.data) {
+           const BASE_URL = "https://cms.dazzlewheels.ae/public/storage";
+          const cleanUrl = (path: string | null): string => {
+            if (!path) return "";
+            if (path.startsWith("http")) return path;
+            return `${BASE_URL}/${path.replace(/^\/+/, "")}`;
+          };
+
+          const mappedCars = result.data.map((car) => {
+            const logo = car.brand.logo ? cleanUrl(car.brand.logo) : "/fallback-logo.png";
+            const image = car.main_image ? cleanUrl(car.main_image) : "/fallback-image.png";
+
+            return {
+              ...car,
+              price: car.daily_rate,
+              image,
+              logo,
+              Seats: car.seats,
+              door: car.doors,
+              slug: car.model.toLowerCase().replace(/\s+/g, "-"),
+            };
+          });
+
+          // Brand filter apply karo
+          const filteredCars = brandParam
+            ? mappedCars.filter(
+                (car) =>
+                  car.brand.name.toLowerCase().replace(/\s+/g, "-") ===
+                  brandParam.toLowerCase()
+              )
+            : mappedCars;
+
+          setCars(filteredCars);
+        } else {
+          console.error("API Error:", result.message);
+        }
+      } catch (error) {
+        console.error("Fetch failed:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchCars();
+  }, [brandParam]);
+
+  const totalPages = Math.ceil(cars.length / ITEMS_PER_PAGE);
+
   const paginatedCars = useMemo(() => {
-    return filteredCars.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
-  }, [filteredCars, currentPage]);
+    return cars.slice(
+      (currentPage - 1) * ITEMS_PER_PAGE,
+      currentPage * ITEMS_PER_PAGE
+    );
+  }, [cars, currentPage]);
 
   const capitalized =
-    brandName.length > 0
-      ? brandName.charAt(0).toUpperCase() + brandName.slice(1)
+    brandParam?.length > 0
+      ? brandParam.charAt(0).toUpperCase() + brandParam.slice(1)
       : "";
 
-  // Function to generate the page link
-  const createPageLink = (page: number) => `/all-vehicles/${brandName.toLowerCase()}?page=${page}`;
+  const createPageLink = (page: number) =>
+    `/all-vehicles/${brandParam.toLowerCase()}?page=${page}`;
+
+  if (loading) {
+    return    <div className="col-12 text-center">
+              <h4 style={{ color: "#999" }}>
+                Loading Cars...
+              </h4>
+            </div>;
+  }
 
   return (
     <section style={{ padding: "50px 0px 10px 0px" }}>
       <div className="container">
         <div className="row">
-          {filteredCars.length === 0 ? (
+          {cars.length === 0 ? (
             <div className="col-12 text-center">
               <h4 style={{ color: "#999" }}>
                 No cars found for
-                <span style={{ color: "#000", fontWeight: "bold" }}>
+                <span style={{ color: "#000", fontWeight: "bold", marginLeft:'10px' }}>
                   &quot;{capitalized}&quot;
                 </span>
               </h4>
             </div>
           ) : (
             paginatedCars.map((car, index) => (
-              <div key={index} className="col-lg-4 col-md-6 col-12 mb-5">
+              <div key={car.id} className="col-lg-4 col-md-6 col-12 mb-5">
                 <div role="listitem" className={styles.collectionItem}>
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
                       <Link
-                        href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
+                        href={`/all-vehicles/${car.brand.name.toLowerCase()}`}
                         className={`${styles.carListingBrand} w-inline-block`}
                       >
                         <Image
-                          src={car.logo}
-                          alt={`${car.brand} Logo`}
+                          src={car.logo!}
+                          alt={`${car.brand.name} Logo`}
                           width={50}
                           height={50}
                           className={styles.carBrandImage}
                         />
                       </Link>
                       <div>
-                        <h3 className={`${styles.carListingName} mb-0`}>{car.name}</h3>
+                        <h3 className={`${styles.carListingName} mb-0`}>
+                          {car.name}
+                        </h3>
                         <div className={styles.carListingSpecs}>
                           <div className={styles.listingDetailsDivider}></div>
                             <div className={styles.listingSpec}>
-                            {(Array.isArray(car.type) ? car.type : [car.type]).join(" * ")}
-                            </div>
+                            {Array.isArray(car.car_types)
+                                ? car.car_types
+                                    .map((type: string) =>
+                                      type.replace(/([a-z])([A-Z])/g, "$1 $2")
+                                    )
+                                    .join(", ")
+                                : typeof car.car_types === "string"
+                                ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
+                                : ""}
+                        </div>
                         </div>
                       </div>
                     </div>
 
                     <Link
-                      href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
+                      href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
                       className={`${styles.listingImageWrapper} w-inline-block`}
                     >
                       <Image
-                        src={car.image}
+                        src={car.image!}
                         alt={car.name}
                         className={styles.listingImage}
                         width={800}
                         height={500}
-                        layout="responsive"
+                        style={{ objectFit: "cover" }}
+                        priority={index < 3}
                       />
                     </Link>
 
@@ -98,12 +167,14 @@ export default function Listing() {
                         <div className={styles.carDetail}>
                           <Image
                             src="/img/icons/icons-1.png"
-                            alt="Mileage"
+                            alt="Seats"
                             width={20}
                             height={20}
                             className={styles.listingDetailIcon}
                           />
-                          <div className={styles.carDetailValue}>{car.Seats}</div>
+                          <div className={styles.carDetailValue}>
+                            {car.seats}
+                          </div>
                         </div>
                         <div className={styles.carDetail}>
                           <Image
@@ -113,15 +184,27 @@ export default function Listing() {
                             height={20}
                             className={styles.listingDetailIcon}
                           />
-                          <div className={styles.carDetailValue}>{car.engine}</div>
+                          <div className={styles.carDetailValue}>
+                            {car.engine}
+                          </div>
                         </div>
                         <div className={styles.carDetail}>
-                          <i className="omfi-door" style={{ color: "#E5AF3E", fontSize: "18px" }}></i>
-                          <div className={styles.carDetailValue}>{car.door}</div>
+                          <i
+                            className="omfi-door"
+                            style={{ color: "#E5AF3E", fontSize: "18px" }}
+                          ></i>
+                          <div className={styles.carDetailValue}>
+                            {car.doors}
+                          </div>
                         </div>
                         <div className={styles.carDetail}>
-                          <i className="fas fa-money-bill" style={{ color: "#E5AF3E" }}></i>
-                          <div className={styles.carDetailValue}>{car.deposit}</div>
+                          <i
+                            className="fas fa-money-bill"
+                            style={{ color: "#E5AF3E" }}
+                          ></i>
+                          <div className={styles.carDetailValue}>
+                              {Math.floor(Number(car.deposit))}
+                          </div>
                         </div>
                       </div>
 
@@ -130,14 +213,18 @@ export default function Listing() {
                           <Image
                             width={30}
                             height={30}
-                            alt=""
+                            alt="Dirham"
                             src="/img/dirham.png"
-                            style={{ filter: "brightness(0) invert(1)", marginTop: "-4px", paddingRight: "3px" }}
+                            style={{
+                              filter: "brightness(0) invert(1)",
+                              marginTop: "-4px",
+                              paddingRight: "3px",
+                            }}
                           />
-                          {car.price} Per Day
+                            {Math.floor(Number(car.daily_rate))} Per Day
                         </div>
                         <Link
-                          href={`/vehicle/${car.brand.toLowerCase()}/${car.slug}`}
+                          href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
                           className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                         >
                           Book Now
@@ -169,7 +256,7 @@ export default function Listing() {
                     <li key={page}>
                       <Link
                         href={createPageLink(page)}
-                        className={page === currentPage ? 'active' : ''}
+                        className={page === currentPage ? "active" : ""}
                       >
                         {page}
                       </Link>

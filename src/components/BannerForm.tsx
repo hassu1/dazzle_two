@@ -1,7 +1,7 @@
 "use client";
 import "./BannerForm.css";
 
-import React, { useEffect, useRef , useState} from 'react';
+import React, { useEffect, useRef} from 'react';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import Image from 'next/image';

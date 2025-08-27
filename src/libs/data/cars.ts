@@ -186,7 +186,7 @@ export const cars = [
   {
     description: "Mercedes GT63 S variant is one of the most top of the line cars amongst all. Or you can say it is an elite class of all GTs. It is a 4-door super car with an engine of V8 and torque of 500Nm at 369 lb. Ft. The interior of Mercedes GT 63 S is extremely executive and supreme which makes it the most demanding for business class rental services. It has 4 passenger’s seats. With luggage capacity for 3 and 4 doors. Our car gives you daily mileage of around 250KM. To make your whole journey remarkable and memorable, our Mercedes GT 63 S, is at your service with seamless smooth drive. With automatic transmission. In our rental cars you do not have to worry about locations, as our cars provide you a proper navigation system and bring forth with an Aux and USB as well. We offer you premium cars with exclusive services like free pickup and drop off and free cancellation facility at an event of emergency. At Dazzle wheels you are allowed pay your payments through cash or card both.",
     brand: "Mercedes",
-    name: "Mercedes GT63S",
+    name: "Mercedes GT63 S",
     year: "2024",
     Luggage: "3",
     type: ["Sports", "Luxury", "Coupe"],
