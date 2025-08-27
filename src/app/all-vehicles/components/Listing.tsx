@@ -1,17 +1,19 @@
 'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 import { useParams, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import styles from "@components/components/OurFleet.module.css";
-
+import { slugify } from "@components/utils/slugify"; // import your slugify function
 
 const ITEMS_PER_PAGE = 12;
 
 export default function Listing() {
-
   const params = useParams();
-  const brandParam = params?.brand as string;
+  const rawBrandParam = params?.brand as string;
+  const brandParam = slugify(rawBrandParam); // ✅ Slugify the brand from URL
+
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1");
 
@@ -25,7 +27,7 @@ export default function Listing() {
         const result: ApiResponse = await res.json();
 
         if (result.success && result.data) {
-           const BASE_URL = "https://cms.dazzlewheels.ae/public/storage";
+          const BASE_URL = "https://cms.dazzlewheels.ae/public/storage";
           const cleanUrl = (path: string | null): string => {
             if (!path) return "";
             if (path.startsWith("http")) return path;
@@ -43,16 +45,14 @@ export default function Listing() {
               logo,
               Seats: car.seats,
               door: car.doors,
-              slug: car.model.toLowerCase().replace(/\s+/g, "-"),
+              slug: slugify(car.model),
             };
           });
 
-          // Brand filter apply karo
+          // ✅ Use slugified comparison
           const filteredCars = brandParam
             ? mappedCars.filter(
-                (car) =>
-                  car.brand.name.toLowerCase().replace(/\s+/g, "-") ===
-                  brandParam.toLowerCase()
+                (car) => slugify(car.brand.name) === brandParam
               )
             : mappedCars;
 
@@ -85,14 +85,14 @@ export default function Listing() {
       : "";
 
   const createPageLink = (page: number) =>
-    `/all-vehicles/${brandParam.toLowerCase()}?page=${page}`;
+    `/all-vehicles/${brandParam}?page=${page}`;
 
   if (loading) {
-    return    <div className="col-12 text-center">
-              <h4 style={{ color: "#999" }}>
-                Loading Cars...
-              </h4>
-            </div>;
+    return (
+      <div className="col-12 text-center">
+        <h4 style={{ color: "#999" }}>Loading Cars...</h4>
+      </div>
+    );
   }
 
   return (
@@ -103,7 +103,7 @@ export default function Listing() {
             <div className="col-12 text-center">
               <h4 style={{ color: "#999" }}>
                 No cars found for
-                <span style={{ color: "#000", fontWeight: "bold", marginLeft:'10px' }}>
+                <span style={{ color: "#000", fontWeight: "bold", marginLeft: '10px' }}>
                   &quot;{capitalized}&quot;
                 </span>
               </h4>
@@ -115,7 +115,7 @@ export default function Listing() {
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
                       <Link
-                        href={`/all-vehicles/${car.brand.name.toLowerCase()}`}
+                        href={`/all-vehicles/${slugify(car.brand.name)}`} // ✅ Slugified link
                         className={`${styles.carListingBrand} w-inline-block`}
                       >
                         <Image
@@ -132,23 +132,23 @@ export default function Listing() {
                         </h3>
                         <div className={styles.carListingSpecs}>
                           <div className={styles.listingDetailsDivider}></div>
-                            <div className={styles.listingSpec}>
+                          <div className={styles.listingSpec}>
                             {Array.isArray(car.car_types)
-                                ? car.car_types
-                                    .map((type: string) =>
-                                      type.replace(/([a-z])([A-Z])/g, "$1 $2")
-                                    )
-                                    .join(", ")
-                                : typeof car.car_types === "string"
-                                ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
-                                : ""}
-                        </div>
+                              ? car.car_types
+                                  .map((type: string) =>
+                                    type.replace(/([a-z])([A-Z])/g, "$1 $2")
+                                  )
+                                  .join(", ")
+                              : typeof car.car_types === "string"
+                              ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
+                              : ""}
+                          </div>
                         </div>
                       </div>
                     </div>
 
                     <Link
-                      href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
+                      href={`/vehicle/${slugify(car.brand.name)}/${car.slug}`} // ✅ Slugified link
                       className={`${styles.listingImageWrapper} w-inline-block`}
                     >
                       <Image
@@ -203,7 +203,7 @@ export default function Listing() {
                             style={{ color: "#E5AF3E" }}
                           ></i>
                           <div className={styles.carDetailValue}>
-                              {Math.floor(Number(car.deposit))}
+                            {Math.floor(Number(car.deposit))}
                           </div>
                         </div>
                       </div>
@@ -221,10 +221,10 @@ export default function Listing() {
                               paddingRight: "3px",
                             }}
                           />
-                            {Math.floor(Number(car.daily_rate))} Per Day
+                          {Math.floor(Number(car.daily_rate))} Per Day
                         </div>
                         <Link
-                          href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
+                          href={`/vehicle/${slugify(car.brand.name)}/${car.slug}`}
                           className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                         >
                           Book Now

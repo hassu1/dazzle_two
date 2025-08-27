@@ -4,12 +4,12 @@ import React, { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
-import styles from '@components/components/OurFleet.module.css'; // adjust if needed
+import styles from '@components/components/OurFleet.module.css';
+import { slugify } from '@components/utils/slugify';
 
 const ITEMS_PER_PAGE = 12;
 
 export default function AllListing() {
-
   const [cars, setCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
@@ -24,13 +24,13 @@ export default function AllListing() {
         if (result.success && result.data) {
           const BASE_URL = "https://cms.dazzlewheels.ae/public/storage";
 
-          function cleanUrl(path: string | null): string {
+          const cleanUrl = (path: string | null): string => {
             if (!path) return '';
             if (path.startsWith('http')) return path;
-            return `${BASE_URL}/${path.replace(/^\/+/, '')}`; 
-          }
+            return `${BASE_URL}/${path.replace(/^\/+/, '')}`;
+          };
 
-          const mappedCars = result.data.map(car => {
+          const mappedCars = result.data.map((car) => {
             const logo = car.brand.logo ? cleanUrl(car.brand.logo) : '/fallback-logo.png';
             const image = car.main_image ? cleanUrl(car.main_image) : '/fallback-image.png';
 
@@ -41,7 +41,8 @@ export default function AllListing() {
               logo,
               Seats: car.seats,
               door: car.doors,
-              slug: car.model.toLowerCase().replace(/\s+/g, '-'),
+              slug: slugify(car.model),              // ✅ Slugify model for vehicle URL
+              brandSlug: slugify(car.brand.name),     // ✅ Slugify brand for URL
             };
           });
 
@@ -68,19 +69,19 @@ export default function AllListing() {
   const createPageLink = (page: number): string => `/all-vehicles?page=${page}`;
 
   if (loading) {
-    return <div className="col-12 text-center">
-              <h4 style={{ color: "#999" }}>
-                Loading Cars...
-              </h4>
-            </div>;
+    return (
+      <div className="col-12 text-center">
+        <h4 style={{ color: "#999" }}>Loading Cars...</h4>
+      </div>
+    );
   }
 
   if (!loading && cars.length === 0) {
-    return <div className="col-12 text-center">
-              <h4 style={{ color: "#999" }}>
-                No Cars Found
-              </h4>
-            </div>;
+    return (
+      <div className="col-12 text-center">
+        <h4 style={{ color: "#999" }}>No Cars Found</h4>
+      </div>
+    );
   }
 
   return (
@@ -94,7 +95,7 @@ export default function AllListing() {
                   {/* Brand Section */}
                   <div className={styles.carListingBrandWrapper}>
                     <Link
-                      href={`/all-vehicles/${car.brand.name.toLowerCase()}`}
+                      href={`/all-vehicles/${car.brandSlug}`} // ✅ slugified link
                       className={`${styles.carListingBrand} w-inline-block`}
                     >
                       <Image
@@ -110,15 +111,15 @@ export default function AllListing() {
                       <div className={styles.carListingSpecs}>
                         <div className={styles.listingDetailsDivider}></div>
                         <div className={styles.listingSpec}>
-                            {Array.isArray(car.car_types)
-                                ? car.car_types
-                                    .map((type: string) =>
-                                      type.replace(/([a-z])([A-Z])/g, "$1 $2")
-                                    )
-                                    .join(", ")
-                                : typeof car.car_types === "string"
-                                ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
-                                : ""}
+                          {Array.isArray(car.car_types)
+                            ? car.car_types
+                                .map((type: string) =>
+                                  type.replace(/([a-z])([A-Z])/g, "$1 $2")
+                                )
+                                .join(", ")
+                            : typeof car.car_types === "string"
+                            ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
+                            : ""}
                         </div>
                       </div>
                     </div>
@@ -126,7 +127,7 @@ export default function AllListing() {
 
                   {/* Car Image */}
                   <Link
-                    href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
+                    href={`/vehicle/${car.brandSlug}/${car.slug}`} // ✅ slugified link
                     className={`${styles.listingImageWrapper} w-inline-block`}
                   >
                     <Image
@@ -170,7 +171,7 @@ export default function AllListing() {
                       <div className={styles.carDetail}>
                         <i className="fas fa-money-bill" style={{ color: '#E5AF3E' }}></i>
                         <div className={styles.carDetailValue}>
-                            {Math.floor(Number(car.deposit))}
+                          {Math.floor(Number(car.deposit))}
                         </div>
                       </div>
                     </div>
@@ -183,12 +184,16 @@ export default function AllListing() {
                           height={30}
                           alt="Dirham"
                           src="/img/dirham.png"
-                          style={{ filter: 'brightness(0) invert(1)', marginTop: '-4px', paddingRight: '3px' }}
+                          style={{
+                            filter: 'brightness(0) invert(1)',
+                            marginTop: '-4px',
+                            paddingRight: '3px'
+                          }}
                         />
-                          {Math.floor(Number(car.daily_rate))} Per Day
+                        {Math.floor(Number(car.daily_rate))} Per Day
                       </div>
                       <Link
-                        href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
+                        href={`/vehicle/${car.brandSlug}/${car.slug}`} // ✅ slugified link
                         className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                       >
                         Book Now
@@ -217,7 +222,10 @@ export default function AllListing() {
                   const page = i + 1;
                   return (
                     <li key={page}>
-                      <Link href={createPageLink(page)} className={page === currentPage ? 'active' : ''}>
+                      <Link
+                        href={createPageLink(page)}
+                        className={page === currentPage ? 'active' : ''}
+                      >
                         {page}
                       </Link>
                     </li>

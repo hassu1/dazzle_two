@@ -12,6 +12,7 @@ interface Car {
   car_brand_id: number;
   free_pickup_drop: boolean;
   bluetooth:boolean;
+  brandSlug: string;
   parking_sensor:boolean;
   full_insurance:boolean;
   is_featured:boolean;
