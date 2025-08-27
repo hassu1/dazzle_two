@@ -4,22 +4,20 @@ import Image from "next/image";
 import styles from "./OurFleet.module.css";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { slugify } from "@components/utils/slugify"; // adjust the import path
 
 const ITEMS_PER_PAGE = 6;
 
 export default function OurFleet() {
-  
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1");
 
   const [cars, setCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
 
-
-
   useEffect(() => {
     async function fetchCars() {
-      try { 
+      try {
         const res = await fetch("/api/cars");
         const result: ApiResponse = await res.json();
 
@@ -33,7 +31,10 @@ export default function OurFleet() {
           };
 
           const mappedCars = result.data.map((car) => {
-            const logo = car.brand.logo ? cleanUrl(car.brand.logo) : "/fallback-logo.png";
+            // Safe fallback for brand info
+            const brandName = car.brand?.name || "unknown-brand";
+            const brandSlug = slugify(brandName);
+            const logo = car.brand?.logo ? cleanUrl(car.brand.logo) : "/fallback-logo.png";
             const image = car.main_image ? cleanUrl(car.main_image) : "/fallback-image.png";
 
             return {
@@ -43,11 +44,13 @@ export default function OurFleet() {
               logo,
               Seats: car.seats,
               door: car.doors,
-              slug: car.model.toLowerCase().replace(/\s+/g, "-"),
+              slug: slugify(car.model),
+              brandName,
+              brandSlug,
             };
           });
 
-          // Sirf featured cars
+          // Only featured cars
           const featuredCars = mappedCars.filter((car) => car.is_featured === true);
 
           setCars(featuredCars);
@@ -74,11 +77,11 @@ export default function OurFleet() {
   }, [cars, currentPage]);
 
   if (loading) {
-    return <div className="col-12 text-center">
-              <h4 style={{ color: "#999" }}>
-                Loading Cars...
-              </h4>
-            </div>;
+    return (
+      <div className="col-12 text-center">
+        <h4 style={{ color: "#999" }}>Loading Cars...</h4>
+      </div>
+    );
   }
 
   return (
@@ -114,40 +117,38 @@ export default function OurFleet() {
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
                       <Link
-                        href={`/all-vehicles/${car.brand.name.toLowerCase()}`}
+                        href={`/all-vehicles/${car.brandSlug}`}
                         className={`${styles.carListingBrand} w-inline-block`}
                       >
                         <Image
                           src={car.logo!}
-                          alt={`${car.brand.name} Logo`}
+                          alt={`${car.brandName} Logo`}
                           width={50}
                           height={50}
                           className={styles.carBrandImage}
                         />
                       </Link>
                       <div>
-                        <h3 className={`${styles.carListingName} mb-0`}>
-                          {car.name}
-                        </h3>
+                        <h3 className={`${styles.carListingName} mb-0`}>{car.name}</h3>
                         <div className={styles.carListingSpecs}>
                           <div className={styles.listingDetailsDivider}></div>
-                            <div className={styles.listingSpec}>
+                          <div className={styles.listingSpec}>
                             {Array.isArray(car.car_types)
-                                ? car.car_types
-                                    .map((type: string) =>
-                                      type.replace(/([a-z])([A-Z])/g, "$1 $2")
-                                    )
-                                    .join(", ")
-                                : typeof car.car_types === "string"
-                                ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
-                                : ""}
-                        </div>
+                              ? car.car_types
+                                  .map((type: string) =>
+                                    type.replace(/([a-z])([A-Z])/g, "$1 $2")
+                                  )
+                                  .join(", ")
+                              : typeof car.car_types === "string"
+                              ? car.car_types.replace(/([a-z])([A-Z])/g, "$1 $2")
+                              : ""}
+                          </div>
                         </div>
                       </div>
                     </div>
 
                     <Link
-                      href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
+                      href={`/vehicle/${car.brandSlug}/${car.slug}`}
                       className={`${styles.listingImageWrapper} w-inline-block`}
                     >
                       <Image
@@ -171,9 +172,7 @@ export default function OurFleet() {
                             height={20}
                             className={styles.listingDetailIcon}
                           />
-                          <div className={styles.carDetailValue}>
-                            {car.seats}
-                          </div>
+                          <div className={styles.carDetailValue}>{car.seats}</div>
                         </div>
                         <div className={styles.carDetail}>
                           <Image
@@ -183,26 +182,19 @@ export default function OurFleet() {
                             height={20}
                             className={styles.listingDetailIcon}
                           />
-                          <div className={styles.carDetailValue}>
-                            {car.engine}
-                          </div>
+                          <div className={styles.carDetailValue}>{car.engine}</div>
                         </div>
                         <div className={styles.carDetail}>
                           <i
                             className="omfi-door"
                             style={{ color: "#E5AF3E", fontSize: "18px" }}
                           ></i>
-                          <div className={styles.carDetailValue}>
-                            {car.doors}
-                          </div>
+                          <div className={styles.carDetailValue}>{car.doors}</div>
                         </div>
                         <div className={styles.carDetail}>
-                          <i
-                            className="fas fa-money-bill"
-                            style={{ color: "#E5AF3E" }}
-                          ></i>
+                          <i className="fas fa-money-bill" style={{ color: "#E5AF3E" }}></i>
                           <div className={styles.carDetailValue}>
-                             {Math.floor(Number(car.deposit))}
+                            {Math.floor(Number(car.deposit))}
                           </div>
                         </div>
                       </div>
@@ -220,10 +212,10 @@ export default function OurFleet() {
                               paddingRight: "3px",
                             }}
                           />
-                            {Math.floor(Number(car.daily_rate))} Per Day
+                          {Math.floor(Number(car.daily_rate))} Per Day
                         </div>
                         <Link
-                          href={`/vehicle/${car.brand.name.toLowerCase()}/${car.slug}`}
+                          href={`/vehicle/${car.brandSlug}/${car.slug}`}
                           className={`${styles.primaryButton} ${styles.carListingButton} ${styles.wButton}`}
                         >
                           Book Now
