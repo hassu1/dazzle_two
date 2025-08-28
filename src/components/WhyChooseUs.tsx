@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section style={{ padding: '20px 0px 0px 0px' }}>
+    <section style={{ padding: '21px 0px 0px 0px' }}>
   <div className="container">
     <div className="row mb-4">
       <div className="col-md-12 text-center">
