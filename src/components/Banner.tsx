@@ -9,7 +9,7 @@ export default function Banner() {
         <div className="hero-bg-image-overlay"></div>
         <div className="hero-bg-wrap" style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px)' }}>
           <h1 className="hero-bg-title">Rent Your Dream Car Today</h1>
-          <Link href="/car" className="button-icon w-inline-block">
+          <Link href="/all-vehicles" className="button-icon w-inline-block">
             <div className="button-icon-text-wrap">
               <div className="d-flex">
                 <button
