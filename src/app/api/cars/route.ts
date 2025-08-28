@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   try {
-    const carListUrl = process.env.CAR_LIST;
+    const carListUrl = process.env.NEXT_PUBLIC_CAR_LIST;
     console.log('CAR_LIST env var:', carListUrl);  // add this line
 
     if (!carListUrl) {
