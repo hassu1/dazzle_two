@@ -12,7 +12,7 @@ const ITEMS_PER_PAGE = 12;
 export default function Listing() {
   const params = useParams();
   const rawBrandParam = params?.brand as string;
-  const brandParam = slugify(rawBrandParam); // ✅ Slugify the brand from URL
+  const brandParam = slugify(rawBrandParam); 
 
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1");
@@ -49,7 +49,7 @@ export default function Listing() {
             };
           });
 
-          // ✅ Use slugified comparison
+          // Use slugified comparison
           const filteredCars = brandParam
             ? mappedCars.filter(
                 (car) => slugify(car.brand.name) === brandParam
@@ -115,7 +115,7 @@ export default function Listing() {
                   <div className={styles.carCard}>
                     <div className={styles.carListingBrandWrapper}>
                       <Link
-                        href={`/all-vehicles/${slugify(car.brand.name)}`} // ✅ Slugified link
+                        href={`/all-vehicles/${slugify(car.brand.name)}`} // Slugified link
                         className={`${styles.carListingBrand} w-inline-block`}
                       >
                         <Image
@@ -148,7 +148,7 @@ export default function Listing() {
                     </div>
 
                     <Link
-                      href={`/vehicle/${slugify(car.brand.name)}/${car.slug}`} // ✅ Slugified link
+                      href={`/vehicle/${slugify(car.brand.name)}/${car.slug}`} // Slugified link
                       className={`${styles.listingImageWrapper} w-inline-block`}
                     >
                       <Image

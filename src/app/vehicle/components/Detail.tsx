@@ -73,7 +73,7 @@ export default function Detail() {
             height: "50vh",
           }}
         ></section>
-        <div className="col-12 text-center">
+        <div className="col-12 text-center mt-4">
               <h4 style={{ color: "#999" }}>
                 Loading...
               </h4>

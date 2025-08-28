@@ -78,7 +78,7 @@ export default function Footer() {
                       <Link href="/all-vehicles/audi">Audi</Link>
                     </li>
                     <li className="mb-3">
-                      <Link href="/all-vehicles/mercedes">Mercedes</Link>
+                      <Link href="/all-vehicles/mercedes-benz">Mercedes</Link>
                     </li>
                     <li className="mb-3">
                       <Link href="/all-vehicles/mclaren">Mclaren</Link>
