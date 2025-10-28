@@ -182,7 +182,7 @@ export default function Footer() {
                         alt=""
                         width={150}
                         height={150}
-                        style={{ width: "100%", height: "auto" }}
+                        style={{ width: "200px", height: "auto" }}
                       />
                     </li>
                   </ul>
