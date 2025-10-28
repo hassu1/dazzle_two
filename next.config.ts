@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["cms.dazzlewheels.ae"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cms.dazzlewheels.ae",
+      },
+    ],
   },
 };
 
