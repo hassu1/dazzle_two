@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
         hostname: "cms.dazzlewheels.ae",
       },
     ],
-    unoptimized: true,
+    // unoptimized: true,
   },
 };
 

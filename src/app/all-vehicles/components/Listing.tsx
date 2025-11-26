@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import styles from "@components/components/OurFleet.module.css";
 import { slugify } from "@components/utils/slugify"; // import your slugify function
 
+
 const ITEMS_PER_PAGE = 12;
 
 export default function Listing() {
