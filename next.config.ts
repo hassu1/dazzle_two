@@ -5,10 +5,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cms.dazzlewheels.ae",
+        hostname: "cmss.dazzlewheels.ae",
       },
     ],
-    // unoptimized: true,
+    unoptimized: false,
   },
 };
 
